@@ -1980,7 +1980,7 @@
         ],
         "x": 2154,
         "y": 39,
-        "w": 352,
+        "w": 362,
         "h": 82
     },
     {
@@ -2092,12 +2092,14 @@
             "a6da726f.2402a",
             "6143e08d.553e3",
             "a4423e84.af18a",
-            "62800ed8.362fc"
+            "62800ed8.362fc",
+            "3039a9ef.dca166",
+            "47dc301a.e0064"
         ],
-        "x": 194,
-        "y": 39,
+        "x": 654,
+        "y": 59,
         "w": 822,
-        "h": 862
+        "h": 882
     },
     {
         "id": "a43b5fd0.86ab2",
@@ -2145,7 +2147,9 @@
             "c6361c1b.c5f5c"
         ],
         "x": 254,
-        "y": 79
+        "y": 79,
+        "w": 562,
+        "h": 82
     },
     {
         "id": "dbcb4b90.cdfce8",
@@ -2219,7 +2223,9 @@
             "ba9c0e3a.9d4bd"
         ],
         "x": 394,
-        "y": 19
+        "y": 19,
+        "w": 602,
+        "h": 382
     },
     {
         "id": "587a9021.5adbf",
@@ -2241,7 +2247,9 @@
             "48611f94.4d494"
         ],
         "x": 339,
-        "y": 19
+        "y": 19,
+        "w": 577,
+        "h": 222
     },
     {
         "id": "e045aa73.92a308",
@@ -2321,9 +2329,9 @@
             "65acd935.85f9b8",
             "d3afa9e1.b3b358"
         ],
-        "x": 974,
+        "x": 964,
         "y": 699,
-        "w": 232,
+        "w": 252,
         "h": 242
     },
     {
@@ -4025,6 +4033,7 @@
         "z": "14763e8a.16f4e1",
         "name": "GALLERY UP 2",
         "label": "LEUCHTEN OBEN 2",
+        "tooltip": "",
         "group": "ee7391e3.0774",
         "order": 1,
         "width": 0,
@@ -5240,8 +5249,8 @@
         "g": "22191ac0.b45bd6",
         "name": "LIGHT_GALLERY_UP_11",
         "env": [],
-        "x": 630,
-        "y": 700,
+        "x": 1090,
+        "y": 780,
         "wires": [
             [
                 "a6da726f.2402a"
@@ -5254,8 +5263,8 @@
         "z": "2110ff8c.cc84f",
         "g": "22191ac0.b45bd6",
         "name": "LIGHT_GALLERY_UP_10",
-        "x": 640,
-        "y": 620,
+        "x": 1100,
+        "y": 720,
         "wires": [
             [
                 "a6da726f.2402a"
@@ -5268,8 +5277,8 @@
         "z": "2110ff8c.cc84f",
         "g": "22191ac0.b45bd6",
         "name": "LIGHT_GALLERY_UP_9",
-        "x": 630,
-        "y": 560,
+        "x": 1090,
+        "y": 660,
         "wires": [
             [
                 "a6da726f.2402a"
@@ -5282,8 +5291,8 @@
         "z": "2110ff8c.cc84f",
         "g": "22191ac0.b45bd6",
         "name": "LIGHT_GALLERY_UP_8",
-        "x": 630,
-        "y": 500,
+        "x": 1090,
+        "y": 600,
         "wires": [
             [
                 "a6da726f.2402a"
@@ -5296,8 +5305,8 @@
         "z": "2110ff8c.cc84f",
         "g": "22191ac0.b45bd6",
         "name": "LIGHT_GALLERY_UP_7",
-        "x": 630,
-        "y": 440,
+        "x": 1090,
+        "y": 540,
         "wires": [
             [
                 "a6da726f.2402a"
@@ -5310,8 +5319,8 @@
         "z": "2110ff8c.cc84f",
         "g": "22191ac0.b45bd6",
         "name": "LIGHT_GALLERY_UP_6",
-        "x": 630,
-        "y": 380,
+        "x": 1090,
+        "y": 480,
         "wires": [
             [
                 "a6da726f.2402a"
@@ -5324,8 +5333,8 @@
         "z": "2110ff8c.cc84f",
         "g": "22191ac0.b45bd6",
         "name": "LIGHT_GALLERY_UP_5",
-        "x": 630,
-        "y": 340,
+        "x": 1090,
+        "y": 420,
         "wires": [
             [
                 "a6da726f.2402a"
@@ -5339,8 +5348,8 @@
         "g": "22191ac0.b45bd6",
         "name": "LIGHT_GALLERY_UP_2",
         "env": [],
-        "x": 630,
-        "y": 140,
+        "x": 1090,
+        "y": 220,
         "wires": [
             [
                 "a6da726f.2402a"
@@ -5353,8 +5362,8 @@
         "z": "2110ff8c.cc84f",
         "g": "22191ac0.b45bd6",
         "name": "LIGHT_GALLERY_UP_3",
-        "x": 630,
-        "y": 220,
+        "x": 1090,
+        "y": 300,
         "wires": [
             [
                 "a6da726f.2402a"
@@ -5367,8 +5376,8 @@
         "z": "2110ff8c.cc84f",
         "g": "22191ac0.b45bd6",
         "name": "LIGHT_GALLERY_UP_4",
-        "x": 630,
-        "y": 280,
+        "x": 1090,
+        "y": 360,
         "wires": [
             [
                 "a6da726f.2402a"
@@ -5384,8 +5393,8 @@
         "links": [
             "234d0ad4.aa5936"
         ],
-        "x": 235,
-        "y": 420,
+        "x": 695,
+        "y": 500,
         "wires": [
             [
                 "b3f8fb06.edebd8",
@@ -5413,8 +5422,8 @@
         "links": [
             "6f154ce5.194d04"
         ],
-        "x": 975,
-        "y": 420,
+        "x": 1435,
+        "y": 500,
         "wires": []
     },
     {
@@ -5561,8 +5570,8 @@
         "g": "22191ac0.b45bd6",
         "name": "LIGHT_GALLERY_UP",
         "env": [],
-        "x": 620,
-        "y": 780,
+        "x": 1080,
+        "y": 840,
         "wires": [
             [
                 "a6da726f.2402a"
@@ -5575,8 +5584,8 @@
         "z": "2110ff8c.cc84f",
         "g": "22191ac0.b45bd6",
         "name": "LIGHT_TRIANGLE_UP",
-        "x": 630,
-        "y": 860,
+        "x": 1090,
+        "y": 900,
         "wires": [
             [
                 "a6da726f.2402a"
@@ -7334,19 +7343,19 @@
         "decouple": "false",
         "topic": "",
         "style": "",
-        "onvalue": "G1ON",
-        "onvalueType": "global",
+        "onvalue": "true",
+        "onvalueType": "bool",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "G1OFF",
-        "offvalueType": "global",
+        "offvalue": "false",
+        "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 600,
-        "y": 80,
+        "x": 1060,
+        "y": 160,
         "wires": [
             [
-                "a6da726f.2402a"
+                "47dc301a.e0064"
             ]
         ]
     },
@@ -7354,6 +7363,7 @@
         "id": "3039a9ef.dca166",
         "type": "config",
         "z": "2110ff8c.cc84f",
+        "g": "22191ac0.b45bd6",
         "name": "CONFIG_GALLERY_COMMANDOS",
         "properties": [
             {
@@ -7370,8 +7380,34 @@
             }
         ],
         "active": true,
-        "x": 1360,
-        "y": 60,
+        "x": 1070,
+        "y": 100,
         "wires": []
+    },
+    {
+        "id": "47dc301a.e0064",
+        "type": "subflow:32ef0b5e.c7e3c4",
+        "z": "2110ff8c.cc84f",
+        "g": "22191ac0.b45bd6",
+        "name": "GALLERY_UP_1",
+        "env": [
+            {
+                "name": "CMD_ON",
+                "value": "TURN-GALLERY-UP1-ON",
+                "type": "str"
+            },
+            {
+                "name": "CMD_OFF",
+                "value": "TURN-GALLERY-UP1-OFF",
+                "type": "str"
+            }
+        ],
+        "x": 1250,
+        "y": 160,
+        "wires": [
+            [
+                "a6da726f.2402a"
+            ]
+        ]
     }
 ]
