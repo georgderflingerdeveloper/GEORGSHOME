@@ -2705,7 +2705,8 @@
         "z": "6c34888.8f9c278",
         "name": "MAIN BUTTON",
         "style": {
-            "label": true
+            "label": true,
+            "fill": "#e3f3d3"
         },
         "nodes": [
             "9c379a22.13de68"
@@ -2721,13 +2722,31 @@
         "z": "6c34888.8f9c278",
         "name": "PRESENCE DETECTOR",
         "style": {
-            "label": true
+            "label": true,
+            "fill": "#e3f3d3"
         },
         "nodes": [
             "8a30080c.f573b8"
         ],
         "x": 174,
         "y": 859,
+        "w": 212,
+        "h": 82
+    },
+    {
+        "id": "c12d92db.8ccdf",
+        "type": "group",
+        "z": "6c34888.8f9c278",
+        "name": "MAINLIGHT",
+        "style": {
+            "fill": "#ffbfbf",
+            "label": true
+        },
+        "nodes": [
+            "2ce69d42.42add2"
+        ],
+        "x": 1594,
+        "y": 439,
         "w": 212,
         "h": 82
     },
@@ -8006,7 +8025,7 @@
         "offvalueType": "bool",
         "officon": "fa-3x fa-lightbulb-o",
         "offcolor": "gray",
-        "x": 1710,
+        "x": 1690,
         "y": 380,
         "wires": [
             []
@@ -8056,7 +8075,7 @@
         "z": "6c34888.8f9c278",
         "name": "DIG_OUT_ON_OFF",
         "env": [],
-        "x": 1360,
+        "x": 1420,
         "y": 480,
         "wires": [
             [
@@ -8068,6 +8087,7 @@
         "id": "2ce69d42.42add2",
         "type": "phidget22-digitaloutput",
         "z": "6c34888.8f9c278",
+        "g": "c12d92db.8ccdf",
         "channel": "0",
         "deviceSerialNumber": "311883",
         "isHubPortDevice": false,
@@ -8075,8 +8095,8 @@
         "debug": false,
         "LEDCurrentLimit": 0.02,
         "LEDForwardVoltage": "1",
-        "x": 1720,
-        "y": 460,
+        "x": 1700,
+        "y": 480,
         "wires": [
             []
         ]
@@ -8497,7 +8517,7 @@
         "z": "6c34888.8f9c278",
         "name": "SUB_TOGGLE",
         "env": [],
-        "x": 420,
+        "x": 480,
         "y": 720,
         "wires": [
             [
@@ -8521,7 +8541,7 @@
         "ignoreCase": false,
         "repeat": false,
         "again": false,
-        "x": 910,
+        "x": 970,
         "y": 720,
         "wires": [
             [],
@@ -8547,7 +8567,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1080,
+        "x": 1140,
         "y": 700,
         "wires": [
             [
@@ -8574,7 +8594,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1290,
+        "x": 1350,
         "y": 740,
         "wires": [
             [
@@ -8626,7 +8646,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1190,
+        "x": 1250,
         "y": 520,
         "wires": [
             [
@@ -8706,7 +8726,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 680,
+        "x": 740,
         "y": 720,
         "wires": [
             [
@@ -8942,5 +8962,15 @@
                 "4fbe2df4.58d0b4"
             ]
         ]
+    },
+    {
+        "id": "1edd4f94.c78db",
+        "type": "comment",
+        "z": "6c34888.8f9c278",
+        "name": "AUTO OFF",
+        "info": "Cancel automatic off\n- when using dashboard\n- when light control is off",
+        "x": 950,
+        "y": 680,
+        "wires": []
     }
 ]
