@@ -2271,6 +2271,48 @@
         }
     },
     {
+        "id": "84513d0.1c477c",
+        "type": "subflow",
+        "name": "SUB_TOGGLE",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "c60d84d2.a3b898"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 500,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "4fe2fc78.5469f4",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99",
+        "status": {
+            "x": 500,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "4fe2fc78.5469f4",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
         "id": "294b4b40.587a14",
         "type": "group",
         "z": "7fa0f8f.5a71708",
@@ -2284,9 +2326,7 @@
             "e6986e20.446ed"
         ],
         "x": 2174,
-        "y": 39,
-        "w": 382,
-        "h": 82
+        "y": 39
     },
     {
         "id": "78be8f10.9c6a",
@@ -2325,9 +2365,7 @@
             "7b20a57f.06ad1c"
         ],
         "x": 1434,
-        "y": 379,
-        "w": 322,
-        "h": 202
+        "y": 379
     },
     {
         "id": "9001a100.f2e51",
@@ -2421,9 +2459,7 @@
             "7aceb02d.3c6a8"
         ],
         "x": 2074,
-        "y": 619,
-        "w": 82,
-        "h": 442
+        "y": 619
     },
     {
         "id": "51fcd714.99f798",
@@ -2558,9 +2594,7 @@
             "8902ca66.b29778"
         ],
         "x": 1274,
-        "y": 399,
-        "w": 82,
-        "h": 382
+        "y": 399
     },
     {
         "id": "fc7cd29.614f63",
@@ -2579,9 +2613,7 @@
             "2ef3deb7.89c4c2"
         ],
         "x": 1534,
-        "y": 59,
-        "w": 352,
-        "h": 282
+        "y": 59
     },
     {
         "id": "d25553b5.e1268",
@@ -2599,9 +2631,7 @@
             "71ee541a.3a062c"
         ],
         "x": 674,
-        "y": 119,
-        "w": 327,
-        "h": 382
+        "y": 119
     },
     {
         "id": "c5095565.7f4e28",
@@ -2617,9 +2647,7 @@
             "d3afa9e1.b3b358"
         ],
         "x": 974,
-        "y": 699,
-        "w": 232,
-        "h": 242
+        "y": 699
     },
     {
         "id": "f9ff8461.417b58",
@@ -2663,6 +2691,22 @@
         ],
         "x": 234,
         "y": 79
+    },
+    {
+        "id": "11412ff.7fe6dd",
+        "type": "group",
+        "z": "6c34888.8f9c278",
+        "name": "MAIN BUTTON",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9c379a22.13de68"
+        ],
+        "x": 34,
+        "y": 319,
+        "w": 212,
+        "h": 82
     },
     {
         "id": "d1e7d7ad.42bde8",
@@ -7939,8 +7983,8 @@
         "offvalueType": "bool",
         "officon": "fa-3x fa-lightbulb-o",
         "offcolor": "gray",
-        "x": 1130,
-        "y": 500,
+        "x": 1170,
+        "y": 360,
         "wires": [
             []
         ]
@@ -7989,8 +8033,8 @@
         "z": "6c34888.8f9c278",
         "name": "DIG_OUT_ON_OFF",
         "env": [],
-        "x": 1160,
-        "y": 420,
+        "x": 1200,
+        "y": 300,
         "wires": [
             [
                 "2ce69d42.42add2"
@@ -8148,10 +8192,12 @@
         "sendStateWithoutChange": true,
         "showTransitionErrors": true,
         "x": 750,
-        "y": 420,
+        "y": 300,
         "wires": [
             [
-                "32aec383.825a6c"
+                "32aec383.825a6c",
+                "f2e21812.905958",
+                "242de3a8.d271bc"
             ]
         ]
     },
@@ -8288,8 +8334,8 @@
         "z": "6c34888.8f9c278",
         "name": "STATE2BOOL",
         "env": [],
-        "x": 930,
-        "y": 420,
+        "x": 980,
+        "y": 300,
         "wires": [
             [
                 "8171c9c8.f2a438",
@@ -8312,14 +8358,15 @@
         "color": "",
         "bgcolor": "",
         "icon": "",
-        "payload": "",
-        "payloadType": "str",
+        "payload": "true",
+        "payloadType": "bool",
         "topic": "",
         "x": 380,
-        "y": 360,
+        "y": 500,
         "wires": [
             [
-                "1d86c2f9.31e54d"
+                "1d86c2f9.31e54d",
+                "a78dc8e.028a038"
             ]
         ]
     },
@@ -8327,6 +8374,7 @@
         "id": "9c379a22.13de68",
         "type": "phidget22-digitalinput",
         "z": "6c34888.8f9c278",
+        "g": "11412ff.7fe6dd",
         "channel": 0,
         "deviceSerialNumber": "311883",
         "isHubPortDevice": false,
@@ -8334,8 +8382,8 @@
         "debug": false,
         "inputMode": 1,
         "powerSupply": 1,
-        "x": 160,
-        "y": 420,
+        "x": 140,
+        "y": 360,
         "wires": [
             [
                 "38ed9d18.281cf2"
@@ -8362,6 +8410,446 @@
         "wires": [
             [
                 "1d86c2f9.31e54d"
+            ]
+        ]
+    },
+    {
+        "id": "76fc4084.96b4b",
+        "type": "subflow:6d480044.1d777",
+        "z": "6c34888.8f9c278",
+        "name": "",
+        "env": [],
+        "x": 710,
+        "y": 600,
+        "wires": [
+            [
+                "6c37a714.e98798"
+            ]
+        ]
+    },
+    {
+        "id": "6c37a714.e98798",
+        "type": "gate",
+        "z": "6c34888.8f9c278",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "open",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "persist": false,
+        "x": 890,
+        "y": 600,
+        "wires": [
+            [
+                "1d86c2f9.31e54d"
+            ]
+        ]
+    },
+    {
+        "id": "c60d84d2.a3b898",
+        "type": "change",
+        "z": "84513d0.1c477c",
+        "name": "PrepareToggle",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "-",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "-",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "4fe2fc78.5469f4"
+            ]
+        ]
+    },
+    {
+        "id": "4fe2fc78.5469f4",
+        "type": "toggle",
+        "z": "84513d0.1c477c",
+        "name": "",
+        "onOffTopic": "",
+        "onValue": "true",
+        "onType": "bool",
+        "offValue": "false",
+        "offType": "bool",
+        "toggleTopic": "",
+        "toggleValue": "",
+        "toggleType": "any",
+        "passOnOff": "ifChanged",
+        "x": 370,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a78dc8e.028a038",
+        "type": "subflow:84513d0.1c477c",
+        "z": "6c34888.8f9c278",
+        "name": "SUB_TOGGLE",
+        "env": [],
+        "x": 400,
+        "y": 600,
+        "wires": [
+            [
+                "ffd3c849.440028",
+                "b5d864.3f55f7a"
+            ]
+        ]
+    },
+    {
+        "id": "ffd3c849.440028",
+        "type": "InvertUltimate",
+        "z": "6c34888.8f9c278",
+        "name": "Invert",
+        "x": 550,
+        "y": 600,
+        "wires": [
+            [
+                "76fc4084.96b4b"
+            ]
+        ]
+    },
+    {
+        "id": "8c20abae.d1c868",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "StateToPayload",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.state",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 940,
+        "wires": [
+            [
+                "57afe779.be5bc8"
+            ]
+        ]
+    },
+    {
+        "id": "57afe779.be5bc8",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "name": "IsTRUE",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 400,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "29794107.f322ce",
+        "type": "mytimeout",
+        "z": "6c34888.8f9c278",
+        "name": "AUTOOFF",
+        "outtopic": "",
+        "outsafe": "",
+        "outwarning": "Warning",
+        "outunsafe": "off",
+        "warning": "1",
+        "timer": "3",
+        "debug": false,
+        "ndebug": false,
+        "ignoreCase": false,
+        "repeat": false,
+        "again": false,
+        "x": 710,
+        "y": 700,
+        "wires": [
+            [],
+            [
+                "e7d39719.b969f8"
+            ]
+        ]
+    },
+    {
+        "id": "e7d39719.b969f8",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "name": "IsExpired",
+        "property": "flag",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 880,
+        "y": 700,
+        "wires": [
+            [
+                "d84fd8ed.94b358"
+            ]
+        ]
+    },
+    {
+        "id": "d84fd8ed.94b358",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "MakeTRUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 700,
+        "wires": [
+            [
+                "89300993.53f848",
+                "1d86c2f9.31e54d"
+            ]
+        ]
+    },
+    {
+        "id": "f2e21812.905958",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "name": "ISON",
+        "property": "payload.status",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 850,
+        "y": 380,
+        "wires": [
+            [
+                "692d4eb3.a9efd"
+            ]
+        ]
+    },
+    {
+        "id": "692d4eb3.a9efd",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "TRUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 380,
+        "wires": [
+            [
+                "29794107.f322ce"
+            ]
+        ]
+    },
+    {
+        "id": "89300993.53f848",
+        "type": "debug",
+        "z": "6c34888.8f9c278",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "a9fbd4cf.698848",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "name": "ISOFF",
+        "property": "payload.status",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 210,
+        "y": 980,
+        "wires": [
+            [
+                "5e2d0346.a434ac"
+            ]
+        ]
+    },
+    {
+        "id": "5e2d0346.a434ac",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "FALSE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "242de3a8.d271bc",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "name": "ISOFF",
+        "property": "payload.status",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 850,
+        "y": 420,
+        "wires": [
+            [
+                "225324b1.859f8c"
+            ]
+        ]
+    },
+    {
+        "id": "225324b1.859f8c",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "CANCEL_AUTOOFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "cancel",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 460,
+        "wires": [
+            [
+                "29794107.f322ce"
+            ]
+        ]
+    },
+    {
+        "id": "b5d864.3f55f7a",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "CANCEL_AUTOOFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "cancel",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 700,
+        "wires": [
+            [
+                "29794107.f322ce"
             ]
         ]
     }
