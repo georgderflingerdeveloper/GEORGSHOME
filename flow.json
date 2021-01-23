@@ -2425,7 +2425,9 @@
             "7211dc16.1b3594"
         ],
         "x": 274,
-        "y": 19
+        "y": 19,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "72d4b200.765e6",
@@ -2463,7 +2465,9 @@
             "4492de44.c8d9a"
         ],
         "x": 374,
-        "y": 39
+        "y": 39,
+        "w": 382,
+        "h": 262
     },
     {
         "id": "5a7f9765.d3d118",
@@ -2483,7 +2487,9 @@
             "b83e37c3.585798"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 787,
+        "h": 202
     },
     {
         "id": "22191ac0.b45bd6",
@@ -2514,7 +2520,9 @@
             "47dc301a.e0064"
         ],
         "x": 654,
-        "y": 59
+        "y": 59,
+        "w": 822,
+        "h": 882
     },
     {
         "id": "a43b5fd0.86ab2",
@@ -2562,7 +2570,9 @@
             "c6361c1b.c5f5c"
         ],
         "x": 254,
-        "y": 79
+        "y": 79,
+        "w": 562,
+        "h": 82
     },
     {
         "id": "dbcb4b90.cdfce8",
@@ -2580,20 +2590,18 @@
             "845cb910.0d57d8"
         ],
         "x": 134,
-        "y": 119
+        "y": 119,
+        "w": 727,
+        "h": 82
     },
     {
         "id": "238a9b61.2e5ee4",
         "type": "group",
         "z": "74fbc076.276df",
+        "name": "",
         "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
+            "fill": "#ffffff",
+            "label": true
         },
         "nodes": [
             "56651b0c.ffcc54",
@@ -2605,20 +2613,18 @@
             "9f75869f.9109f8"
         ],
         "x": 454,
-        "y": 19
+        "y": 19,
+        "w": 607,
+        "h": 322
     },
     {
         "id": "e8552233.d4d87",
         "type": "group",
         "z": "c28cf7ba.34de98",
+        "name": "",
         "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
+            "fill": "#dbcbe7",
+            "label": true
         },
         "nodes": [
             "8616432a.605b1",
@@ -2632,20 +2638,18 @@
             "ba9c0e3a.9d4bd"
         ],
         "x": 394,
-        "y": 19
+        "y": 19,
+        "w": 602,
+        "h": 382
     },
     {
         "id": "587a9021.5adbf",
         "type": "group",
         "z": "3428a01a.0d641",
+        "name": "",
         "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
+            "fill": "#e3f3d3",
+            "label": true
         },
         "nodes": [
             "25c0e3c3.9c37ac",
@@ -2654,7 +2658,9 @@
             "48611f94.4d494"
         ],
         "x": 339,
-        "y": 19
+        "y": 19,
+        "w": 577,
+        "h": 222
     },
     {
         "id": "e045aa73.92a308",
@@ -2759,7 +2765,9 @@
             "8d7eff1b.47165"
         ],
         "x": 434,
-        "y": 119
+        "y": 119,
+        "w": 702,
+        "h": 402
     },
     {
         "id": "6e130f3.368a6f",
@@ -2780,7 +2788,9 @@
             "39b8623a.a0dfae"
         ],
         "x": 234,
-        "y": 79
+        "y": 79,
+        "w": 702,
+        "h": 302
     },
     {
         "id": "11412ff.7fe6dd",
@@ -2877,7 +2887,8 @@
         "z": "6c34888.8f9c278",
         "name": "BELL",
         "style": {
-            "label": true
+            "label": true,
+            "fill": "#ffffbf"
         },
         "nodes": [
             "db2d219.a627be",
@@ -2906,6 +2917,26 @@
         "y": 299,
         "w": 232,
         "h": 82
+    },
+    {
+        "id": "1bba2fe1.2947e",
+        "type": "group",
+        "z": "27c430f0.58ebc",
+        "name": "",
+        "style": {
+            "fill": "#ffffbf",
+            "label": true
+        },
+        "nodes": [
+            "b461a748.541ac8",
+            "b518eb80.ad0298",
+            "732c79a1.5df9c8",
+            "8a6c9274.5e31d"
+        ],
+        "x": 634,
+        "y": 39,
+        "w": 372,
+        "h": 202
     },
     {
         "id": "d1e7d7ad.42bde8",
@@ -6282,6 +6313,7 @@
         "id": "b461a748.541ac8",
         "type": "function",
         "z": "27c430f0.58ebc",
+        "g": "1bba2fe1.2947e",
         "name": "LIGHT COMMAND ALL LIGHTS WEST",
         "func": "var result;\nvar ResultOn  = \"TURN-ALL-LIGHTS-WEST-ON\";\nvar ResultOff = \"TURN-ALL-LIGHTS-WEST-OFF\";\n\nif( msg.payload === true)\n{\n   result = ResultOn;\n}\nelse\n{\n   result = ResultOff;\n}\nmsg.payload = result;\nreturn msg;",
         "outputs": 1,
@@ -6298,6 +6330,7 @@
         "id": "b518eb80.ad0298",
         "type": "subflow:e1423e4a.93e71",
         "z": "27c430f0.58ebc",
+        "g": "1bba2fe1.2947e",
         "name": "LIGHT_WINDOW_LEDGE_WEST",
         "x": 800,
         "y": 80,
@@ -6311,6 +6344,7 @@
         "id": "732c79a1.5df9c8",
         "type": "subflow:1df46f96.bc77b",
         "z": "27c430f0.58ebc",
+        "g": "1bba2fe1.2947e",
         "name": "LIGHT_WALL_WEST",
         "x": 760,
         "y": 160,
@@ -6324,6 +6358,7 @@
         "id": "8a6c9274.5e31d",
         "type": "subflow:9e792846.0d4958",
         "z": "27c430f0.58ebc",
+        "g": "1bba2fe1.2947e",
         "name": "LIGHT_TRIANGLE_WEST",
         "x": 780,
         "y": 200,
@@ -9316,41 +9351,13 @@
         "id": "2bee3d5e.e9cf42",
         "type": "change",
         "z": "6c34888.8f9c278",
-        "name": "MakeTRUE",
+        "name": "MakePressed",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 490,
-        "y": 360,
-        "wires": [
-            [
-                "2630ad1a.c40ed2",
-                "a0a64eb0.a8015"
-            ]
-        ]
-    },
-    {
-        "id": "deb2cc33.4ccf7",
-        "type": "change",
-        "z": "6c34888.8f9c278",
-        "name": "CANCEL_AUTOOFF",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "cancel",
+                "to": "pressed",
                 "tot": "str"
             }
         ],
@@ -9359,71 +9366,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 780,
-        "y": 300,
+        "x": 500,
+        "y": 360,
         "wires": [
             [
-                "2630ad1a.c40ed2"
-            ]
-        ]
-    },
-    {
-        "id": "2630ad1a.c40ed2",
-        "type": "mytimeout",
-        "z": "6c34888.8f9c278",
-        "name": "AUTOOFF",
-        "outtopic": "control",
-        "outsafe": "",
-        "outwarning": "Warning",
-        "outunsafe": "off",
-        "warning": "1",
-        "timer": "2",
-        "debug": false,
-        "ndebug": false,
-        "ignoreCase": false,
-        "repeat": false,
-        "again": false,
-        "x": 750,
-        "y": 380,
-        "wires": [
-            [],
-            [
-                "894c34f1.03c8b8"
-            ]
-        ]
-    },
-    {
-        "id": "a0a64eb0.a8015",
-        "type": "subflow:6d480044.1d777",
-        "z": "6c34888.8f9c278",
-        "name": "GateKeeper",
-        "env": [],
-        "x": 750,
-        "y": 480,
-        "wires": [
-            [
-                "592157c0.16cd88"
-            ]
-        ]
-    },
-    {
-        "id": "592157c0.16cd88",
-        "type": "gate",
-        "z": "6c34888.8f9c278",
-        "name": "",
-        "controlTopic": "control",
-        "defaultState": "closed",
-        "openCmd": "open",
-        "closeCmd": "close",
-        "toggleCmd": "toggle",
-        "defaultCmd": "default",
-        "statusCmd": "",
-        "persist": false,
-        "x": 1110,
-        "y": 440,
-        "wires": [
-            [
-                "e6f05da7.45be"
+                "8c744f96.89db4"
             ]
         ]
     },
@@ -9456,14 +9403,14 @@
         "id": "d6cbc89d.f63348",
         "type": "change",
         "z": "6c34888.8f9c278",
-        "name": "MakeTRUE",
+        "name": "MakeReleased",
         "rules": [
             {
                 "t": "set",
-                "p": "payload.state",
+                "p": "payload",
                 "pt": "msg",
-                "to": "true",
-                "tot": "bool"
+                "to": "released",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -9471,12 +9418,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 490,
+        "x": 500,
         "y": 460,
         "wires": [
             [
-                "deb2cc33.4ccf7",
-                "592157c0.16cd88"
+                "8c744f96.89db4"
             ]
         ]
     },
@@ -9531,92 +9477,6 @@
         ]
     },
     {
-        "id": "894c34f1.03c8b8",
-        "type": "switch",
-        "z": "6c34888.8f9c278",
-        "name": "IsExpired",
-        "property": "flag",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "off",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 920,
-        "y": 380,
-        "wires": [
-            [
-                "2a767536.c4c42a"
-            ]
-        ]
-    },
-    {
-        "id": "d85a3c73.e69d8",
-        "type": "change",
-        "z": "6c34888.8f9c278",
-        "name": "MakeCLOSE",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "control",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "close",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1130,
-        "y": 380,
-        "wires": [
-            [
-                "592157c0.16cd88"
-            ]
-        ]
-    },
-    {
-        "id": "2a767536.c4c42a",
-        "type": "change",
-        "z": "6c34888.8f9c278",
-        "name": "MakeTRUE",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1010,
-        "y": 340,
-        "wires": [
-            [
-                "d85a3c73.e69d8"
-            ]
-        ]
-    },
-    {
         "id": "e6f05da7.45be",
         "type": "link out",
         "z": "6c34888.8f9c278",
@@ -9625,8 +9485,8 @@
             "4fddc827.ae1838",
             "b3ed8444.ed1538"
         ],
-        "x": 1315,
-        "y": 440,
+        "x": 955,
+        "y": 360,
         "wires": []
     },
     {
@@ -10062,5 +9922,417 @@
         "x": 1010,
         "y": 380,
         "wires": []
+    },
+    {
+        "id": "8c744f96.89db4",
+        "type": "subflow:f10f58ea.a676f8",
+        "z": "6c34888.8f9c278",
+        "name": "TIMEDBUTTON",
+        "env": [],
+        "x": 770,
+        "y": 400,
+        "wires": [
+            [
+                "e6f05da7.45be"
+            ],
+            [
+                "1686b10a.07014f"
+            ]
+        ]
+    },
+    {
+        "id": "105803e6.d8882c",
+        "type": "change",
+        "z": "439be944.edbf68",
+        "name": "CANCEL_AUTOOFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "cancel",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 560,
+        "wires": [
+            [
+                "ee051dc6.b119d"
+            ]
+        ]
+    },
+    {
+        "id": "ee051dc6.b119d",
+        "type": "mytimeout",
+        "z": "439be944.edbf68",
+        "name": "AUTOOFF",
+        "outtopic": "control",
+        "outsafe": "",
+        "outwarning": "Warning",
+        "outunsafe": "off",
+        "warning": "1",
+        "timer": "2",
+        "debug": false,
+        "ndebug": false,
+        "ignoreCase": false,
+        "repeat": false,
+        "again": false,
+        "x": 850,
+        "y": 560,
+        "wires": [
+            [],
+            [
+                "aef4f46d.7408b8"
+            ]
+        ]
+    },
+    {
+        "id": "c033b07d.1d6ee",
+        "type": "subflow:6d480044.1d777",
+        "z": "439be944.edbf68",
+        "name": "GateKeeper",
+        "env": [],
+        "x": 1090,
+        "y": 480,
+        "wires": [
+            [
+                "585676ed.694278"
+            ]
+        ]
+    },
+    {
+        "id": "585676ed.694278",
+        "type": "gate",
+        "z": "439be944.edbf68",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "closed",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "",
+        "persist": false,
+        "x": 1250,
+        "y": 660,
+        "wires": [
+            [
+                "b2002310.62adf"
+            ]
+        ]
+    },
+    {
+        "id": "aef4f46d.7408b8",
+        "type": "switch",
+        "z": "439be944.edbf68",
+        "name": "IsExpired",
+        "property": "flag",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1040,
+        "y": 540,
+        "wires": [
+            [
+                "5fbdc516.64a3dc"
+            ]
+        ]
+    },
+    {
+        "id": "7bab6b1a.977a54",
+        "type": "change",
+        "z": "439be944.edbf68",
+        "name": "MakeCLOSE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "control",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "close",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 620,
+        "wires": [
+            [
+                "585676ed.694278"
+            ]
+        ]
+    },
+    {
+        "id": "5fbdc516.64a3dc",
+        "type": "change",
+        "z": "439be944.edbf68",
+        "name": "MakeTRUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 580,
+        "wires": [
+            [
+                "7bab6b1a.977a54"
+            ]
+        ]
+    },
+    {
+        "id": "954625b.7c682d8",
+        "type": "switch",
+        "z": "439be944.edbf68",
+        "name": "IsButtonPressed",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "pressed",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 500,
+        "wires": [
+            [
+                "18f0a09d.19689f"
+            ]
+        ]
+    },
+    {
+        "id": "18f0a09d.19689f",
+        "type": "change",
+        "z": "439be944.edbf68",
+        "name": "MakeTRUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 500,
+        "wires": [
+            [
+                "c033b07d.1d6ee",
+                "a65c217b.5fc57"
+            ]
+        ]
+    },
+    {
+        "id": "3ac9a857.9ffad8",
+        "type": "switch",
+        "z": "439be944.edbf68",
+        "name": "IsButtonReleased",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "released",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 660,
+        "wires": [
+            [
+                "21169407.3e051c"
+            ]
+        ]
+    },
+    {
+        "id": "21169407.3e051c",
+        "type": "change",
+        "z": "439be944.edbf68",
+        "name": "MakeTRUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 660,
+        "wires": [
+            [
+                "105803e6.d8882c",
+                "585676ed.694278"
+            ]
+        ]
+    },
+    {
+        "id": "a65c217b.5fc57",
+        "type": "function",
+        "z": "439be944.edbf68",
+        "name": "TIMEOUT",
+        "func": "msg.timeout = env.get('DELAY_TIME_PRESSED');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 760,
+        "y": 520,
+        "wires": [
+            [
+                "ee051dc6.b119d"
+            ]
+        ]
+    },
+    {
+        "id": "57e293a1.f8e80c",
+        "type": "inject",
+        "z": "439be944.edbf68",
+        "name": "PRESSED",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "pressed",
+        "payloadType": "str",
+        "x": 260,
+        "y": 520,
+        "wires": [
+            [
+                "954625b.7c682d8"
+            ]
+        ]
+    },
+    {
+        "id": "14fb29cb.76cc86",
+        "type": "inject",
+        "z": "439be944.edbf68",
+        "name": "RELEASED",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "released",
+        "payloadType": "str",
+        "x": 250,
+        "y": 660,
+        "wires": [
+            [
+                "3ac9a857.9ffad8"
+            ]
+        ]
+    },
+    {
+        "id": "b2002310.62adf",
+        "type": "debug",
+        "z": "439be944.edbf68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1310,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "1686b10a.07014f",
+        "type": "link out",
+        "z": "6c34888.8f9c278",
+        "name": "LIVINGROOM_ON",
+        "links": [
+            "d6b20002.34f7"
+        ],
+        "x": 925,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d6b20002.34f7",
+        "type": "link in",
+        "z": "7fa0f8f.5a71708",
+        "name": "TO_LIVINGROOM_ON",
+        "links": [
+            "1686b10a.07014f"
+        ],
+        "x": 725,
+        "y": 640,
+        "wires": [
+            [
+                "419fc6fa.d20eb8",
+                "1f08d9ae.1ea606",
+                "a030b27e.8deae",
+                "8902ca66.b29778"
+            ]
+        ]
     }
 ]
