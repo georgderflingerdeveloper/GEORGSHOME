@@ -2585,9 +2585,7 @@
             "48611f94.4d494"
         ],
         "x": 339,
-        "y": 19,
-        "w": 577,
-        "h": 222
+        "y": 19
     },
     {
         "id": "e045aa73.92a308",
@@ -2713,9 +2711,7 @@
             "39b8623a.a0dfae"
         ],
         "x": 234,
-        "y": 79,
-        "w": 702,
-        "h": 302
+        "y": 79
     },
     {
         "id": "11412ff.7fe6dd",
@@ -2729,8 +2725,8 @@
         "nodes": [
             "9c379a22.13de68"
         ],
-        "x": 174,
-        "y": 479,
+        "x": 134,
+        "y": 699,
         "w": 212,
         "h": 82
     },
@@ -2746,8 +2742,8 @@
         "nodes": [
             "8a30080c.f573b8"
         ],
-        "x": 174,
-        "y": 859,
+        "x": 134,
+        "y": 1079,
         "w": 212,
         "h": 82
     },
@@ -2763,8 +2759,8 @@
         "nodes": [
             "2ce69d42.42add2"
         ],
-        "x": 1594,
-        "y": 439,
+        "x": 1554,
+        "y": 659,
         "w": 212,
         "h": 82
     },
@@ -2784,7 +2780,7 @@
             "c9e06b00.0cd268",
             "115cef24.ed8421"
         ],
-        "x": 4,
+        "x": 164,
         "y": 99,
         "w": 1222,
         "h": 142
@@ -2801,8 +2797,8 @@
         "nodes": [
             "44b7d67f.c34f98"
         ],
-        "x": 174,
-        "y": 1019,
+        "x": 134,
+        "y": 1239,
         "w": 212,
         "h": 82
     },
@@ -2820,9 +2816,26 @@
             "1eb5de2b.92b0b2",
             "fbeefdb2.6805c"
         ],
-        "x": 474,
-        "y": 1019,
+        "x": 434,
+        "y": 1239,
         "w": 632,
+        "h": 82
+    },
+    {
+        "id": "66be4139.b7eb8",
+        "type": "group",
+        "z": "6c34888.8f9c278",
+        "name": "REMOTE BUTTON",
+        "style": {
+            "fill": "#bfc7d7",
+            "label": true
+        },
+        "nodes": [
+            "faa630ff.2863"
+        ],
+        "x": 154,
+        "y": 319,
+        "w": 232,
         "h": 82
     },
     {
@@ -7892,7 +7905,7 @@
         "debug": false,
         "LEDCurrentLimit": 0.02,
         "LEDForwardVoltage": "1",
-        "x": 1110,
+        "x": 1270,
         "y": 160,
         "wires": [
             []
@@ -7937,7 +7950,7 @@
         "g": "fb8faace.0a2d48",
         "name": "DIGOUT_ON_TRUE",
         "env": [],
-        "x": 820,
+        "x": 980,
         "y": 140,
         "wires": [
             [
@@ -7993,6 +8006,7 @@
         "id": "9eb805e.1add8f8",
         "type": "inject",
         "z": "6c34888.8f9c278",
+        "d": true,
         "g": "fb8faace.0a2d48",
         "name": "",
         "props": [
@@ -8007,7 +8021,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 100,
+        "x": 260,
         "y": 140,
         "wires": [
             [
@@ -8022,7 +8036,7 @@
         "g": "fb8faace.0a2d48",
         "name": "Blinker",
         "blinkfrequency": "500",
-        "x": 460,
+        "x": 620,
         "y": 140,
         "wires": [
             [
@@ -8061,7 +8075,7 @@
         "port": "5661",
         "hostname": "localhost",
         "debug": false,
-        "x": 150,
+        "x": 230,
         "y": 60,
         "wires": [
             [
@@ -8082,7 +8096,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 410,
+        "x": 490,
         "y": 60,
         "wires": []
     },
@@ -8109,8 +8123,8 @@
         "offvalueType": "bool",
         "officon": "fa-3x fa-lightbulb-o",
         "offcolor": "gray",
-        "x": 1690,
-        "y": 380,
+        "x": 1630,
+        "y": 620,
         "wires": [
             []
         ]
@@ -8122,7 +8136,7 @@
         "g": "fb8faace.0a2d48",
         "name": "DIGOUT_OFF_FALSE",
         "env": [],
-        "x": 820,
+        "x": 980,
         "y": 200,
         "wires": [
             [
@@ -8160,8 +8174,8 @@
         "z": "6c34888.8f9c278",
         "name": "DIG_OUT_ON_OFF",
         "env": [],
-        "x": 1420,
-        "y": 480,
+        "x": 1380,
+        "y": 700,
         "wires": [
             [
                 "2ce69d42.42add2"
@@ -8180,8 +8194,8 @@
         "debug": false,
         "LEDCurrentLimit": 0.02,
         "LEDForwardVoltage": "1",
-        "x": 1700,
-        "y": 480,
+        "x": 1660,
+        "y": 700,
         "wires": [
             []
         ]
@@ -8319,8 +8333,8 @@
         "sendInitialState": false,
         "sendStateWithoutChange": true,
         "showTransitionErrors": true,
-        "x": 870,
-        "y": 520,
+        "x": 830,
+        "y": 740,
         "wires": [
             [
                 "32aec383.825a6c",
@@ -8348,8 +8362,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
-        "y": 520,
+        "x": 650,
+        "y": 740,
         "wires": [
             [
                 "fe7dcc1d.c27a7"
@@ -8462,8 +8476,8 @@
         "z": "6c34888.8f9c278",
         "name": "STATE2BOOL",
         "env": [],
-        "x": 1100,
-        "y": 460,
+        "x": 1060,
+        "y": 680,
         "wires": [
             [
                 "8171c9c8.f2a438",
@@ -8489,8 +8503,8 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "",
-        "x": 240,
-        "y": 720,
+        "x": 200,
+        "y": 940,
         "wires": [
             [
                 "1d86c2f9.31e54d",
@@ -8510,8 +8524,8 @@
         "debug": false,
         "inputMode": 1,
         "powerSupply": 1,
-        "x": 280,
-        "y": 520,
+        "x": 240,
+        "y": 740,
         "wires": [
             [
                 "38ed9d18.281cf2",
@@ -8534,8 +8548,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 480,
-        "y": 520,
+        "x": 440,
+        "y": 740,
         "wires": [
             [
                 "1d86c2f9.31e54d",
@@ -8604,8 +8618,8 @@
         "z": "6c34888.8f9c278",
         "name": "SUB_TOGGLE",
         "env": [],
-        "x": 480,
-        "y": 720,
+        "x": 440,
+        "y": 940,
         "wires": [
             [
                 "b5d864.3f55f7a"
@@ -8628,8 +8642,8 @@
         "ignoreCase": false,
         "repeat": false,
         "again": false,
-        "x": 970,
-        "y": 720,
+        "x": 930,
+        "y": 940,
         "wires": [
             [],
             [
@@ -8654,8 +8668,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1140,
-        "y": 700,
+        "x": 1100,
+        "y": 920,
         "wires": [
             [
                 "d84fd8ed.94b358"
@@ -8681,8 +8695,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1350,
-        "y": 740,
+        "x": 1310,
+        "y": 960,
         "wires": [
             [
                 "1d86c2f9.31e54d"
@@ -8706,8 +8720,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1070,
-        "y": 520,
+        "x": 1030,
+        "y": 740,
         "wires": [
             [
                 "692d4eb3.a9efd"
@@ -8733,8 +8747,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1250,
-        "y": 520,
+        "x": 1210,
+        "y": 740,
         "wires": [
             [
                 "29794107.f322ce"
@@ -8758,8 +8772,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1070,
-        "y": 560,
+        "x": 1030,
+        "y": 780,
         "wires": [
             [
                 "225324b1.859f8c"
@@ -8785,8 +8799,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1080,
-        "y": 600,
+        "x": 1040,
+        "y": 820,
         "wires": [
             [
                 "29794107.f322ce",
@@ -8813,8 +8827,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 720,
+        "x": 700,
+        "y": 940,
         "wires": [
             [
                 "29794107.f322ce"
@@ -8827,8 +8841,8 @@
         "z": "6c34888.8f9c278",
         "name": "",
         "env": [],
-        "x": 830,
-        "y": 900,
+        "x": 790,
+        "y": 1120,
         "wires": [
             [
                 "79edd7d9.504c38"
@@ -8847,8 +8861,8 @@
         "toggleCmd": "toggle",
         "defaultCmd": "default",
         "persist": false,
-        "x": 990,
-        "y": 900,
+        "x": 950,
+        "y": 1120,
         "wires": [
             [
                 "29794107.f322ce"
@@ -8874,8 +8888,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1330,
-        "y": 600,
+        "x": 1290,
+        "y": 820,
         "wires": [
             [
                 "904c2d97.16243"
@@ -8901,8 +8915,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
-        "y": 900,
+        "x": 590,
+        "y": 1120,
         "wires": [
             [
                 "904c2d97.16243"
@@ -9019,8 +9033,8 @@
         "debug": false,
         "inputMode": 1,
         "powerSupply": 1,
-        "x": 280,
-        "y": 900,
+        "x": 240,
+        "y": 1120,
         "wires": [
             [
                 "9ca05382.134ba"
@@ -9042,8 +9056,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 480,
-        "y": 900,
+        "x": 440,
+        "y": 1120,
         "wires": [
             [
                 "4fbe2df4.58d0b4"
@@ -9056,8 +9070,8 @@
         "z": "6c34888.8f9c278",
         "name": "AUTO OFF",
         "info": "Cancel automatic off\n- when using dashboard\n- when light control is off",
-        "x": 950,
-        "y": 680,
+        "x": 910,
+        "y": 900,
         "wires": []
     },
     {
@@ -9071,8 +9085,8 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 860,
-        "y": 1060,
+        "x": 820,
+        "y": 1280,
         "wires": [
             [
                 "7495e500.290dcc"
@@ -9088,8 +9102,8 @@
         "group": "d8bce319.63fd",
         "voice": "",
         "always": true,
-        "x": 1020,
-        "y": 1060,
+        "x": 980,
+        "y": 1280,
         "wires": []
     },
     {
@@ -9112,8 +9126,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 710,
-        "y": 1060,
+        "x": 670,
+        "y": 1280,
         "wires": [
             [
                 "db2d219.a627be"
@@ -9136,8 +9150,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 560,
-        "y": 1060,
+        "x": 520,
+        "y": 1280,
         "wires": [
             [
                 "1eb5de2b.92b0b2"
@@ -9156,8 +9170,8 @@
         "debug": false,
         "inputMode": 1,
         "powerSupply": 1,
-        "x": 280,
-        "y": 1060,
+        "x": 240,
+        "y": 1280,
         "wires": [
             [
                 "fbeefdb2.6805c"
@@ -9179,8 +9193,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 480,
-        "y": 460,
+        "x": 440,
+        "y": 680,
         "wires": [
             [
                 "8361c80d.817828"
@@ -9200,44 +9214,403 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 630,
-        "y": 460,
+        "x": 590,
+        "y": 680,
         "wires": []
     },
     {
         "id": "faa630ff.2863",
         "type": "udp in",
         "z": "6c34888.8f9c278",
+        "g": "66be4139.b7eb8",
         "name": "REMOTE_BUTTON",
         "iface": "",
         "port": "5020",
         "ipv": "udp4",
         "multicast": "false",
         "group": "192.168.0.255",
-        "datatype": "buffer",
-        "x": 290,
+        "datatype": "utf8",
+        "x": 270,
         "y": 360,
         "wires": [
             [
-                "b6830bb7.ff2bf8"
+                "1b6b9621.927b0a",
+                "96ee993d.118b08"
             ]
         ]
     },
     {
-        "id": "b6830bb7.ff2bf8",
-        "type": "debug",
+        "id": "1b6b9621.927b0a",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "name": "IsButtonPressed",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "_3_True",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 340,
+        "wires": [
+            [
+                "2bee3d5e.e9cf42"
+            ]
+        ]
+    },
+    {
+        "id": "2bee3d5e.e9cf42",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "MakeTRUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 380,
+        "wires": [
+            [
+                "2630ad1a.c40ed2",
+                "a0a64eb0.a8015"
+            ]
+        ]
+    },
+    {
+        "id": "deb2cc33.4ccf7",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "CANCEL_AUTOOFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "cancel",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 300,
+        "wires": [
+            [
+                "2630ad1a.c40ed2"
+            ]
+        ]
+    },
+    {
+        "id": "2630ad1a.c40ed2",
+        "type": "mytimeout",
+        "z": "6c34888.8f9c278",
+        "name": "AUTOOFF",
+        "outtopic": "control",
+        "outsafe": "",
+        "outwarning": "Warning",
+        "outunsafe": "off",
+        "warning": "1",
+        "timer": "2",
+        "debug": false,
+        "ndebug": false,
+        "ignoreCase": false,
+        "repeat": false,
+        "again": false,
+        "x": 750,
+        "y": 380,
+        "wires": [
+            [],
+            [
+                "894c34f1.03c8b8"
+            ]
+        ]
+    },
+    {
+        "id": "a0a64eb0.a8015",
+        "type": "subflow:6d480044.1d777",
         "z": "6c34888.8f9c278",
         "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 550,
-        "y": 360,
+        "env": [],
+        "x": 770,
+        "y": 480,
+        "wires": [
+            [
+                "592157c0.16cd88"
+            ]
+        ]
+    },
+    {
+        "id": "592157c0.16cd88",
+        "type": "gate",
+        "z": "6c34888.8f9c278",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "closed",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "",
+        "persist": false,
+        "x": 1250,
+        "y": 420,
+        "wires": [
+            [
+                "e6f05da7.45be"
+            ]
+        ]
+    },
+    {
+        "id": "96ee993d.118b08",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "name": "IsButtonReleased",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "_3_False",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 420,
+        "wires": [
+            [
+                "d6cbc89d.f63348"
+            ]
+        ]
+    },
+    {
+        "id": "d6cbc89d.f63348",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "MakeTRUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.state",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 460,
+        "wires": [
+            [
+                "deb2cc33.4ccf7",
+                "592157c0.16cd88"
+            ]
+        ]
+    },
+    {
+        "id": "4010c0c.e365c4",
+        "type": "inject",
+        "z": "6c34888.8f9c278",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "_3_True",
+        "payloadType": "str",
+        "x": 280,
+        "y": 420,
+        "wires": [
+            [
+                "1b6b9621.927b0a"
+            ]
+        ]
+    },
+    {
+        "id": "76475fd6.a183e",
+        "type": "inject",
+        "z": "6c34888.8f9c278",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "_3_False",
+        "payloadType": "str",
+        "x": 280,
+        "y": 460,
+        "wires": [
+            [
+                "96ee993d.118b08"
+            ]
+        ]
+    },
+    {
+        "id": "894c34f1.03c8b8",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "name": "IsExpired",
+        "property": "flag",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 900,
+        "y": 400,
+        "wires": [
+            [
+                "2a767536.c4c42a"
+            ]
+        ]
+    },
+    {
+        "id": "d85a3c73.e69d8",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "MakeCLOSE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "control",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "close",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 300,
+        "wires": [
+            [
+                "592157c0.16cd88"
+            ]
+        ]
+    },
+    {
+        "id": "2a767536.c4c42a",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "MakeTRUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 340,
+        "wires": [
+            [
+                "d85a3c73.e69d8"
+            ]
+        ]
+    },
+    {
+        "id": "e6f05da7.45be",
+        "type": "link out",
+        "z": "6c34888.8f9c278",
+        "name": "TO_AUTO_OFF",
+        "links": [
+            "4fddc827.ae1838",
+            "b3ed8444.ed1538"
+        ],
+        "x": 1365,
+        "y": 420,
         "wires": []
+    },
+    {
+        "id": "4fddc827.ae1838",
+        "type": "link in",
+        "z": "6c34888.8f9c278",
+        "name": "AUTO_OFF",
+        "links": [
+            "e6f05da7.45be"
+        ],
+        "x": 365,
+        "y": 1020,
+        "wires": [
+            [
+                "4fbe2df4.58d0b4"
+            ]
+        ]
+    },
+    {
+        "id": "b3ed8444.ed1538",
+        "type": "link in",
+        "z": "6c34888.8f9c278",
+        "name": "AUTO_OFF",
+        "links": [
+            "e6f05da7.45be"
+        ],
+        "x": 575,
+        "y": 620,
+        "wires": [
+            [
+                "1d86c2f9.31e54d"
+            ]
+        ]
     }
 ]
