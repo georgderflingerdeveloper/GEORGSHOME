@@ -2333,7 +2333,9 @@
             "e6986e20.446ed"
         ],
         "x": 2174,
-        "y": 39
+        "y": 39,
+        "w": 392,
+        "h": 82
     },
     {
         "id": "78be8f10.9c6a",
@@ -2372,7 +2374,9 @@
             "7b20a57f.06ad1c"
         ],
         "x": 1434,
-        "y": 379
+        "y": 379,
+        "w": 322,
+        "h": 202
     },
     {
         "id": "9001a100.f2e51",
@@ -2466,7 +2470,9 @@
             "7aceb02d.3c6a8"
         ],
         "x": 2074,
-        "y": 619
+        "y": 619,
+        "w": 82,
+        "h": 442
     },
     {
         "id": "51fcd714.99f798",
@@ -2601,7 +2607,9 @@
             "8902ca66.b29778"
         ],
         "x": 1274,
-        "y": 399
+        "y": 399,
+        "w": 82,
+        "h": 382
     },
     {
         "id": "fc7cd29.614f63",
@@ -2620,7 +2628,9 @@
             "2ef3deb7.89c4c2"
         ],
         "x": 1534,
-        "y": 59
+        "y": 59,
+        "w": 352,
+        "h": 282
     },
     {
         "id": "d25553b5.e1268",
@@ -2638,7 +2648,9 @@
             "71ee541a.3a062c"
         ],
         "x": 674,
-        "y": 119
+        "y": 119,
+        "w": 327,
+        "h": 382
     },
     {
         "id": "c5095565.7f4e28",
@@ -2654,7 +2666,9 @@
             "d3afa9e1.b3b358"
         ],
         "x": 974,
-        "y": 699
+        "y": 699,
+        "w": 232,
+        "h": 242
     },
     {
         "id": "f9ff8461.417b58",
@@ -2748,6 +2762,63 @@
         "x": 1594,
         "y": 439,
         "w": 212,
+        "h": 82
+    },
+    {
+        "id": "fb8faace.0a2d48",
+        "type": "group",
+        "z": "6c34888.8f9c278",
+        "name": "ALIFE",
+        "style": {
+            "fill": "#ffffbf",
+            "label": true
+        },
+        "nodes": [
+            "2e7140a0.29fda",
+            "7bb77c9c.12e3e4",
+            "9eb805e.1add8f8",
+            "c9e06b00.0cd268",
+            "115cef24.ed8421"
+        ],
+        "x": 4,
+        "y": 99,
+        "w": 1222,
+        "h": 142
+    },
+    {
+        "id": "80dd15cd.c27898",
+        "type": "group",
+        "z": "6c34888.8f9c278",
+        "name": "BELL BUTTON",
+        "style": {
+            "label": true,
+            "fill": "#e3f3d3"
+        },
+        "nodes": [
+            "44b7d67f.c34f98"
+        ],
+        "x": 174,
+        "y": 1019,
+        "w": 212,
+        "h": 82
+    },
+    {
+        "id": "e76d5a04.689508",
+        "type": "group",
+        "z": "6c34888.8f9c278",
+        "name": "BELL",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "db2d219.a627be",
+            "7495e500.290dcc",
+            "1eb5de2b.92b0b2",
+            "fbeefdb2.6805c"
+        ],
+        "x": 474,
+        "y": 1019,
+        "w": 632,
         "h": 82
     },
     {
@@ -3224,6 +3295,20 @@
         "disp": true,
         "width": "6",
         "collapse": true
+    },
+    {
+        "id": "78ad82e4.622fac",
+        "type": "alexa-home-conf",
+        "username": "georgderflinger"
+    },
+    {
+        "id": "d416729b.f81b4",
+        "type": "chatbot-alexa-node",
+        "botname": "georgsbot",
+        "usernames": "georg",
+        "store": "",
+        "log": "",
+        "debug": false
     },
     {
         "id": "5e8c7091.07116",
@@ -7804,6 +7889,7 @@
         "id": "2e7140a0.29fda",
         "type": "phidget22-digitaloutput",
         "z": "6c34888.8f9c278",
+        "g": "fb8faace.0a2d48",
         "channel": "15",
         "deviceSerialNumber": "311883",
         "isHubPortDevice": false,
@@ -7853,6 +7939,7 @@
         "id": "7bb77c9c.12e3e4",
         "type": "subflow:737cfbd.2ae9804",
         "z": "6c34888.8f9c278",
+        "g": "fb8faace.0a2d48",
         "name": "DIGOUT_ON_TRUE",
         "env": [],
         "x": 820,
@@ -7911,6 +7998,7 @@
         "id": "9eb805e.1add8f8",
         "type": "inject",
         "z": "6c34888.8f9c278",
+        "g": "fb8faace.0a2d48",
         "name": "",
         "props": [
             {
@@ -7936,6 +8024,7 @@
         "id": "c9e06b00.0cd268",
         "type": "BlinkerUltimate",
         "z": "6c34888.8f9c278",
+        "g": "fb8faace.0a2d48",
         "name": "Blinker",
         "blinkfrequency": "500",
         "x": 460,
@@ -7977,7 +8066,7 @@
         "port": "5661",
         "hostname": "localhost",
         "debug": false,
-        "x": 110,
+        "x": 150,
         "y": 60,
         "wires": [
             [
@@ -8035,6 +8124,7 @@
         "id": "115cef24.ed8421",
         "type": "subflow:504919b5.c2e038",
         "z": "6c34888.8f9c278",
+        "g": "fb8faace.0a2d48",
         "name": "DIGOUT_OFF_FALSE",
         "env": [],
         "x": 820,
@@ -8429,7 +8519,8 @@
         "y": 520,
         "wires": [
             [
-                "38ed9d18.281cf2"
+                "38ed9d18.281cf2",
+                "f89eaf36.8df32"
             ]
         ]
     },
@@ -8453,7 +8544,8 @@
         "wires": [
             [
                 "1d86c2f9.31e54d",
-                "4fbe2df4.58d0b4"
+                "4fbe2df4.58d0b4",
+                "1eb5de2b.92b0b2"
             ]
         ]
     },
@@ -8971,6 +9063,186 @@
         "info": "Cancel automatic off\n- when using dashboard\n- when light control is off",
         "x": 950,
         "y": 680,
+        "wires": []
+    },
+    {
+        "id": "db2d219.a627be",
+        "type": "file in",
+        "z": "6c34888.8f9c278",
+        "g": "e76d5a04.689508",
+        "name": "SOUND",
+        "filename": ".node-red\\soundfiles_\\bell01.mp3",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 860,
+        "y": 1060,
+        "wires": [
+            [
+                "7495e500.290dcc"
+            ]
+        ]
+    },
+    {
+        "id": "7495e500.290dcc",
+        "type": "ui_audio",
+        "z": "6c34888.8f9c278",
+        "g": "e76d5a04.689508",
+        "name": "",
+        "group": "d8bce319.63fd",
+        "voice": "",
+        "always": true,
+        "x": 1020,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "1eb5de2b.92b0b2",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "g": "e76d5a04.689508",
+        "name": "TRUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 1060,
+        "wires": [
+            [
+                "db2d219.a627be"
+            ]
+        ]
+    },
+    {
+        "id": "fbeefdb2.6805c",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "g": "e76d5a04.689508",
+        "name": "IsTRUE",
+        "property": "payload.state",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 560,
+        "y": 1060,
+        "wires": [
+            [
+                "1eb5de2b.92b0b2"
+            ]
+        ]
+    },
+    {
+        "id": "44b7d67f.c34f98",
+        "type": "phidget22-digitalinput",
+        "z": "6c34888.8f9c278",
+        "g": "80dd15cd.c27898",
+        "channel": "2",
+        "deviceSerialNumber": "311883",
+        "isHubPortDevice": false,
+        "hubPort": 0,
+        "debug": false,
+        "inputMode": 1,
+        "powerSupply": 1,
+        "x": 280,
+        "y": 1060,
+        "wires": [
+            [
+                "fbeefdb2.6805c"
+            ]
+        ]
+    },
+    {
+        "id": "f89eaf36.8df32",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "name": "IsFALSE",
+        "property": "payload.state",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 480,
+        "y": 460,
+        "wires": [
+            [
+                "8361c80d.817828"
+            ]
+        ]
+    },
+    {
+        "id": "8361c80d.817828",
+        "type": "debug",
+        "z": "6c34888.8f9c278",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "faa630ff.2863",
+        "type": "udp in",
+        "z": "6c34888.8f9c278",
+        "name": "REMOTE_BUTTON",
+        "iface": "",
+        "port": "5020",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "192.168.0.255",
+        "datatype": "buffer",
+        "x": 290,
+        "y": 360,
+        "wires": [
+            [
+                "b6830bb7.ff2bf8"
+            ]
+        ]
+    },
+    {
+        "id": "b6830bb7.ff2bf8",
+        "type": "debug",
+        "z": "6c34888.8f9c278",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 360,
         "wires": []
     }
 ]
