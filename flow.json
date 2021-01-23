@@ -2585,7 +2585,9 @@
             "48611f94.4d494"
         ],
         "x": 339,
-        "y": 19
+        "y": 19,
+        "w": 577,
+        "h": 222
     },
     {
         "id": "e045aa73.92a308",
@@ -2711,7 +2713,9 @@
             "39b8623a.a0dfae"
         ],
         "x": 234,
-        "y": 79
+        "y": 79,
+        "w": 702,
+        "h": 302
     },
     {
         "id": "11412ff.7fe6dd",
@@ -3300,15 +3304,6 @@
         "id": "78ad82e4.622fac",
         "type": "alexa-home-conf",
         "username": "georgderflinger"
-    },
-    {
-        "id": "d416729b.f81b4",
-        "type": "chatbot-alexa-node",
-        "botname": "georgsbot",
-        "usernames": "georg",
-        "store": "",
-        "log": "",
-        "debug": false
     },
     {
         "id": "5e8c7091.07116",
