@@ -2931,6 +2931,44 @@
         "h": 302
     },
     {
+        "id": "b5e6f8f3.3d4d28",
+        "type": "group",
+        "z": "6c34888.8f9c278",
+        "name": "RESET",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "ce54f186.36d16",
+            "8ba7a9f0.071118"
+        ],
+        "x": 394,
+        "y": 479,
+        "w": 392,
+        "h": 122
+    },
+    {
+        "id": "df4a2f2b.bf53a",
+        "type": "group",
+        "z": "6c34888.8f9c278",
+        "name": "GROUP SWITCH",
+        "style": {
+            "fill": "#ffffbf",
+            "label": true
+        },
+        "nodes": [
+            "1b6b9621.927b0a",
+            "2bee3d5e.e9cf42",
+            "96ee993d.118b08",
+            "d6cbc89d.f63348"
+        ],
+        "x": 414,
+        "y": 259,
+        "w": 292,
+        "h": 202
+    },
+    {
         "id": "d1e7d7ad.42bde8",
         "type": "ui_group",
         "name": "HAUPTSTEUERUNG",
@@ -9310,7 +9348,8 @@
         "wires": [
             [
                 "1b6b9621.927b0a",
-                "96ee993d.118b08"
+                "96ee993d.118b08",
+                "ce54f186.36d16"
             ]
         ]
     },
@@ -9318,7 +9357,8 @@
         "id": "1b6b9621.927b0a",
         "type": "switch",
         "z": "6c34888.8f9c278",
-        "name": "IsButtonPressed",
+        "g": "df4a2f2b.bf53a",
+        "name": "IsUpperButtonRightPressed",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
@@ -9331,7 +9371,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 500,
+        "x": 560,
         "y": 300,
         "wires": [
             [
@@ -9343,6 +9383,7 @@
         "id": "2bee3d5e.e9cf42",
         "type": "change",
         "z": "6c34888.8f9c278",
+        "g": "df4a2f2b.bf53a",
         "name": "MakePressed",
         "rules": [
             {
@@ -9358,8 +9399,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 500,
-        "y": 360,
+        "x": 520,
+        "y": 340,
         "wires": [
             [
                 "8c744f96.89db4"
@@ -9370,7 +9411,8 @@
         "id": "96ee993d.118b08",
         "type": "switch",
         "z": "6c34888.8f9c278",
-        "name": "IsButtonReleased",
+        "g": "df4a2f2b.bf53a",
+        "name": "IsUpperButtonRightReleased",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
@@ -9383,8 +9425,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 510,
-        "y": 400,
+        "x": 560,
+        "y": 380,
         "wires": [
             [
                 "d6cbc89d.f63348"
@@ -9395,6 +9437,7 @@
         "id": "d6cbc89d.f63348",
         "type": "change",
         "z": "6c34888.8f9c278",
+        "g": "df4a2f2b.bf53a",
         "name": "MakeReleased",
         "rules": [
             {
@@ -9410,8 +9453,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 500,
-        "y": 460,
+        "x": 520,
+        "y": 420,
         "wires": [
             [
                 "8c744f96.89db4"
@@ -9477,7 +9520,7 @@
             "4fddc827.ae1838",
             "b3ed8444.ed1538"
         ],
-        "x": 955,
+        "x": 1075,
         "y": 360,
         "wires": []
     },
@@ -9505,8 +9548,8 @@
         "links": [
             "e6f05da7.45be"
         ],
-        "x": 575,
-        "y": 620,
+        "x": 615,
+        "y": 660,
         "wires": [
             [
                 "1d86c2f9.31e54d"
@@ -9919,7 +9962,7 @@
         "id": "8c744f96.89db4",
         "type": "subflow:f10f58ea.a676f8",
         "z": "6c34888.8f9c278",
-        "name": "TIMEDBUTTON",
+        "name": "TIMEDBUTTON_CONTROL",
         "env": [
             {
                 "name": "DELAY_TIME_PRESSED",
@@ -9927,8 +9970,8 @@
                 "type": "num"
             }
         ],
-        "x": 770,
-        "y": 400,
+        "x": 900,
+        "y": 360,
         "wires": [
             [
                 "e6f05da7.45be"
@@ -10310,7 +10353,7 @@
         "links": [
             "d6b20002.34f7"
         ],
-        "x": 975,
+        "x": 1075,
         "y": 460,
         "wires": []
     },
@@ -10339,7 +10382,7 @@
         "z": "6c34888.8f9c278",
         "name": "Toggle",
         "env": [],
-        "x": 870,
+        "x": 970,
         "y": 460,
         "wires": [
             [
@@ -10353,7 +10396,7 @@
         "z": "6c34888.8f9c278",
         "name": "GROUP CONTROL",
         "info": "turn a group of lights on /off",
-        "x": 1010,
+        "x": 1130,
         "y": 420,
         "wires": []
     },
@@ -10868,7 +10911,7 @@
         "type": "change",
         "z": "439be944.edbf68",
         "g": "1741a4d0.5b250b",
-        "name": "",
+        "name": "RESET",
         "rules": [
             {
                 "t": "set",
@@ -10883,7 +10926,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
+        "x": 420,
         "y": 1420,
         "wires": [
             [
@@ -10964,6 +11007,85 @@
         "wires": [
             [
                 "4fe2fc78.5469f4"
+            ]
+        ]
+    },
+    {
+        "id": "ce54f186.36d16",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "g": "b5e6f8f3.3d4d28",
+        "name": "IsLowerButtonRightPressed",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "_0_True",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 540,
+        "y": 520,
+        "wires": [
+            [
+                "8ba7a9f0.071118"
+            ]
+        ]
+    },
+    {
+        "id": "8ba7a9f0.071118",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "g": "b5e6f8f3.3d4d28",
+        "name": "RESET",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "reset",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 560,
+        "wires": [
+            [
+                "ea742d77.cedb1"
+            ]
+        ]
+    },
+    {
+        "id": "1141d0c0.7cab8f",
+        "type": "inject",
+        "z": "6c34888.8f9c278",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "_0_True",
+        "payloadType": "str",
+        "x": 280,
+        "y": 500,
+        "wires": [
+            [
+                "ce54f186.36d16"
             ]
         ]
     }
