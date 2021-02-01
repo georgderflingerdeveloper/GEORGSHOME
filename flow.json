@@ -2384,9 +2384,7 @@
             "7211dc16.1b3594"
         ],
         "x": 274,
-        "y": 19,
-        "w": 812,
-        "h": 82
+        "y": 19
     },
     {
         "id": "72d4b200.765e6",
@@ -2424,9 +2422,7 @@
             "4492de44.c8d9a"
         ],
         "x": 374,
-        "y": 39,
-        "w": 382,
-        "h": 262
+        "y": 39
     },
     {
         "id": "5a7f9765.d3d118",
@@ -2470,12 +2466,16 @@
             "50acef78.9240b",
             "b1c3add6.32e6",
             "866dd405.c142b8",
-            "c0651433.0a86f8"
+            "c0651433.0a86f8",
+            "782ddbd3.816fd4",
+            "82920477.19ba58",
+            "6a8fb4d3.e6458c",
+            "cd590f55.9db66",
+            "5a269f21.d5e2d",
+            "92176813.c87c28"
         ],
-        "x": 654,
-        "y": 59,
-        "w": 822,
-        "h": 882
+        "x": 794,
+        "y": 59
     },
     {
         "id": "a43b5fd0.86ab2",
@@ -2523,9 +2523,7 @@
             "c6361c1b.c5f5c"
         ],
         "x": 254,
-        "y": 79,
-        "w": 562,
-        "h": 82
+        "y": 79
     },
     {
         "id": "dbcb4b90.cdfce8",
@@ -2564,9 +2562,7 @@
             "9f75869f.9109f8"
         ],
         "x": 454,
-        "y": 19,
-        "w": 607,
-        "h": 322
+        "y": 19
     },
     {
         "id": "e8552233.d4d87",
@@ -2589,9 +2585,7 @@
             "ba9c0e3a.9d4bd"
         ],
         "x": 394,
-        "y": 19,
-        "w": 602,
-        "h": 382
+        "y": 19
     },
     {
         "id": "587a9021.5adbf",
@@ -2609,9 +2603,7 @@
             "48611f94.4d494"
         ],
         "x": 339,
-        "y": 19,
-        "w": 577,
-        "h": 222
+        "y": 19
     },
     {
         "id": "e045aa73.92a308",
@@ -2716,9 +2708,7 @@
             "8d7eff1b.47165"
         ],
         "x": 434,
-        "y": 119,
-        "w": 702,
-        "h": 402
+        "y": 119
     },
     {
         "id": "6e130f3.368a6f",
@@ -2739,9 +2729,7 @@
             "39b8623a.a0dfae"
         ],
         "x": 234,
-        "y": 79,
-        "w": 702,
-        "h": 302
+        "y": 79
     },
     {
         "id": "11412ff.7fe6dd",
@@ -2885,9 +2873,7 @@
             "8a6c9274.5e31d"
         ],
         "x": 634,
-        "y": 39,
-        "w": 372,
-        "h": 202
+        "y": 39
     },
     {
         "id": "1741a4d0.5b250b",
@@ -2912,9 +2898,7 @@
             "326ead5e.aa98a2"
         ],
         "x": 334,
-        "y": 1159,
-        "w": 732,
-        "h": 302
+        "y": 1159
     },
     {
         "id": "b5e6f8f3.3d4d28",
@@ -3433,6 +3417,27 @@
         "id": "78ad82e4.622fac",
         "type": "alexa-home-conf",
         "username": "georgderflinger"
+    },
+    {
+        "id": "2579135a.e4f65c",
+        "type": "mqtt-broker",
+        "name": "BROKER",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "connection",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "bevoresend",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "broken",
+        "willQos": "0",
+        "willPayload": ""
     },
     {
         "id": "5e8c7091.07116",
@@ -4182,6 +4187,8 @@
         "func": "var result;\nvar ResultOn  = \"TURN-GALLERY-UP-ON\";\nvar ResultOff = \"TURN-GALLERY-UP-OFF\";\n\nif( msg.payload === true)\n{\n   result = ResultOn;\n}\nelse\n{\n   result = ResultOff;\n}\nmsg.payload = result;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 3008.028564453125,
         "y": 1622.0112571716309,
         "wires": [
@@ -5520,7 +5527,7 @@
         "links": [
             "234d0ad4.aa5936"
         ],
-        "x": 695,
+        "x": 835,
         "y": 500,
         "wires": [
             [
@@ -5549,7 +5556,7 @@
         "links": [
             "6f154ce5.194d04"
         ],
-        "x": 1435,
+        "x": 1575,
         "y": 500,
         "wires": []
     },
@@ -5697,7 +5704,7 @@
         "g": "22191ac0.b45bd6",
         "name": "LIGHT_GALLERY_UP",
         "env": [],
-        "x": 1080,
+        "x": 1220,
         "y": 840,
         "wires": [
             [
@@ -5711,7 +5718,7 @@
         "z": "2110ff8c.cc84f",
         "g": "22191ac0.b45bd6",
         "name": "LIGHT_TRIANGLE_UP",
-        "x": 1090,
+        "x": 1230,
         "y": 900,
         "wires": [
             [
@@ -7481,7 +7488,7 @@
             }
         ],
         "active": true,
-        "x": 1070,
+        "x": 1210,
         "y": 100,
         "wires": []
     },
@@ -7503,7 +7510,7 @@
                 "type": "str"
             }
         ],
-        "x": 1250,
+        "x": 1270,
         "y": 160,
         "wires": [
             [
@@ -8746,7 +8753,8 @@
         "y": 1280,
         "wires": [
             [
-                "db2d219.a627be"
+                "db2d219.a627be",
+                "18e31a08.de7586"
             ]
         ]
     },
@@ -10623,7 +10631,7 @@
                 "type": "str"
             }
         ],
-        "x": 1250,
+        "x": 1270,
         "y": 220,
         "wires": [
             [
@@ -10681,7 +10689,7 @@
                 "type": "str"
             }
         ],
-        "x": 1250,
+        "x": 1270,
         "y": 280,
         "wires": [
             [
@@ -10724,6 +10732,7 @@
         "id": "92176813.c87c28",
         "type": "subflow:32ef0b5e.c7e3c4",
         "z": "2110ff8c.cc84f",
+        "g": "22191ac0.b45bd6",
         "name": "GALLERY_UP_4",
         "env": [
             {
@@ -10737,7 +10746,7 @@
                 "type": "str"
             }
         ],
-        "x": 1250,
+        "x": 1270,
         "y": 340,
         "wires": [
             [
@@ -10780,6 +10789,7 @@
         "id": "5a269f21.d5e2d",
         "type": "subflow:32ef0b5e.c7e3c4",
         "z": "2110ff8c.cc84f",
+        "g": "22191ac0.b45bd6",
         "name": "GALLERY_UP_5",
         "env": [
             {
@@ -10793,7 +10803,7 @@
                 "type": "str"
             }
         ],
-        "x": 1250,
+        "x": 1270,
         "y": 400,
         "wires": [
             [
@@ -10836,6 +10846,7 @@
         "id": "cd590f55.9db66",
         "type": "subflow:32ef0b5e.c7e3c4",
         "z": "2110ff8c.cc84f",
+        "g": "22191ac0.b45bd6",
         "name": "GALLERY_UP_6",
         "env": [
             {
@@ -10849,7 +10860,7 @@
                 "type": "str"
             }
         ],
-        "x": 1250,
+        "x": 1270,
         "y": 460,
         "wires": [
             [
@@ -10892,6 +10903,7 @@
         "id": "6a8fb4d3.e6458c",
         "type": "subflow:32ef0b5e.c7e3c4",
         "z": "2110ff8c.cc84f",
+        "g": "22191ac0.b45bd6",
         "name": "GALLERY_UP_7",
         "env": [
             {
@@ -10905,7 +10917,7 @@
                 "type": "str"
             }
         ],
-        "x": 1250,
+        "x": 1270,
         "y": 520,
         "wires": [
             [
@@ -10948,6 +10960,7 @@
         "id": "82920477.19ba58",
         "type": "subflow:32ef0b5e.c7e3c4",
         "z": "2110ff8c.cc84f",
+        "g": "22191ac0.b45bd6",
         "name": "GALLERY_UP_8",
         "env": [
             {
@@ -10961,7 +10974,7 @@
                 "type": "str"
             }
         ],
-        "x": 1250,
+        "x": 1270,
         "y": 580,
         "wires": [
             [
@@ -11036,6 +11049,7 @@
         "id": "782ddbd3.816fd4",
         "type": "subflow:32ef0b5e.c7e3c4",
         "z": "2110ff8c.cc84f",
+        "g": "22191ac0.b45bd6",
         "name": "GALLERY_UP_9",
         "env": [
             {
@@ -11049,7 +11063,7 @@
                 "type": "str"
             }
         ],
-        "x": 1250,
+        "x": 1270,
         "y": 640,
         "wires": [
             [
@@ -11170,5 +11184,18 @@
                 "866dd405.c142b8"
             ]
         ]
+    },
+    {
+        "id": "18e31a08.de7586",
+        "type": "mqtt out",
+        "z": "6c34888.8f9c278",
+        "name": "BELL",
+        "topic": "BellIsTriggered",
+        "qos": "0",
+        "retain": "true",
+        "broker": "2579135a.e4f65c",
+        "x": 870,
+        "y": 1400,
+        "wires": []
     }
 ]
