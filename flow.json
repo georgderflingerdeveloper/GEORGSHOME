@@ -2837,12 +2837,13 @@
             "db2d219.a627be",
             "7495e500.290dcc",
             "1eb5de2b.92b0b2",
-            "fbeefdb2.6805c"
+            "fbeefdb2.6805c",
+            "18e31a08.de7586"
         ],
         "x": 434,
-        "y": 1239,
+        "y": 1179,
         "w": 632,
-        "h": 82
+        "h": 142
     },
     {
         "id": "66be4139.b7eb8",
@@ -9897,31 +9898,6 @@
         "wires": []
     },
     {
-        "id": "a41bff5a.2d578",
-        "type": "inject",
-        "z": "6c34888.8f9c278",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 650,
-        "y": 1400,
-        "wires": [
-            [
-                "db2d219.a627be"
-            ]
-        ]
-    },
-    {
         "id": "3a22bea7.e11152",
         "type": "toggle",
         "z": "439be944.edbf68",
@@ -11193,38 +11169,14 @@
         "id": "18e31a08.de7586",
         "type": "mqtt out",
         "z": "6c34888.8f9c278",
+        "g": "e76d5a04.689508",
         "name": "BELL",
         "topic": "BellIsTriggered",
         "qos": "0",
         "retain": "true",
         "broker": "2579135a.e4f65c",
-        "x": 870,
-        "y": 1400,
+        "x": 990,
+        "y": 1220,
         "wires": []
-    },
-    {
-        "id": "2d7f3453.5ec5ac",
-        "type": "inject",
-        "z": "6c34888.8f9c278",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 670,
-        "y": 1440,
-        "wires": [
-            [
-                "18e31a08.de7586"
-            ]
-        ]
     }
 ]
