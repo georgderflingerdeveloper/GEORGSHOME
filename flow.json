@@ -9059,7 +9059,7 @@
         "id": "b3ed8444.ed1538",
         "type": "link in",
         "z": "6c34888.8f9c278",
-        "name": "AUTO_OFF",
+        "name": "TURN_LIGHT",
         "links": [
             "e6f05da7.45be"
         ],
@@ -11268,22 +11268,17 @@
         "type": "subflow:f10f58ea.a676f8",
         "z": "6c34888.8f9c278",
         "name": "TIMED_MAIN_BUTTON",
-        "env": [
-            {
-                "name": "DELAY_TIME_PRESSED",
-                "value": "1",
-                "type": "num"
-            }
-        ],
+        "env": [],
         "x": 870,
         "y": 700,
         "wires": [
             [
                 "1d86c2f9.31e54d",
-                "904c2d97.16243"
+                "904c2d97.16243",
+                "55fc5c53.955284"
             ],
             [
-                "56685b0.f18caa4"
+                "570c4e1d.1267e"
             ]
         ]
     },
@@ -11342,44 +11337,6 @@
         ]
     },
     {
-        "id": "56685b0.f18caa4",
-        "type": "subflow:84513d0.1c477c",
-        "z": "6c34888.8f9c278",
-        "name": "Toggle",
-        "env": [],
-        "x": 1130,
-        "y": 700,
-        "wires": [
-            [
-                "92fb97fb.d0eb68",
-                "55fc5c53.955284"
-            ]
-        ]
-    },
-    {
-        "id": "92fb97fb.d0eb68",
-        "type": "switch",
-        "z": "6c34888.8f9c278",
-        "name": "IsFALSE",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1260,
-        "y": 740,
-        "wires": [
-            [
-                "570c4e1d.1267e"
-            ]
-        ]
-    },
-    {
         "id": "570c4e1d.1267e",
         "type": "link out",
         "z": "6c34888.8f9c278",
@@ -11387,7 +11344,7 @@
         "links": [
             "8b7d8fb4.0669"
         ],
-        "x": 1405,
+        "x": 1155,
         "y": 720,
         "wires": []
     },
