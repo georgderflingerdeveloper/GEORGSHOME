@@ -2745,7 +2745,7 @@
             "9c379a22.13de68"
         ],
         "x": 134,
-        "y": 699,
+        "y": 659,
         "w": 212,
         "h": 82
     },
@@ -2762,7 +2762,7 @@
             "8a30080c.f573b8"
         ],
         "x": 134,
-        "y": 1079,
+        "y": 1221,
         "w": 212,
         "h": 82
     },
@@ -2779,7 +2779,7 @@
             "2ce69d42.42add2"
         ],
         "x": 1554,
-        "y": 659,
+        "y": 801,
         "w": 212,
         "h": 82
     },
@@ -2817,7 +2817,7 @@
             "44b7d67f.c34f98"
         ],
         "x": 134,
-        "y": 1319,
+        "y": 1461,
         "w": 212,
         "h": 82
     },
@@ -2838,7 +2838,7 @@
             "18e31a08.de7586"
         ],
         "x": 434,
-        "y": 1259,
+        "y": 1401,
         "w": 632,
         "h": 142
     },
@@ -2854,7 +2854,7 @@
         "nodes": [
             "faa630ff.2863"
         ],
-        "x": 114,
+        "x": 154,
         "y": 299,
         "w": 232,
         "h": 82
@@ -2915,7 +2915,7 @@
             "ce54f186.36d16",
             "8ba7a9f0.071118"
         ],
-        "x": 394,
+        "x": 434,
         "y": 479,
         "w": 392,
         "h": 122
@@ -2935,7 +2935,7 @@
             "96ee993d.118b08",
             "d6cbc89d.f63348"
         ],
-        "x": 414,
+        "x": 454,
         "y": 259,
         "w": 292,
         "h": 202
@@ -2954,7 +2954,7 @@
             "df163297.92799"
         ],
         "x": 134,
-        "y": 799,
+        "y": 941,
         "w": 252,
         "h": 82
     },
@@ -4357,7 +4357,7 @@
         "order": 8,
         "width": 0,
         "height": 0,
-        "passthru": false,
+        "passthru": true,
         "label": "ALLE LICHTER  AUS",
         "tooltip": "",
         "color": "",
@@ -7769,7 +7769,7 @@
         "officon": "fa-3x fa-lightbulb-o",
         "offcolor": "gray",
         "x": 1630,
-        "y": 620,
+        "y": 762,
         "wires": [
             []
         ]
@@ -7820,7 +7820,7 @@
         "name": "DIG_OUT_ON_OFF",
         "env": [],
         "x": 1380,
-        "y": 700,
+        "y": 842,
         "wires": [
             [
                 "2ce69d42.42add2"
@@ -7840,7 +7840,7 @@
         "LEDCurrentLimit": 0.02,
         "LEDForwardVoltage": "1",
         "x": 1660,
-        "y": 700,
+        "y": 842,
         "wires": [
             []
         ]
@@ -7979,7 +7979,7 @@
         "sendStateWithoutChange": true,
         "showTransitionErrors": true,
         "x": 830,
-        "y": 740,
+        "y": 882,
         "wires": [
             [
                 "32aec383.825a6c",
@@ -8008,7 +8008,7 @@
         "to": "",
         "reg": false,
         "x": 730,
-        "y": 820,
+        "y": 962,
         "wires": [
             [
                 "fe7dcc1d.c27a7"
@@ -8122,7 +8122,7 @@
         "name": "STATE2BOOL",
         "env": [],
         "x": 1060,
-        "y": 680,
+        "y": 822,
         "wires": [
             [
                 "8171c9c8.f2a438",
@@ -8149,7 +8149,7 @@
         "payloadType": "bool",
         "topic": "",
         "x": 200,
-        "y": 940,
+        "y": 1082,
         "wires": [
             [
                 "1d86c2f9.31e54d",
@@ -8170,7 +8170,7 @@
         "inputMode": 1,
         "powerSupply": 1,
         "x": 240,
-        "y": 740,
+        "y": 700,
         "wires": [
             [
                 "38ed9d18.281cf2",
@@ -8197,8 +8197,7 @@
         "y": 740,
         "wires": [
             [
-                "1d86c2f9.31e54d",
-                "904c2d97.16243"
+                "7e7375d3.b1b42c"
             ]
         ]
     },
@@ -8263,7 +8262,7 @@
         "name": "Toggle",
         "env": [],
         "x": 410,
-        "y": 940,
+        "y": 1082,
         "wires": [
             [
                 "b5d864.3f55f7a"
@@ -8287,7 +8286,7 @@
         "repeat": false,
         "again": false,
         "x": 930,
-        "y": 940,
+        "y": 1082,
         "wires": [
             [],
             [
@@ -8312,8 +8311,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1100,
-        "y": 920,
+        "x": 1140,
+        "y": 1102,
         "wires": [
             [
                 "d84fd8ed.94b358"
@@ -8340,7 +8339,7 @@
         "to": "",
         "reg": false,
         "x": 1310,
-        "y": 960,
+        "y": 1102,
         "wires": [
             [
                 "1d86c2f9.31e54d"
@@ -8365,7 +8364,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1030,
-        "y": 740,
+        "y": 882,
         "wires": [
             [
                 "692d4eb3.a9efd"
@@ -8392,7 +8391,7 @@
         "to": "",
         "reg": false,
         "x": 1210,
-        "y": 740,
+        "y": 882,
         "wires": [
             [
                 "29794107.f322ce"
@@ -8417,7 +8416,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1030,
-        "y": 780,
+        "y": 922,
         "wires": [
             [
                 "225324b1.859f8c"
@@ -8444,7 +8443,7 @@
         "to": "",
         "reg": false,
         "x": 1040,
-        "y": 820,
+        "y": 962,
         "wires": [
             [
                 "29794107.f322ce",
@@ -8472,7 +8471,7 @@
         "to": "",
         "reg": false,
         "x": 700,
-        "y": 940,
+        "y": 1082,
         "wires": [
             [
                 "29794107.f322ce"
@@ -8486,7 +8485,7 @@
         "name": "GateKeeper",
         "env": [],
         "x": 770,
-        "y": 1060,
+        "y": 1202,
         "wires": [
             [
                 "79edd7d9.504c38"
@@ -8507,7 +8506,7 @@
         "statusCmd": "",
         "persist": false,
         "x": 1010,
-        "y": 1120,
+        "y": 1262,
         "wires": [
             [
                 "29794107.f322ce"
@@ -8533,8 +8532,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1290,
-        "y": 820,
+        "x": 1300,
+        "y": 962,
         "wires": [
             [
                 "904c2d97.16243"
@@ -8560,8 +8559,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 670,
-        "y": 1120,
+        "x": 750,
+        "y": 1262,
         "wires": [
             [
                 "79edd7d9.504c38"
@@ -8679,7 +8678,7 @@
         "inputMode": 1,
         "powerSupply": 1,
         "x": 240,
-        "y": 1120,
+        "y": 1262,
         "wires": [
             [
                 "9ca05382.134ba"
@@ -8701,8 +8700,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 480,
-        "y": 1120,
+        "x": 540,
+        "y": 1262,
         "wires": [
             [
                 "4fbe2df4.58d0b4"
@@ -8716,7 +8715,7 @@
         "name": "AUTO OFF",
         "info": "Cancel automatic off\n- when using dashboard\n- when light control is off",
         "x": 910,
-        "y": 900,
+        "y": 1042,
         "wires": []
     },
     {
@@ -8731,7 +8730,7 @@
         "sendError": false,
         "encoding": "none",
         "x": 820,
-        "y": 1360,
+        "y": 1502,
         "wires": [
             [
                 "7495e500.290dcc"
@@ -8748,7 +8747,7 @@
         "voice": "",
         "always": true,
         "x": 980,
-        "y": 1360,
+        "y": 1502,
         "wires": []
     },
     {
@@ -8772,7 +8771,7 @@
         "to": "",
         "reg": false,
         "x": 670,
-        "y": 1360,
+        "y": 1502,
         "wires": [
             [
                 "db2d219.a627be",
@@ -8797,7 +8796,7 @@
         "repair": false,
         "outputs": 1,
         "x": 520,
-        "y": 1360,
+        "y": 1502,
         "wires": [
             [
                 "1eb5de2b.92b0b2"
@@ -8817,7 +8816,7 @@
         "inputMode": 1,
         "powerSupply": 1,
         "x": 240,
-        "y": 1360,
+        "y": 1502,
         "wires": [
             [
                 "fbeefdb2.6805c"
@@ -8842,7 +8841,9 @@
         "x": 440,
         "y": 680,
         "wires": [
-            []
+            [
+                "e3a54209.5d7d9"
+            ]
         ]
     },
     {
@@ -8857,7 +8858,7 @@
         "multicast": "false",
         "group": "192.168.0.255",
         "datatype": "utf8",
-        "x": 230,
+        "x": 270,
         "y": 340,
         "wires": [
             [
@@ -8885,7 +8886,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 560,
+        "x": 600,
         "y": 300,
         "wires": [
             [
@@ -8913,7 +8914,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 520,
+        "x": 560,
         "y": 340,
         "wires": [
             [
@@ -8939,7 +8940,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 560,
+        "x": 600,
         "y": 380,
         "wires": [
             [
@@ -8967,7 +8968,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 520,
+        "x": 560,
         "y": 420,
         "wires": [
             [
@@ -8992,7 +8993,7 @@
         "topic": "",
         "payload": "_3_True",
         "payloadType": "str",
-        "x": 280,
+        "x": 320,
         "y": 420,
         "wires": [
             [
@@ -9017,7 +9018,7 @@
         "topic": "",
         "payload": "_3_False",
         "payloadType": "str",
-        "x": 280,
+        "x": 320,
         "y": 460,
         "wires": [
             [
@@ -9034,7 +9035,7 @@
             "4fddc827.ae1838",
             "b3ed8444.ed1538"
         ],
-        "x": 1075,
+        "x": 1115,
         "y": 360,
         "wires": []
     },
@@ -9047,7 +9048,7 @@
             "e6f05da7.45be"
         ],
         "x": 365,
-        "y": 1020,
+        "y": 1162,
         "wires": [
             [
                 "904c2d97.16243"
@@ -9063,7 +9064,7 @@
             "e6f05da7.45be"
         ],
         "x": 615,
-        "y": 660,
+        "y": 802,
         "wires": [
             [
                 "1d86c2f9.31e54d"
@@ -9484,7 +9485,7 @@
                 "type": "num"
             }
         ],
-        "x": 900,
+        "x": 940,
         "y": 360,
         "wires": [
             [
@@ -9867,7 +9868,7 @@
         "links": [
             "d6b20002.34f7"
         ],
-        "x": 1075,
+        "x": 1115,
         "y": 460,
         "wires": []
     },
@@ -9896,7 +9897,7 @@
         "z": "6c34888.8f9c278",
         "name": "Toggle",
         "env": [],
-        "x": 970,
+        "x": 1010,
         "y": 460,
         "wires": [
             [
@@ -9910,7 +9911,7 @@
         "z": "6c34888.8f9c278",
         "name": "GROUP CONTROL",
         "info": "turn a group of lights on /off",
-        "x": 1130,
+        "x": 1170,
         "y": 420,
         "wires": []
     },
@@ -10517,7 +10518,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 540,
+        "x": 580,
         "y": 520,
         "wires": [
             [
@@ -10545,7 +10546,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 700,
+        "x": 740,
         "y": 560,
         "wires": [
             [
@@ -10570,7 +10571,7 @@
         "topic": "",
         "payload": "_0_True",
         "payloadType": "str",
-        "x": 280,
+        "x": 320,
         "y": 500,
         "wires": [
             [
@@ -11193,7 +11194,7 @@
         "retain": "true",
         "broker": "2579135a.e4f65c",
         "x": 990,
-        "y": 1300,
+        "y": 1442,
         "wires": []
     },
     {
@@ -11224,7 +11225,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 840,
+        "y": 982,
         "wires": [
             [
                 "fe7dcc1d.c27a7",
@@ -11242,7 +11243,7 @@
             "bc1c3fcc.9b284"
         ],
         "x": 175,
-        "y": 840,
+        "y": 982,
         "wires": [
             [
                 "f475a645.ef3e88"
@@ -11261,5 +11262,172 @@
         "x": 1315,
         "y": 800,
         "wires": []
+    },
+    {
+        "id": "b8d607a9.141a98",
+        "type": "subflow:f10f58ea.a676f8",
+        "z": "6c34888.8f9c278",
+        "name": "TIMED_MAIN_BUTTON",
+        "env": [
+            {
+                "name": "DELAY_TIME_PRESSED",
+                "value": "1",
+                "type": "num"
+            }
+        ],
+        "x": 870,
+        "y": 700,
+        "wires": [
+            [
+                "1d86c2f9.31e54d",
+                "904c2d97.16243"
+            ],
+            [
+                "56685b0.f18caa4"
+            ]
+        ]
+    },
+    {
+        "id": "e3a54209.5d7d9",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "MakePressed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "pressed",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 680,
+        "wires": [
+            [
+                "b8d607a9.141a98"
+            ]
+        ]
+    },
+    {
+        "id": "7e7375d3.b1b42c",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "MakeReleased",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "released",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 740,
+        "wires": [
+            [
+                "b8d607a9.141a98"
+            ]
+        ]
+    },
+    {
+        "id": "56685b0.f18caa4",
+        "type": "subflow:84513d0.1c477c",
+        "z": "6c34888.8f9c278",
+        "name": "Toggle",
+        "env": [],
+        "x": 1130,
+        "y": 700,
+        "wires": [
+            [
+                "92fb97fb.d0eb68",
+                "55fc5c53.955284"
+            ]
+        ]
+    },
+    {
+        "id": "92fb97fb.d0eb68",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "name": "IsFALSE",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1260,
+        "y": 740,
+        "wires": [
+            [
+                "570c4e1d.1267e"
+            ]
+        ]
+    },
+    {
+        "id": "570c4e1d.1267e",
+        "type": "link out",
+        "z": "6c34888.8f9c278",
+        "name": "TO_ALL_OFF",
+        "links": [
+            "8b7d8fb4.0669"
+        ],
+        "x": 1405,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "8b7d8fb4.0669",
+        "type": "link in",
+        "z": "7fa0f8f.5a71708",
+        "name": "ALL_OFF",
+        "links": [
+            "570c4e1d.1267e"
+        ],
+        "x": 615,
+        "y": 460,
+        "wires": [
+            [
+                "f141cad7.25f818"
+            ]
+        ]
+    },
+    {
+        "id": "55fc5c53.955284",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "name": "IsTRUE",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1260,
+        "y": 660,
+        "wires": [
+            [
+                "1686b10a.07014f"
+            ]
+        ]
     }
 ]
