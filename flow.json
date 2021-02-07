@@ -7652,7 +7652,6 @@
         "id": "9eb805e.1add8f8",
         "type": "inject",
         "z": "6c34888.8f9c278",
-        "d": true,
         "g": "fb8faace.0a2d48",
         "name": "",
         "props": [
@@ -8008,8 +8007,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 650,
-        "y": 740,
+        "x": 730,
+        "y": 820,
         "wires": [
             [
                 "fe7dcc1d.c27a7"
