@@ -8159,8 +8159,8 @@
         "y": 700,
         "wires": [
             [
-                "38ed9d18.281cf2",
-                "f89eaf36.8df32"
+                "f89eaf36.8df32",
+                "38ed9d18.281cf2"
             ]
         ]
     },
@@ -8179,11 +8179,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 440,
-        "y": 740,
+        "x": 420,
+        "y": 680,
         "wires": [
             [
-                "7e7375d3.b1b42c"
+                "e3a54209.5d7d9"
             ]
         ]
     },
@@ -8824,11 +8824,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 440,
-        "y": 680,
+        "x": 420,
+        "y": 740,
         "wires": [
             [
-                "e3a54209.5d7d9"
+                "7e7375d3.b1b42c"
             ]
         ]
     },
