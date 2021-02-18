@@ -2959,6 +2959,27 @@
         "h": 82
     },
     {
+        "id": "d3ea6032.c1ad8",
+        "type": "group",
+        "z": "6c34888.8f9c278",
+        "name": "KEEP ALIVE",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "904c2d97.16243",
+            "79edd7d9.504c38",
+            "4fbe2df4.58d0b4",
+            "9ca05382.134ba",
+            "397c466e.17fc3a"
+        ],
+        "x": 454,
+        "y": 1161,
+        "w": 632,
+        "h": 200
+    },
+    {
         "id": "d1e7d7ad.42bde8",
         "type": "ui_group",
         "name": "HAUPTSTEUERUNG",
@@ -8482,6 +8503,7 @@
         "id": "904c2d97.16243",
         "type": "subflow:6d480044.1d777",
         "z": "6c34888.8f9c278",
+        "g": "d3ea6032.c1ad8",
         "name": "GateKeeper",
         "env": [],
         "x": 770,
@@ -8496,6 +8518,7 @@
         "id": "79edd7d9.504c38",
         "type": "gate",
         "z": "6c34888.8f9c278",
+        "g": "d3ea6032.c1ad8",
         "name": "",
         "controlTopic": "control",
         "defaultState": "closed",
@@ -8544,6 +8567,7 @@
         "id": "4fbe2df4.58d0b4",
         "type": "change",
         "z": "6c34888.8f9c278",
+        "g": "d3ea6032.c1ad8",
         "name": "TRUE",
         "rules": [
             {
@@ -8689,6 +8713,7 @@
         "id": "9ca05382.134ba",
         "type": "switch",
         "z": "6c34888.8f9c278",
+        "g": "d3ea6032.c1ad8",
         "name": "IsFALSE",
         "property": "payload.state",
         "propertyType": "msg",
@@ -11275,7 +11300,8 @@
             [
                 "55fc5c53.955284",
                 "1d86c2f9.31e54d",
-                "904c2d97.16243"
+                "904c2d97.16243",
+                "635507f6.5d8c58"
             ],
             [
                 "570c4e1d.1267e",
@@ -11414,5 +11440,16 @@
                 "ea742d77.cedb1"
             ]
         ]
+    },
+    {
+        "id": "397c466e.17fc3a",
+        "type": "comment",
+        "z": "6c34888.8f9c278",
+        "g": "d3ea6032.c1ad8",
+        "name": "Restart timer when receiving a new presence detector signal",
+        "info": "",
+        "x": 780,
+        "y": 1320,
+        "wires": []
     }
 ]
