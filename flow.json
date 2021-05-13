@@ -3094,7 +3094,7 @@
         "type": "group",
         "z": "73b4244c.d9fd9c",
         "g": "d564b7a8.bb8e78",
-        "name": "KEEP FAN ALIVE",
+        "name": "FAN AUTO TURN OFF",
         "style": {
             "fill": "#e3f3d3",
             "label": true
