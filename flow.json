@@ -11538,7 +11538,7 @@
                 "property": "payload",
                 "propertyType": "msg",
                 "type": "false",
-                "failMsg": ""
+                "failMsg": "Toggle to false failed"
             }
         ],
         "x": 1070,
