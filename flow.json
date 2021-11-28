@@ -108,7 +108,7 @@
         "id": "6c34888.8f9c278",
         "type": "tab",
         "label": "ENTRY_ROOM",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
@@ -122,7 +122,7 @@
         "id": "73b4244c.d9fd9c",
         "type": "tab",
         "label": "ENTRY_ROOM_FAN_CONTROL",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
@@ -1930,6 +1930,7 @@
                 "value": ""
             }
         ],
+        "meta": {},
         "color": "#DDAA99",
         "status": {
             "x": 340,
@@ -2395,7 +2396,9 @@
             "7211dc16.1b3594"
         ],
         "x": 274,
-        "y": 19
+        "y": 19,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "72d4b200.765e6",
@@ -2656,7 +2659,7 @@
         ],
         "x": 1534,
         "y": 59,
-        "w": 352,
+        "w": 342,
         "h": 282
     },
     {
@@ -2784,7 +2787,7 @@
             "193227be.052708",
             "8171c9c8.f2a438"
         ],
-        "x": 1444,
+        "x": 1434,
         "y": 839
     },
     {
@@ -2899,7 +2902,7 @@
             "6f142b4a.1ea934",
             "c0c76c92.31c7b"
         ],
-        "x": 434,
+        "x": 574,
         "y": 1159,
         "w": 752,
         "h": 362
@@ -2935,7 +2938,7 @@
             "96ee993d.118b08",
             "d6cbc89d.f63348"
         ],
-        "x": 454,
+        "x": 444,
         "y": 319
     },
     {
@@ -3083,6 +3086,86 @@
         ],
         "x": 664,
         "y": 339
+    },
+    {
+        "id": "680d0bedc4187762",
+        "type": "group",
+        "z": "439be944.edbf68",
+        "name": "TEST CONTROLLER",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "a448132d.ad5c6",
+            "d9564624.008678",
+            "2d56d1a9.3a6c8e",
+            "fbdf20a1.b0888",
+            "10404531.961b5b"
+        ],
+        "env": [],
+        "x": 34,
+        "y": 1159,
+        "w": 432,
+        "h": 322
+    },
+    {
+        "id": "6ce5eca29c0fc044",
+        "type": "group",
+        "z": "439be944.edbf68",
+        "name": "TOGGLE TEST",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "3a22bea7.e11152",
+            "efebf46e.171ee8",
+            "1ad214a6.e1fa1b",
+            "3f6aa48.e4fce5c",
+            "a68156ae.4e6228",
+            "67933de2.575f54",
+            "ee9c478e.cefd28",
+            "63b7ad48.f9ad64",
+            "b6eff37c.7d8af",
+            "fe3ae856.c77ed8"
+        ],
+        "env": [],
+        "x": 54,
+        "y": 739,
+        "w": 812,
+        "h": 322
+    },
+    {
+        "id": "05c122a0a5a3655d",
+        "type": "group",
+        "z": "439be944.edbf68",
+        "name": "TIMED GATE TEST",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "105803e6.d8882c",
+            "ee051dc6.b119d",
+            "c033b07d.1d6ee",
+            "585676ed.694278",
+            "aef4f46d.7408b8",
+            "7bab6b1a.977a54",
+            "5fbdc516.64a3dc",
+            "954625b.7c682d8",
+            "18f0a09d.19689f",
+            "3ac9a857.9ffad8",
+            "21169407.3e051c",
+            "a65c217b.5fc57",
+            "57e293a1.f8e80c",
+            "14fb29cb.76cc86",
+            "b2002310.62adf",
+            "b6267b4bc1336e05",
+            "7af2474e1d056bd0"
+        ],
+        "env": [],
+        "x": 54,
+        "y": 419,
+        "w": 1212,
+        "h": 302
     },
     {
         "id": "d1e7d7ad.42bde8",
@@ -5643,6 +5726,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 190,
         "y": 80,
         "wires": [
@@ -10905,6 +10989,7 @@
         "id": "105803e6.d8882c",
         "type": "change",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "CANCEL_AUTOOFF",
         "rules": [
             {
@@ -10920,7 +11005,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 600,
+        "x": 520,
         "y": 560,
         "wires": [
             [
@@ -10932,9 +11017,10 @@
         "id": "ee051dc6.b119d",
         "type": "mytimeout",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "AUTOOFF",
         "outtopic": "control",
-        "outsafe": "",
+        "outsafe": "on",
         "outwarning": "Warning",
         "outunsafe": "off",
         "warning": "1",
@@ -10944,7 +11030,7 @@
         "ignoreCase": false,
         "repeat": false,
         "again": false,
-        "x": 850,
+        "x": 770,
         "y": 560,
         "wires": [
             [],
@@ -10957,9 +11043,10 @@
         "id": "c033b07d.1d6ee",
         "type": "subflow:6d480044.1d777",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "GateKeeper",
         "env": [],
-        "x": 1090,
+        "x": 1010,
         "y": 480,
         "wires": [
             [
@@ -10971,6 +11058,7 @@
         "id": "585676ed.694278",
         "type": "gate",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "",
         "controlTopic": "control",
         "defaultState": "closed",
@@ -10978,9 +11066,10 @@
         "closeCmd": "close",
         "toggleCmd": "toggle",
         "defaultCmd": "default",
+        "statusCmd": "",
         "persist": false,
-        "x": 1250,
-        "y": 660,
+        "x": 1170,
+        "y": 480,
         "wires": [
             [
                 "b2002310.62adf"
@@ -10991,6 +11080,7 @@
         "id": "aef4f46d.7408b8",
         "type": "switch",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "IsExpired",
         "property": "flag",
         "propertyType": "msg",
@@ -11004,7 +11094,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1040,
+        "x": 960,
         "y": 540,
         "wires": [
             [
@@ -11016,6 +11106,7 @@
         "id": "7bab6b1a.977a54",
         "type": "change",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "MakeCLOSE",
         "rules": [
             {
@@ -11038,11 +11129,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1050,
+        "x": 970,
         "y": 620,
         "wires": [
             [
-                "585676ed.694278"
+                "585676ed.694278",
+                "7af2474e1d056bd0"
             ]
         ]
     },
@@ -11050,6 +11142,7 @@
         "id": "5fbdc516.64a3dc",
         "type": "change",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "MakeTRUE",
         "rules": [
             {
@@ -11065,7 +11158,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1050,
+        "x": 970,
         "y": 580,
         "wires": [
             [
@@ -11077,6 +11170,7 @@
         "id": "954625b.7c682d8",
         "type": "switch",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "IsButtonPressed",
         "property": "payload",
         "propertyType": "msg",
@@ -11090,7 +11184,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 440,
+        "x": 360,
         "y": 500,
         "wires": [
             [
@@ -11102,6 +11196,7 @@
         "id": "18f0a09d.19689f",
         "type": "change",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "MakeTRUE",
         "rules": [
             {
@@ -11117,12 +11212,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
+        "x": 530,
         "y": 500,
         "wires": [
             [
                 "c033b07d.1d6ee",
-                "a65c217b.5fc57"
+                "a65c217b.5fc57",
+                "b6267b4bc1336e05"
             ]
         ]
     },
@@ -11130,6 +11226,7 @@
         "id": "3ac9a857.9ffad8",
         "type": "switch",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "IsButtonReleased",
         "property": "payload",
         "propertyType": "msg",
@@ -11143,7 +11240,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 450,
+        "x": 370,
         "y": 660,
         "wires": [
             [
@@ -11155,6 +11252,7 @@
         "id": "21169407.3e051c",
         "type": "change",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "MakeTRUE",
         "rules": [
             {
@@ -11170,7 +11268,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
+        "x": 750,
         "y": 660,
         "wires": [
             [
@@ -11183,6 +11281,7 @@
         "id": "a65c217b.5fc57",
         "type": "function",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "TIMEOUT",
         "func": "msg.timeout = env.get('DELAY_TIME_PRESSED');\nreturn msg;",
         "outputs": 1,
@@ -11190,7 +11289,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
+        "x": 680,
         "y": 520,
         "wires": [
             [
@@ -11202,6 +11301,7 @@
         "id": "57e293a1.f8e80c",
         "type": "inject",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "PRESSED",
         "props": [
             {
@@ -11215,7 +11315,7 @@
         "topic": "",
         "payload": "pressed",
         "payloadType": "str",
-        "x": 260,
+        "x": 180,
         "y": 520,
         "wires": [
             [
@@ -11227,6 +11327,7 @@
         "id": "14fb29cb.76cc86",
         "type": "inject",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "RELEASED",
         "props": [
             {
@@ -11240,7 +11341,7 @@
         "topic": "",
         "payload": "released",
         "payloadType": "str",
-        "x": 250,
+        "x": 170,
         "y": 660,
         "wires": [
             [
@@ -11252,6 +11353,7 @@
         "id": "b2002310.62adf",
         "type": "debug",
         "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -11261,14 +11363,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1310,
-        "y": 760,
+        "x": 1170,
+        "y": 600,
         "wires": []
     },
     {
         "id": "3a22bea7.e11152",
         "type": "toggle",
         "z": "439be944.edbf68",
+        "g": "6ce5eca29c0fc044",
         "name": "",
         "onOffTopic": "",
         "onValue": "true",
@@ -11291,6 +11394,7 @@
         "id": "efebf46e.171ee8",
         "type": "inject",
         "z": "439be944.edbf68",
+        "g": "6ce5eca29c0fc044",
         "name": "",
         "props": [
             {
@@ -11316,6 +11420,7 @@
         "id": "1ad214a6.e1fa1b",
         "type": "inject",
         "z": "439be944.edbf68",
+        "g": "6ce5eca29c0fc044",
         "name": "",
         "props": [
             {
@@ -11341,6 +11446,7 @@
         "id": "3f6aa48.e4fce5c",
         "type": "debug",
         "z": "439be944.edbf68",
+        "g": "6ce5eca29c0fc044",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -11357,6 +11463,7 @@
         "id": "a68156ae.4e6228",
         "type": "inject",
         "z": "439be944.edbf68",
+        "g": "6ce5eca29c0fc044",
         "name": "",
         "props": [
             {
@@ -11382,6 +11489,7 @@
         "id": "67933de2.575f54",
         "type": "change",
         "z": "439be944.edbf68",
+        "g": "6ce5eca29c0fc044",
         "name": "PrepareToggle",
         "rules": [
             {
@@ -11416,6 +11524,7 @@
         "id": "ee9c478e.cefd28",
         "type": "inject",
         "z": "439be944.edbf68",
+        "g": "6ce5eca29c0fc044",
         "name": "",
         "props": [
             {
@@ -11441,6 +11550,7 @@
         "id": "63b7ad48.f9ad64",
         "type": "subflow:84513d0.1c477c",
         "z": "439be944.edbf68",
+        "g": "6ce5eca29c0fc044",
         "name": "Toggle",
         "env": [],
         "x": 550,
@@ -11455,6 +11565,7 @@
         "id": "b6eff37c.7d8af",
         "type": "inject",
         "z": "439be944.edbf68",
+        "g": "6ce5eca29c0fc044",
         "name": "",
         "props": [
             {
@@ -11480,6 +11591,7 @@
         "id": "fe3ae856.c77ed8",
         "type": "debug",
         "z": "439be944.edbf68",
+        "g": "6ce5eca29c0fc044",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -11506,7 +11618,7 @@
                 "failMsg": "Toggle did not work"
             }
         ],
-        "x": 1080,
+        "x": 1220,
         "y": 1200,
         "wires": [
             []
@@ -11519,7 +11631,7 @@
         "g": "1741a4d0.5b250b",
         "name": "Toggle",
         "env": [],
-        "x": 670,
+        "x": 810,
         "y": 1200,
         "wires": [
             [
@@ -11541,7 +11653,7 @@
                 "failMsg": "Toggle to false failed"
             }
         ],
-        "x": 1070,
+        "x": 1210,
         "y": 1280,
         "wires": [
             []
@@ -11554,7 +11666,7 @@
         "g": "1741a4d0.5b250b",
         "name": "Toggle_To_False",
         "env": [],
-        "x": 710,
+        "x": 850,
         "y": 1280,
         "wires": [
             [
@@ -11569,7 +11681,7 @@
         "g": "1741a4d0.5b250b",
         "name": "Toggle",
         "env": [],
-        "x": 670,
+        "x": 810,
         "y": 1360,
         "wires": [
             [
@@ -11591,7 +11703,7 @@
                 "failMsg": "Reset test failed"
             }
         ],
-        "x": 1080,
+        "x": 1220,
         "y": 1360,
         "wires": [
             []
@@ -11613,7 +11725,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 510,
+        "x": 650,
         "y": 1200,
         "wires": [
             [
@@ -11625,6 +11737,7 @@
         "id": "a448132d.ad5c6",
         "type": "inject",
         "z": "439be944.edbf68",
+        "g": "680d0bedc4187762",
         "name": "",
         "props": [
             {
@@ -11638,8 +11751,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 110,
-        "y": 1300,
+        "x": 130,
+        "y": 1440,
         "wires": [
             [
                 "2d56d1a9.3a6c8e"
@@ -11662,7 +11775,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 510,
+        "x": 650,
         "y": 1280,
         "wires": [
             [
@@ -11686,7 +11799,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 510,
+        "x": 650,
         "y": 1320,
         "wires": [
             [
@@ -11710,7 +11823,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 510,
+        "x": 650,
         "y": 1360,
         "wires": [
             [
@@ -11738,7 +11851,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 520,
+        "x": 660,
         "y": 1420,
         "wires": [
             [
@@ -11762,7 +11875,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 870,
+        "x": 1010,
         "y": 1200,
         "wires": [
             [
@@ -11777,7 +11890,7 @@
         "g": "1741a4d0.5b250b",
         "name": "Toggle",
         "env": [],
-        "x": 670,
+        "x": 810,
         "y": 1480,
         "wires": [
             [
@@ -11799,7 +11912,7 @@
                 "failMsg": "PReset test failed"
             }
         ],
-        "x": 1090,
+        "x": 1230,
         "y": 1480,
         "wires": [
             []
@@ -11825,7 +11938,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 520,
+        "x": 660,
         "y": 1480,
         "wires": [
             [
@@ -11837,10 +11950,11 @@
         "id": "d9564624.008678",
         "type": "subflow:6d480044.1d777",
         "z": "439be944.edbf68",
+        "g": "680d0bedc4187762",
         "name": "GateKeeper",
         "env": [],
-        "x": 350,
-        "y": 1100,
+        "x": 370,
+        "y": 1260,
         "wires": [
             [
                 "2d56d1a9.3a6c8e"
@@ -11851,6 +11965,7 @@
         "id": "2d56d1a9.3a6c8e",
         "type": "gate",
         "z": "439be944.edbf68",
+        "g": "680d0bedc4187762",
         "name": "",
         "controlTopic": "control",
         "defaultState": "closed",
@@ -11858,9 +11973,10 @@
         "closeCmd": "close",
         "toggleCmd": "toggle",
         "defaultCmd": "default",
+        "statusCmd": "",
         "persist": false,
-        "x": 290,
-        "y": 1300,
+        "x": 370,
+        "y": 1400,
         "wires": [
             [
                 "636d0e9e.99d11",
@@ -11876,6 +11992,7 @@
         "id": "fbdf20a1.b0888",
         "type": "inject",
         "z": "439be944.edbf68",
+        "g": "680d0bedc4187762",
         "name": "START_UNIT_TESTS",
         "props": [
             {
@@ -11889,8 +12006,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 140,
-        "y": 1040,
+        "x": 180,
+        "y": 1200,
         "wires": [
             [
                 "d9564624.008678"
@@ -11901,6 +12018,7 @@
         "id": "10404531.961b5b",
         "type": "inject",
         "z": "439be944.edbf68",
+        "g": "680d0bedc4187762",
         "name": "STOP_UNIT_TESTS",
         "props": [
             {
@@ -11914,13 +12032,49 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 160,
-        "y": 1160,
+        "x": 170,
+        "y": 1340,
         "wires": [
             [
                 "d9564624.008678"
             ]
         ]
+    },
+    {
+        "id": "b6267b4bc1336e05",
+        "type": "debug",
+        "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "7af2474e1d056bd0",
+        "type": "debug",
+        "z": "439be944.edbf68",
+        "g": "05c122a0a5a3655d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 680,
+        "wires": []
     },
     {
         "id": "cb84c65c.4e5f2",
