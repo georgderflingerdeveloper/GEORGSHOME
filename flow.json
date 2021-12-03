@@ -112,6 +112,13 @@
         "info": ""
     },
     {
+        "id": "73b4244c.d9fd9c",
+        "type": "tab",
+        "label": "ENTRY_ROOM_FAN_CONTROL",
+        "disabled": true,
+        "info": ""
+    },
+    {
         "id": "439be944.edbf68",
         "type": "tab",
         "label": "WHITEBOARD",
@@ -119,11 +126,12 @@
         "info": ""
     },
     {
-        "id": "73b4244c.d9fd9c",
+        "id": "5ac5f5224c737d0b",
         "type": "tab",
-        "label": "ENTRY_ROOM_FAN_CONTROL",
-        "disabled": true,
-        "info": ""
+        "label": "TestCallerFromWhiteBoard",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
         "id": "f6dd1fca.6c306",
@@ -2373,7 +2381,9 @@
             "e6986e20.446ed"
         ],
         "x": 2174,
-        "y": 39
+        "y": 39,
+        "w": 392,
+        "h": 82
     },
     {
         "id": "78be8f10.9c6a",
@@ -2394,7 +2404,9 @@
             "7211dc16.1b3594"
         ],
         "x": 274,
-        "y": 19
+        "y": 19,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "72d4b200.765e6",
@@ -2412,7 +2424,9 @@
             "7b20a57f.06ad1c"
         ],
         "x": 1434,
-        "y": 379
+        "y": 379,
+        "w": 322,
+        "h": 202
     },
     {
         "id": "9001a100.f2e51",
@@ -2508,7 +2522,9 @@
             "7aceb02d.3c6a8"
         ],
         "x": 2074,
-        "y": 619
+        "y": 619,
+        "w": 82,
+        "h": 442
     },
     {
         "id": "51fcd714.99f798",
@@ -2629,7 +2645,9 @@
             "bc1c3fcc.9b284"
         ],
         "x": 1274,
-        "y": 399
+        "y": 399,
+        "w": 82,
+        "h": 442
     },
     {
         "id": "fc7cd29.614f63",
@@ -2648,7 +2666,9 @@
             "2ef3deb7.89c4c2"
         ],
         "x": 1534,
-        "y": 59
+        "y": 59,
+        "w": 342,
+        "h": 282
     },
     {
         "id": "d25553b5.e1268",
@@ -2666,7 +2686,9 @@
             "71ee541a.3a062c"
         ],
         "x": 674,
-        "y": 119
+        "y": 119,
+        "w": 327,
+        "h": 382
     },
     {
         "id": "c5095565.7f4e28",
@@ -2682,7 +2704,9 @@
             "d3afa9e1.b3b358"
         ],
         "x": 974,
-        "y": 699
+        "y": 699,
+        "w": 232,
+        "h": 242
     },
     {
         "id": "f9ff8461.417b58",
@@ -3069,6 +3093,28 @@
         "h": 302
     },
     {
+        "id": "1a836227e1fcfebf",
+        "type": "group",
+        "z": "439be944.edbf68",
+        "name": "TIMED_BUTTON_TEST",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "63e7df80.7f3ee",
+            "6f14865a.185358",
+            "11e01e48.8d0832",
+            "2244ab68.2f1d84",
+            "1a9d86a4.f23a19"
+        ],
+        "env": [],
+        "x": 244,
+        "y": 39,
+        "w": 682,
+        "h": 182
+    },
+    {
         "id": "c714b94e.ae699",
         "type": "group",
         "z": "73b4244c.d9fd9c",
@@ -3156,28 +3202,6 @@
         ],
         "x": 664,
         "y": 339
-    },
-    {
-        "id": "1a836227e1fcfebf",
-        "type": "group",
-        "z": "439be944.edbf68",
-        "name": "TIMED_BUTTON_TEST",
-        "style": {
-            "fill": "#dbcbe7",
-            "label": true
-        },
-        "nodes": [
-            "63e7df80.7f3ee",
-            "6f14865a.185358",
-            "11e01e48.8d0832",
-            "2244ab68.2f1d84",
-            "1a9d86a4.f23a19"
-        ],
-        "env": [],
-        "x": 244,
-        "y": 39,
-        "w": 682,
-        "h": 182
     },
     {
         "id": "d1e7d7ad.42bde8",
@@ -10793,6 +10817,594 @@
         "wires": []
     },
     {
+        "id": "cb84c65c.4e5f2",
+        "type": "subflow:84513d0.1c477c",
+        "z": "73b4244c.d9fd9c",
+        "g": "38a55132.89b07e",
+        "name": "TOGGLE_FAN",
+        "env": [],
+        "x": 980,
+        "y": 220,
+        "wires": [
+            [
+                "467039d5.8ce248",
+                "3b9bd892.bbdd7",
+                "4e4afd72.55a414",
+                "a68180eb.68942"
+            ]
+        ]
+    },
+    {
+        "id": "72cdc27f.f0041c",
+        "type": "subflow:f10f58ea.a676f8",
+        "z": "73b4244c.d9fd9c",
+        "g": "38a55132.89b07e",
+        "name": "TIMED_REMOTE_BUTTON_FAN_CONTROL",
+        "env": [
+            {
+                "name": "DELAY_TIME_PRESSED",
+                "value": "3",
+                "type": "num"
+            }
+        ],
+        "x": 880,
+        "y": 140,
+        "wires": [
+            [],
+            [
+                "cb84c65c.4e5f2",
+                "a0a0db42.024168"
+            ]
+        ]
+    },
+    {
+        "id": "e0d3b687.4587e",
+        "type": "comment",
+        "z": "73b4244c.d9fd9c",
+        "g": "38a55132.89b07e",
+        "name": "LONGPUSH",
+        "info": "",
+        "x": 970,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8ef4004.42c008",
+        "type": "phidget22-digitaloutput",
+        "z": "73b4244c.d9fd9c",
+        "g": "aed419e2.361d9",
+        "channel": "1",
+        "deviceSerialNumber": "311883",
+        "isHubPortDevice": false,
+        "hubPort": 0,
+        "debug": false,
+        "LEDCurrentLimit": 0.02,
+        "LEDForwardVoltage": "1",
+        "x": 1340,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "467039d5.8ce248",
+        "type": "ui_switch",
+        "z": "73b4244c.d9fd9c",
+        "g": "aed419e2.361d9",
+        "name": "FAN",
+        "label": "VENTILATOR",
+        "tooltip": "",
+        "group": "d8bce319.63fd",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-2x fa-superpowers",
+        "oncolor": "yellow",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-2x fa-superpowers",
+        "offcolor": "grey",
+        "x": 1330,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3b9bd892.bbdd7",
+        "type": "subflow:f69b432a.83cd7",
+        "z": "73b4244c.d9fd9c",
+        "g": "aed419e2.361d9",
+        "name": "DIG_OUT_ON_OFF",
+        "env": [],
+        "x": 1320,
+        "y": 160,
+        "wires": [
+            [
+                "8ef4004.42c008"
+            ]
+        ]
+    },
+    {
+        "id": "c5e62446.21a16",
+        "type": "link in",
+        "z": "73b4244c.d9fd9c",
+        "g": "c714b94e.ae699",
+        "name": "FAN_ENTRY_ROOM_BUTTON",
+        "links": [
+            "3a4f243e.5e2c6c"
+        ],
+        "x": 375,
+        "y": 140,
+        "wires": [
+            [
+                "72cdc27f.f0041c"
+            ]
+        ]
+    },
+    {
+        "id": "85555801.6e10e8",
+        "type": "link in",
+        "z": "73b4244c.d9fd9c",
+        "g": "c714b94e.ae699",
+        "name": "FAN_ENTRY_ROOM_CONTROL_RESET",
+        "links": [
+            "570c4e1d.1267e"
+        ],
+        "x": 375,
+        "y": 220,
+        "wires": [
+            [
+                "cb84c65c.4e5f2"
+            ]
+        ]
+    },
+    {
+        "id": "5604af13.874a68",
+        "type": "link in",
+        "z": "73b4244c.d9fd9c",
+        "g": "c714b94e.ae699",
+        "name": "FAN_ENTRY_ROOM_KEEP_ALIVE",
+        "links": [
+            "26c32fde.c785e"
+        ],
+        "x": 375,
+        "y": 460,
+        "wires": [
+            [
+                "f6a45aba.6db05"
+            ]
+        ]
+    },
+    {
+        "id": "8ba3d48.cf2b628",
+        "type": "ui_button",
+        "z": "73b4244c.d9fd9c",
+        "g": "38a55132.89b07e",
+        "name": "",
+        "group": "d8bce319.63fd",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "EIN/AUS",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "",
+        "x": 760,
+        "y": 240,
+        "wires": [
+            [
+                "cb84c65c.4e5f2",
+                "c733a978.b176e8"
+            ]
+        ]
+    },
+    {
+        "id": "dde5f30.4f9e71",
+        "type": "subflow:6d480044.1d777",
+        "z": "73b4244c.d9fd9c",
+        "g": "91ed8461.9088d8",
+        "name": "GateKeeper",
+        "env": [],
+        "x": 1010,
+        "y": 440,
+        "wires": [
+            [
+                "6c4efcc0.ea6254"
+            ]
+        ]
+    },
+    {
+        "id": "6c4efcc0.ea6254",
+        "type": "gate",
+        "z": "73b4244c.d9fd9c",
+        "g": "91ed8461.9088d8",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "closed",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "persist": false,
+        "x": 1250,
+        "y": 500,
+        "wires": [
+            [
+                "2c0dd16f.dc4106"
+            ]
+        ]
+    },
+    {
+        "id": "f6a45aba.6db05",
+        "type": "change",
+        "z": "73b4244c.d9fd9c",
+        "g": "91ed8461.9088d8",
+        "name": "TRUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 990,
+        "y": 560,
+        "wires": [
+            [
+                "6c4efcc0.ea6254"
+            ]
+        ]
+    },
+    {
+        "id": "8088ad7d.3db39",
+        "type": "comment",
+        "z": "73b4244c.d9fd9c",
+        "g": "91ed8461.9088d8",
+        "name": "Restart timer when receiving a new presence detector signal",
+        "info": "",
+        "x": 1220,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "2c0dd16f.dc4106",
+        "type": "mytimeout",
+        "z": "73b4244c.d9fd9c",
+        "g": "91ed8461.9088d8",
+        "name": "AUTOOFF",
+        "outtopic": "",
+        "outsafe": "",
+        "outwarning": "Warning",
+        "outunsafe": "off",
+        "warning": "1",
+        "timer": "900",
+        "debug": false,
+        "ndebug": false,
+        "ignoreCase": false,
+        "repeat": false,
+        "again": false,
+        "x": 1190,
+        "y": 380,
+        "wires": [
+            [],
+            [
+                "77c6b5e6.ff87b4"
+            ]
+        ]
+    },
+    {
+        "id": "6cf74758.c4d27",
+        "type": "change",
+        "z": "73b4244c.d9fd9c",
+        "g": "91ed8461.9088d8",
+        "name": "CANCEL_AUTOOFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "cancel",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 380,
+        "wires": [
+            [
+                "2c0dd16f.dc4106"
+            ]
+        ]
+    },
+    {
+        "id": "77c6b5e6.ff87b4",
+        "type": "switch",
+        "z": "73b4244c.d9fd9c",
+        "g": "91ed8461.9088d8",
+        "name": "IsExpired",
+        "property": "flag",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1340,
+        "y": 380,
+        "wires": [
+            [
+                "5dfaf36d.a77c6c"
+            ]
+        ]
+    },
+    {
+        "id": "5dfaf36d.a77c6c",
+        "type": "change",
+        "z": "73b4244c.d9fd9c",
+        "g": "91ed8461.9088d8",
+        "name": "MakeReset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "reset",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1350,
+        "y": 420,
+        "wires": [
+            [
+                "cb84c65c.4e5f2"
+            ]
+        ]
+    },
+    {
+        "id": "4e4afd72.55a414",
+        "type": "switch",
+        "z": "73b4244c.d9fd9c",
+        "g": "91ed8461.9088d8",
+        "name": "IsFALSE",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 820,
+        "y": 400,
+        "wires": [
+            [
+                "6cf74758.c4d27"
+            ]
+        ]
+    },
+    {
+        "id": "c733a978.b176e8",
+        "type": "change",
+        "z": "73b4244c.d9fd9c",
+        "g": "91ed8461.9088d8",
+        "name": "FALSE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 440,
+        "wires": [
+            [
+                "dde5f30.4f9e71"
+            ]
+        ]
+    },
+    {
+        "id": "a0a0db42.024168",
+        "type": "switch",
+        "z": "73b4244c.d9fd9c",
+        "g": "91ed8461.9088d8",
+        "name": "IsTRUE",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 840,
+        "y": 480,
+        "wires": [
+            [
+                "dde5f30.4f9e71"
+            ]
+        ]
+    },
+    {
+        "id": "1b4d007f.5f1ae8",
+        "type": "comment",
+        "z": "73b4244c.d9fd9c",
+        "g": "c714b94e.ae699",
+        "name": "PRESENCE SENSOR",
+        "info": "",
+        "x": 450,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "3dea0999.cc5c86",
+        "type": "comment",
+        "z": "73b4244c.d9fd9c",
+        "g": "c714b94e.ae699",
+        "name": "ALL OFF",
+        "info": "",
+        "x": 420,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ca9cb80a.e6811",
+        "type": "comment",
+        "z": "73b4244c.d9fd9c",
+        "g": "c714b94e.ae699",
+        "name": "BUTTON_1",
+        "info": "",
+        "x": 430,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "1ec1f787.ee832",
+        "type": "inject",
+        "z": "73b4244c.d9fd9c",
+        "g": "91ed8461.9088d8",
+        "name": "SIM_PRESENCE_DETECTOR",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 830,
+        "y": 600,
+        "wires": [
+            [
+                "f6a45aba.6db05"
+            ]
+        ]
+    },
+    {
+        "id": "937b0b88.c0bbf8",
+        "type": "inject",
+        "z": "73b4244c.d9fd9c",
+        "g": "38a55132.89b07e",
+        "name": "SIM_RELEASED",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "released",
+        "payloadType": "str",
+        "x": 720,
+        "y": 200,
+        "wires": [
+            [
+                "72cdc27f.f0041c"
+            ]
+        ]
+    },
+    {
+        "id": "15b81864.5e3c8",
+        "type": "inject",
+        "z": "73b4244c.d9fd9c",
+        "g": "38a55132.89b07e",
+        "name": "SIM_PRESSED",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "pressed",
+        "payloadType": "str",
+        "x": 720,
+        "y": 100,
+        "wires": [
+            [
+                "72cdc27f.f0041c"
+            ]
+        ]
+    },
+    {
+        "id": "a68180eb.68942",
+        "type": "switch",
+        "z": "73b4244c.d9fd9c",
+        "g": "91ed8461.9088d8",
+        "name": "IsFALSE",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 880,
+        "y": 520,
+        "wires": [
+            [
+                "dde5f30.4f9e71"
+            ]
+        ]
+    },
+    {
         "id": "63e7df80.7f3ee",
         "type": "subflow:f10f58ea.a676f8",
         "z": "439be944.edbf68",
@@ -11996,591 +12608,214 @@
         "wires": []
     },
     {
-        "id": "cb84c65c.4e5f2",
-        "type": "subflow:84513d0.1c477c",
-        "z": "73b4244c.d9fd9c",
-        "g": "38a55132.89b07e",
-        "name": "TOGGLE_FAN",
-        "env": [],
-        "x": 980,
-        "y": 220,
-        "wires": [
-            [
-                "467039d5.8ce248",
-                "3b9bd892.bbdd7",
-                "4e4afd72.55a414",
-                "a68180eb.68942"
-            ]
-        ]
-    },
-    {
-        "id": "72cdc27f.f0041c",
-        "type": "subflow:f10f58ea.a676f8",
-        "z": "73b4244c.d9fd9c",
-        "g": "38a55132.89b07e",
-        "name": "TIMED_REMOTE_BUTTON_FAN_CONTROL",
-        "env": [
-            {
-                "name": "DELAY_TIME_PRESSED",
-                "value": "3",
-                "type": "num"
-            }
+        "id": "d8bdecf44c5318ef",
+        "type": "link out",
+        "z": "439be944.edbf68",
+        "name": "TestSumToLink",
+        "mode": "link",
+        "links": [
+            "b70d53cf558868b7"
         ],
-        "x": 880,
-        "y": 140,
-        "wires": [
-            [],
-            [
-                "cb84c65c.4e5f2",
-                "a0a0db42.024168"
-            ]
-        ]
-    },
-    {
-        "id": "e0d3b687.4587e",
-        "type": "comment",
-        "z": "73b4244c.d9fd9c",
-        "g": "38a55132.89b07e",
-        "name": "LONGPUSH",
-        "info": "",
-        "x": 970,
-        "y": 180,
+        "x": 695,
+        "y": 1480,
         "wires": []
     },
     {
-        "id": "8ef4004.42c008",
-        "type": "phidget22-digitaloutput",
-        "z": "73b4244c.d9fd9c",
-        "g": "aed419e2.361d9",
-        "channel": "1",
-        "deviceSerialNumber": "311883",
-        "isHubPortDevice": false,
-        "hubPort": 0,
-        "debug": false,
-        "LEDCurrentLimit": 0.02,
-        "LEDForwardVoltage": "1",
-        "x": 1340,
-        "y": 100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "467039d5.8ce248",
-        "type": "ui_switch",
-        "z": "73b4244c.d9fd9c",
-        "g": "aed419e2.361d9",
-        "name": "FAN",
-        "label": "VENTILATOR",
-        "tooltip": "",
-        "group": "d8bce319.63fd",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "decouple": "true",
-        "topic": "",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "fa-2x fa-superpowers",
-        "oncolor": "yellow",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "fa-2x fa-superpowers",
-        "offcolor": "grey",
-        "x": 1330,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3b9bd892.bbdd7",
-        "type": "subflow:f69b432a.83cd7",
-        "z": "73b4244c.d9fd9c",
-        "g": "aed419e2.361d9",
-        "name": "DIG_OUT_ON_OFF",
-        "env": [],
-        "x": 1320,
-        "y": 160,
-        "wires": [
-            [
-                "8ef4004.42c008"
-            ]
-        ]
-    },
-    {
-        "id": "c5e62446.21a16",
-        "type": "link in",
-        "z": "73b4244c.d9fd9c",
-        "g": "c714b94e.ae699",
-        "name": "FAN_ENTRY_ROOM_BUTTON",
-        "links": [
-            "3a4f243e.5e2c6c"
-        ],
-        "x": 375,
-        "y": 140,
-        "wires": [
-            [
-                "72cdc27f.f0041c"
-            ]
-        ]
-    },
-    {
-        "id": "85555801.6e10e8",
-        "type": "link in",
-        "z": "73b4244c.d9fd9c",
-        "g": "c714b94e.ae699",
-        "name": "FAN_ENTRY_ROOM_CONTROL_RESET",
-        "links": [
-            "570c4e1d.1267e"
-        ],
-        "x": 375,
-        "y": 220,
-        "wires": [
-            [
-                "cb84c65c.4e5f2"
-            ]
-        ]
-    },
-    {
-        "id": "5604af13.874a68",
-        "type": "link in",
-        "z": "73b4244c.d9fd9c",
-        "g": "c714b94e.ae699",
-        "name": "FAN_ENTRY_ROOM_KEEP_ALIVE",
-        "links": [
-            "26c32fde.c785e"
-        ],
-        "x": 375,
-        "y": 460,
-        "wires": [
-            [
-                "f6a45aba.6db05"
-            ]
-        ]
-    },
-    {
-        "id": "8ba3d48.cf2b628",
-        "type": "ui_button",
-        "z": "73b4244c.d9fd9c",
-        "g": "38a55132.89b07e",
+        "id": "b6bc5399.8385e",
+        "type": "calculator",
+        "z": "439be944.edbf68",
         "name": "",
-        "group": "d8bce319.63fd",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "EIN/AUS",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "",
-        "x": 760,
-        "y": 240,
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "max",
+        "constant": "",
+        "round": false,
+        "decimals": 0,
+        "x": 540,
+        "y": 1660,
         "wires": [
             [
-                "cb84c65c.4e5f2",
-                "c733a978.b176e8"
+                "4c297cba.7585a4"
             ]
         ]
     },
     {
-        "id": "dde5f30.4f9e71",
-        "type": "subflow:6d480044.1d777",
-        "z": "73b4244c.d9fd9c",
-        "g": "91ed8461.9088d8",
-        "name": "GateKeeper",
-        "env": [],
-        "x": 1010,
-        "y": 440,
-        "wires": [
-            [
-                "6c4efcc0.ea6254"
-            ]
-        ]
-    },
-    {
-        "id": "6c4efcc0.ea6254",
-        "type": "gate",
-        "z": "73b4244c.d9fd9c",
-        "g": "91ed8461.9088d8",
+        "id": "e5a3b930.003428",
+        "type": "inject",
+        "z": "439be944.edbf68",
         "name": "",
-        "controlTopic": "control",
-        "defaultState": "closed",
-        "openCmd": "open",
-        "closeCmd": "close",
-        "toggleCmd": "toggle",
-        "defaultCmd": "default",
-        "persist": false,
-        "x": 1250,
-        "y": 500,
-        "wires": [
-            [
-                "2c0dd16f.dc4106"
-            ]
-        ]
-    },
-    {
-        "id": "f6a45aba.6db05",
-        "type": "change",
-        "z": "73b4244c.d9fd9c",
-        "g": "91ed8461.9088d8",
-        "name": "TRUE",
-        "rules": [
+        "props": [
             {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 990,
-        "y": 560,
-        "wires": [
-            [
-                "6c4efcc0.ea6254"
-            ]
-        ]
-    },
-    {
-        "id": "8088ad7d.3db39",
-        "type": "comment",
-        "z": "73b4244c.d9fd9c",
-        "g": "91ed8461.9088d8",
-        "name": "Restart timer when receiving a new presence detector signal",
-        "info": "",
-        "x": 1220,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "2c0dd16f.dc4106",
-        "type": "mytimeout",
-        "z": "73b4244c.d9fd9c",
-        "g": "91ed8461.9088d8",
-        "name": "AUTOOFF",
-        "outtopic": "",
-        "outsafe": "",
-        "outwarning": "Warning",
-        "outunsafe": "off",
-        "warning": "1",
-        "timer": "900",
-        "debug": false,
-        "ndebug": false,
-        "ignoreCase": false,
-        "repeat": false,
-        "again": false,
-        "x": 1190,
-        "y": 380,
-        "wires": [
-            [],
-            [
-                "77c6b5e6.ff87b4"
-            ]
-        ]
-    },
-    {
-        "id": "6cf74758.c4d27",
-        "type": "change",
-        "z": "73b4244c.d9fd9c",
-        "g": "91ed8461.9088d8",
-        "name": "CANCEL_AUTOOFF",
-        "rules": [
+                "p": "payload"
+            },
             {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "cancel",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1000,
-        "y": 380,
-        "wires": [
-            [
-                "2c0dd16f.dc4106"
-            ]
-        ]
-    },
-    {
-        "id": "77c6b5e6.ff87b4",
-        "type": "switch",
-        "z": "73b4244c.d9fd9c",
-        "g": "91ed8461.9088d8",
-        "name": "IsExpired",
-        "property": "flag",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "off",
+                "p": "topic",
                 "vt": "str"
             }
         ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1340,
-        "y": 380,
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[321,123,333,222,111]",
+        "payloadType": "json",
+        "x": 320,
+        "y": 1660,
         "wires": [
             [
-                "5dfaf36d.a77c6c"
+                "b6bc5399.8385e"
             ]
         ]
     },
     {
-        "id": "5dfaf36d.a77c6c",
-        "type": "change",
-        "z": "73b4244c.d9fd9c",
-        "g": "91ed8461.9088d8",
-        "name": "MakeReset",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "reset",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1350,
-        "y": 420,
-        "wires": [
-            [
-                "cb84c65c.4e5f2"
-            ]
-        ]
-    },
-    {
-        "id": "4e4afd72.55a414",
-        "type": "switch",
-        "z": "73b4244c.d9fd9c",
-        "g": "91ed8461.9088d8",
-        "name": "IsFALSE",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 820,
-        "y": 400,
-        "wires": [
-            [
-                "6cf74758.c4d27"
-            ]
-        ]
-    },
-    {
-        "id": "c733a978.b176e8",
-        "type": "change",
-        "z": "73b4244c.d9fd9c",
-        "g": "91ed8461.9088d8",
-        "name": "FALSE",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 830,
-        "y": 440,
-        "wires": [
-            [
-                "dde5f30.4f9e71"
-            ]
-        ]
-    },
-    {
-        "id": "a0a0db42.024168",
-        "type": "switch",
-        "z": "73b4244c.d9fd9c",
-        "g": "91ed8461.9088d8",
-        "name": "IsTRUE",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 840,
-        "y": 480,
-        "wires": [
-            [
-                "dde5f30.4f9e71"
-            ]
-        ]
-    },
-    {
-        "id": "1b4d007f.5f1ae8",
-        "type": "comment",
-        "z": "73b4244c.d9fd9c",
-        "g": "c714b94e.ae699",
-        "name": "PRESENCE SENSOR",
-        "info": "",
-        "x": 450,
-        "y": 420,
+        "id": "4c297cba.7585a4",
+        "type": "debug",
+        "z": "439be944.edbf68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 730,
+        "y": 1660,
         "wires": []
     },
     {
-        "id": "3dea0999.cc5c86",
-        "type": "comment",
-        "z": "73b4244c.d9fd9c",
-        "g": "c714b94e.ae699",
-        "name": "ALL OFF",
-        "info": "",
-        "x": 420,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "ca9cb80a.e6811",
-        "type": "comment",
-        "z": "73b4244c.d9fd9c",
-        "g": "c714b94e.ae699",
-        "name": "BUTTON_1",
-        "info": "",
+        "id": "5a1ed448dbd94640",
+        "type": "inject",
+        "z": "439be944.edbf68",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[321,123,333,222,111]",
+        "payloadType": "json",
         "x": 430,
-        "y": 100,
+        "y": 1480,
+        "wires": [
+            [
+                "d8bdecf44c5318ef"
+            ]
+        ]
+    },
+    {
+        "id": "f043b6ee033d8226",
+        "type": "link call",
+        "z": "439be944.edbf68",
+        "name": "CALL_CALC",
+        "links": [
+            "b70d53cf558868b7"
+        ],
+        "timeout": "30",
+        "x": 700,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f9b5a29eb4bd5474",
+        "type": "inject",
+        "z": "439be944.edbf68",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[321,123,333,222,111]",
+        "payloadType": "json",
+        "x": 430,
+        "y": 1420,
+        "wires": [
+            [
+                "f043b6ee033d8226"
+            ]
+        ]
+    },
+    {
+        "id": "b70d53cf558868b7",
+        "type": "link in",
+        "z": "5ac5f5224c737d0b",
+        "name": "TIN",
+        "links": [
+            "d8bdecf44c5318ef"
+        ],
+        "x": 355,
+        "y": 240,
+        "wires": [
+            [
+                "3b0db74f303adeac"
+            ]
+        ]
+    },
+    {
+        "id": "35f0c2b1a4b5699d",
+        "type": "link out",
+        "z": "5ac5f5224c737d0b",
+        "name": "TOUT",
+        "mode": "link",
+        "links": [],
+        "x": 655,
+        "y": 240,
         "wires": []
     },
     {
-        "id": "1ec1f787.ee832",
-        "type": "inject",
-        "z": "73b4244c.d9fd9c",
-        "g": "91ed8461.9088d8",
-        "name": "SIM_PRESENCE_DETECTOR",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 830,
-        "y": 600,
+        "id": "3b0db74f303adeac",
+        "type": "calculator",
+        "z": "5ac5f5224c737d0b",
+        "name": "TCALC",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "sum",
+        "constant": "",
+        "round": false,
+        "decimals": 0,
+        "x": 510,
+        "y": 240,
         "wires": [
             [
-                "f6a45aba.6db05"
+                "35f0c2b1a4b5699d",
+                "efd4e267bf041293"
             ]
         ]
     },
     {
-        "id": "937b0b88.c0bbf8",
-        "type": "inject",
-        "z": "73b4244c.d9fd9c",
-        "g": "38a55132.89b07e",
-        "name": "SIM_RELEASED",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "released",
-        "payloadType": "str",
-        "x": 720,
-        "y": 200,
-        "wires": [
-            [
-                "72cdc27f.f0041c"
-            ]
-        ]
-    },
-    {
-        "id": "15b81864.5e3c8",
-        "type": "inject",
-        "z": "73b4244c.d9fd9c",
-        "g": "38a55132.89b07e",
-        "name": "SIM_PRESSED",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "pressed",
-        "payloadType": "str",
-        "x": 720,
-        "y": 100,
-        "wires": [
-            [
-                "72cdc27f.f0041c"
-            ]
-        ]
-    },
-    {
-        "id": "a68180eb.68942",
-        "type": "switch",
-        "z": "73b4244c.d9fd9c",
-        "g": "91ed8461.9088d8",
-        "name": "IsFALSE",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 880,
-        "y": 520,
-        "wires": [
-            [
-                "dde5f30.4f9e71"
-            ]
-        ]
+        "id": "efd4e267bf041293",
+        "type": "debug",
+        "z": "5ac5f5224c737d0b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 160,
+        "wires": []
     }
 ]
