@@ -2373,9 +2373,7 @@
             "e6986e20.446ed"
         ],
         "x": 2174,
-        "y": 39,
-        "w": 392,
-        "h": 82
+        "y": 39
     },
     {
         "id": "78be8f10.9c6a",
@@ -2396,9 +2394,7 @@
             "7211dc16.1b3594"
         ],
         "x": 274,
-        "y": 19,
-        "w": 812,
-        "h": 82
+        "y": 19
     },
     {
         "id": "72d4b200.765e6",
@@ -2416,9 +2412,7 @@
             "7b20a57f.06ad1c"
         ],
         "x": 1434,
-        "y": 379,
-        "w": 322,
-        "h": 202
+        "y": 379
     },
     {
         "id": "9001a100.f2e51",
@@ -2514,9 +2508,7 @@
             "7aceb02d.3c6a8"
         ],
         "x": 2074,
-        "y": 619,
-        "w": 82,
-        "h": 442
+        "y": 619
     },
     {
         "id": "51fcd714.99f798",
@@ -2637,9 +2629,7 @@
             "bc1c3fcc.9b284"
         ],
         "x": 1274,
-        "y": 399,
-        "w": 82,
-        "h": 442
+        "y": 399
     },
     {
         "id": "fc7cd29.614f63",
@@ -2658,9 +2648,7 @@
             "2ef3deb7.89c4c2"
         ],
         "x": 1534,
-        "y": 59,
-        "w": 342,
-        "h": 282
+        "y": 59
     },
     {
         "id": "d25553b5.e1268",
@@ -2678,9 +2666,7 @@
             "71ee541a.3a062c"
         ],
         "x": 674,
-        "y": 119,
-        "w": 327,
-        "h": 382
+        "y": 119
     },
     {
         "id": "c5095565.7f4e28",
@@ -2696,9 +2682,7 @@
             "d3afa9e1.b3b358"
         ],
         "x": 974,
-        "y": 699,
-        "w": 232,
-        "h": 242
+        "y": 699
     },
     {
         "id": "f9ff8461.417b58",
@@ -2883,7 +2867,8 @@
         "z": "439be944.edbf68",
         "name": "TOGGLE TESTER",
         "style": {
-            "label": true
+            "label": true,
+            "fill": "#e3f3d3"
         },
         "nodes": [
             "88202ca0.0adb",
@@ -2902,6 +2887,7 @@
             "6f142b4a.1ea934",
             "c0c76c92.31c7b"
         ],
+        "env": [],
         "x": 574,
         "y": 1159,
         "w": 752,
@@ -2999,6 +2985,87 @@
         "y": 33
     },
     {
+        "id": "680d0bedc4187762",
+        "type": "group",
+        "z": "439be944.edbf68",
+        "name": "TEST CONTROLLER",
+        "style": {
+            "label": true,
+            "fill": "#d1d1d1"
+        },
+        "nodes": [
+            "a448132d.ad5c6",
+            "d9564624.008678",
+            "2d56d1a9.3a6c8e",
+            "fbdf20a1.b0888",
+            "10404531.961b5b"
+        ],
+        "env": [],
+        "x": 34,
+        "y": 1159,
+        "w": 432,
+        "h": 322
+    },
+    {
+        "id": "6ce5eca29c0fc044",
+        "type": "group",
+        "z": "439be944.edbf68",
+        "name": "TOGGLE TEST",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "3a22bea7.e11152",
+            "efebf46e.171ee8",
+            "1ad214a6.e1fa1b",
+            "3f6aa48.e4fce5c",
+            "a68156ae.4e6228",
+            "67933de2.575f54",
+            "ee9c478e.cefd28",
+            "63b7ad48.f9ad64",
+            "b6eff37c.7d8af",
+            "fe3ae856.c77ed8"
+        ],
+        "env": [],
+        "x": 54,
+        "y": 739,
+        "w": 812,
+        "h": 322
+    },
+    {
+        "id": "05c122a0a5a3655d",
+        "type": "group",
+        "z": "439be944.edbf68",
+        "name": "TIMED GATE TEST",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "105803e6.d8882c",
+            "ee051dc6.b119d",
+            "c033b07d.1d6ee",
+            "585676ed.694278",
+            "aef4f46d.7408b8",
+            "7bab6b1a.977a54",
+            "5fbdc516.64a3dc",
+            "954625b.7c682d8",
+            "18f0a09d.19689f",
+            "3ac9a857.9ffad8",
+            "21169407.3e051c",
+            "a65c217b.5fc57",
+            "57e293a1.f8e80c",
+            "14fb29cb.76cc86",
+            "b2002310.62adf",
+            "b6267b4bc1336e05",
+            "7af2474e1d056bd0"
+        ],
+        "env": [],
+        "x": 54,
+        "y": 419,
+        "w": 1212,
+        "h": 302
+    },
+    {
         "id": "c714b94e.ae699",
         "type": "group",
         "z": "73b4244c.d9fd9c",
@@ -3088,84 +3155,26 @@
         "y": 339
     },
     {
-        "id": "680d0bedc4187762",
+        "id": "1a836227e1fcfebf",
         "type": "group",
         "z": "439be944.edbf68",
-        "name": "TEST CONTROLLER",
+        "name": "TIMED_BUTTON_TEST",
         "style": {
+            "fill": "#dbcbe7",
             "label": true
         },
         "nodes": [
-            "a448132d.ad5c6",
-            "d9564624.008678",
-            "2d56d1a9.3a6c8e",
-            "fbdf20a1.b0888",
-            "10404531.961b5b"
+            "63e7df80.7f3ee",
+            "6f14865a.185358",
+            "11e01e48.8d0832",
+            "2244ab68.2f1d84",
+            "1a9d86a4.f23a19"
         ],
         "env": [],
-        "x": 34,
-        "y": 1159,
-        "w": 432,
-        "h": 322
-    },
-    {
-        "id": "6ce5eca29c0fc044",
-        "type": "group",
-        "z": "439be944.edbf68",
-        "name": "TOGGLE TEST",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "3a22bea7.e11152",
-            "efebf46e.171ee8",
-            "1ad214a6.e1fa1b",
-            "3f6aa48.e4fce5c",
-            "a68156ae.4e6228",
-            "67933de2.575f54",
-            "ee9c478e.cefd28",
-            "63b7ad48.f9ad64",
-            "b6eff37c.7d8af",
-            "fe3ae856.c77ed8"
-        ],
-        "env": [],
-        "x": 54,
-        "y": 739,
-        "w": 812,
-        "h": 322
-    },
-    {
-        "id": "05c122a0a5a3655d",
-        "type": "group",
-        "z": "439be944.edbf68",
-        "name": "TIMED GATE TEST",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "105803e6.d8882c",
-            "ee051dc6.b119d",
-            "c033b07d.1d6ee",
-            "585676ed.694278",
-            "aef4f46d.7408b8",
-            "7bab6b1a.977a54",
-            "5fbdc516.64a3dc",
-            "954625b.7c682d8",
-            "18f0a09d.19689f",
-            "3ac9a857.9ffad8",
-            "21169407.3e051c",
-            "a65c217b.5fc57",
-            "57e293a1.f8e80c",
-            "14fb29cb.76cc86",
-            "b2002310.62adf",
-            "b6267b4bc1336e05",
-            "7af2474e1d056bd0"
-        ],
-        "env": [],
-        "x": 54,
-        "y": 419,
-        "w": 1212,
-        "h": 302
+        "x": 64,
+        "y": 219,
+        "w": 682,
+        "h": 182
     },
     {
         "id": "d1e7d7ad.42bde8",
@@ -10882,6 +10891,7 @@
         "id": "63e7df80.7f3ee",
         "type": "subflow:f10f58ea.a676f8",
         "z": "439be944.edbf68",
+        "g": "1a836227e1fcfebf",
         "name": "",
         "env": [
             {
@@ -10890,8 +10900,8 @@
                 "type": "num"
             }
         ],
-        "x": 780,
-        "y": 340,
+        "x": 420,
+        "y": 320,
         "wires": [
             [
                 "2244ab68.2f1d84"
@@ -10905,6 +10915,7 @@
         "id": "6f14865a.185358",
         "type": "inject",
         "z": "439be944.edbf68",
+        "g": "1a836227e1fcfebf",
         "name": "PRESSED",
         "props": [
             {
@@ -10918,8 +10929,8 @@
         "topic": "",
         "payload": "pressed",
         "payloadType": "str",
-        "x": 530,
-        "y": 280,
+        "x": 170,
+        "y": 260,
         "wires": [
             [
                 "63e7df80.7f3ee"
@@ -10930,6 +10941,7 @@
         "id": "11e01e48.8d0832",
         "type": "inject",
         "z": "439be944.edbf68",
+        "g": "1a836227e1fcfebf",
         "name": "RELEASED",
         "props": [
             {
@@ -10943,8 +10955,8 @@
         "topic": "",
         "payload": "released",
         "payloadType": "str",
-        "x": 550,
-        "y": 380,
+        "x": 190,
+        "y": 360,
         "wires": [
             [
                 "63e7df80.7f3ee"
@@ -10955,6 +10967,7 @@
         "id": "2244ab68.2f1d84",
         "type": "debug",
         "z": "439be944.edbf68",
+        "g": "1a836227e1fcfebf",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -10964,14 +10977,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1000,
-        "y": 300,
+        "x": 640,
+        "y": 280,
         "wires": []
     },
     {
         "id": "1a9d86a4.f23a19",
         "type": "debug",
         "z": "439be944.edbf68",
+        "g": "1a836227e1fcfebf",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -10981,8 +10995,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1010,
-        "y": 380,
+        "x": 650,
+        "y": 360,
         "wires": []
     },
     {
