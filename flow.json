@@ -3012,7 +3012,9 @@
         "z": "439be944.edbf68",
         "name": "TOGGLE TEST",
         "style": {
-            "label": true
+            "label": true,
+            "fill": "#ffcf3f",
+            "fill-opacity": "0.67"
         },
         "nodes": [
             "3a22bea7.e11152",
@@ -3038,7 +3040,8 @@
         "z": "439be944.edbf68",
         "name": "TIMED GATE TEST",
         "style": {
-            "label": true
+            "label": true,
+            "fill": "#ffffbf"
         },
         "nodes": [
             "105803e6.d8882c",
@@ -10788,104 +10791,6 @@
         "x": 325,
         "y": 1440,
         "wires": []
-    },
-    {
-        "id": "7a73ac12.b6bcd4",
-        "type": "change",
-        "z": "439be944.edbf68",
-        "name": "StateToPayload",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.state",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 280,
-        "y": 120,
-        "wires": [
-            [
-                "4c43f211.6aa9dc"
-            ]
-        ]
-    },
-    {
-        "id": "4c43f211.6aa9dc",
-        "type": "switch",
-        "z": "439be944.edbf68",
-        "name": "IsTRUE",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 440,
-        "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f1ead78f.c33a28",
-        "type": "switch",
-        "z": "439be944.edbf68",
-        "name": "ISOFF",
-        "property": "payload.status",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "OFF",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 250,
-        "y": 160,
-        "wires": [
-            [
-                "b1d45819.487278"
-            ]
-        ]
-    },
-    {
-        "id": "b1d45819.487278",
-        "type": "change",
-        "z": "439be944.edbf68",
-        "name": "FALSE",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 370,
-        "y": 160,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "63e7df80.7f3ee",
