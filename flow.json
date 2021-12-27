@@ -2626,10 +2626,13 @@
             "25c0e3c3.9c37ac",
             "573539e9.5b4038",
             "9ea353d9.0ebde",
-            "48611f94.4d494"
+            "48611f94.4d494",
+            "07c480ed2869352e"
         ],
-        "x": 339,
-        "y": 19
+        "x": 379,
+        "y": 19,
+        "w": 577,
+        "h": 262
     },
     {
         "id": "e045aa73.92a308",
@@ -2674,7 +2677,7 @@
         ],
         "x": 1534,
         "y": 59,
-        "w": 342,
+        "w": 352,
         "h": 282
     },
     {
@@ -2710,9 +2713,9 @@
             "65acd935.85f9b8",
             "d3afa9e1.b3b358"
         ],
-        "x": 974,
+        "x": 964,
         "y": 699,
-        "w": 232,
+        "w": 252,
         "h": 242
     },
     {
@@ -2926,11 +2929,8 @@
             "92de409327d5ae3a",
             "67b79c9900aca270"
         ],
-        "env": [],
         "x": 694,
-        "y": 959,
-        "w": 1192,
-        "h": 762
+        "y": 959
     },
     {
         "id": "b5e6f8f3.3d4d28",
@@ -3039,11 +3039,8 @@
             "fbdf20a1.b0888",
             "10404531.961b5b"
         ],
-        "env": [],
         "x": 114,
-        "y": 1279,
-        "w": 432,
-        "h": 322
+        "y": 1279
     },
     {
         "id": "6ce5eca29c0fc044",
@@ -3067,11 +3064,8 @@
             "b6eff37c.7d8af",
             "fe3ae856.c77ed8"
         ],
-        "env": [],
         "x": 194,
-        "y": 579,
-        "w": 812,
-        "h": 322
+        "y": 579
     },
     {
         "id": "05c122a0a5a3655d",
@@ -3101,11 +3095,8 @@
             "b6267b4bc1336e05",
             "7af2474e1d056bd0"
         ],
-        "env": [],
         "x": 54,
-        "y": 259,
-        "w": 1212,
-        "h": 302
+        "y": 259
     },
     {
         "id": "1a836227e1fcfebf",
@@ -3123,11 +3114,8 @@
             "2244ab68.2f1d84",
             "1a9d86a4.f23a19"
         ],
-        "env": [],
         "x": 244,
-        "y": 39,
-        "w": 682,
-        "h": 182
+        "y": 39
     },
     {
         "id": "94f8f5dacd7e03c9",
@@ -3145,11 +3133,8 @@
             "f9b5a29eb4bd5474",
             "b57d2dde1741fcfa"
         ],
-        "env": [],
         "x": 324,
-        "y": 1879,
-        "w": 772,
-        "h": 142
+        "y": 1879
     },
     {
         "id": "99c829970b783386",
@@ -3168,11 +3153,8 @@
             "73aa512a04ace131",
             "ecee5540e8869324"
         ],
-        "env": [],
         "x": 274,
-        "y": 2079,
-        "w": 812,
-        "h": 162
+        "y": 2079
     },
     {
         "id": "64ccc06c4fd30210",
@@ -3188,11 +3170,8 @@
             "e5a3b930.003428",
             "4c297cba.7585a4"
         ],
-        "env": [],
         "x": 314,
-        "y": 2299,
-        "w": 672,
-        "h": 82
+        "y": 2299
     },
     {
         "id": "c714b94e.ae699",
@@ -3297,9 +3276,11 @@
         "type": "ui_group",
         "name": "KÜCHE",
         "tab": "2211de52.b114b2",
-        "order": 1,
+        "order": 2,
         "disp": true,
-        "width": "6"
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "3a67d708.491aa8",
@@ -3481,7 +3462,7 @@
         "id": "3dbc8c98.083aa4",
         "type": "ui_group",
         "name": "KÜCHE",
-        "tab": "35aaad8a.ed3c12",
+        "tab": "2211de52.b114b2",
         "order": 1,
         "disp": true,
         "width": "6"
@@ -3961,6 +3942,9 @@
         "func": "var result;\nvar ResultOn  = \"TURN-FRONT-LIGHTS-ON\";\nvar ResultOff = \"TURN-FRONT-LIGHTS-OFF\";\n\nif( msg.payload === true)\n{\n   result = ResultOn;\n}\nelse\n{\n   result = ResultOff;\n}\nmsg.payload = result;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 580,
         "y": 40,
         "wires": [
@@ -3974,7 +3958,7 @@
         "name": "FRONTLIGHTS KITCHEN",
         "label": "VORDERLICHTER KÜCHE",
         "group": "3dbc8c98.083aa4",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -4137,6 +4121,9 @@
         "func": "var result;\nvar ResultOn  = \"TURN-KITCHEN-BOARD-DOWN-LIGHTS-ON\";\nvar ResultOff = \"TURN-KITCHEN-BOARD-DOWN-LIGHTS-OFF\";\n\nif( msg.payload === true)\n{\n   result = ResultOn;\n}\nelse\n{\n   result = ResultOff;\n}\nmsg.payload = result;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 3182.0143432617188,
         "y": 1286.6416490077972,
         "wires": [
@@ -4150,7 +4137,7 @@
         "name": "LIGHT KITCHENBOARD DOWN",
         "label": "ARBEITSPLATTE KÜCHE UNTEN",
         "group": "3dbc8c98.083aa4",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -8715,7 +8702,7 @@
         "z": "3428a01a.0d641",
         "g": "587a9021.5adbf",
         "name": "LIGHT_KITCHENBOARD_DOWN",
-        "x": 620,
+        "x": 660,
         "y": 200,
         "wires": [
             [
@@ -8730,7 +8717,7 @@
         "g": "587a9021.5adbf",
         "name": "FRONTLIGHTS_KITCHEN",
         "env": [],
-        "x": 620,
+        "x": 660,
         "y": 60,
         "wires": [
             [
@@ -8747,12 +8734,13 @@
         "links": [
             "1f08d9ae.1ea606"
         ],
-        "x": 380,
+        "x": 420,
         "y": 120,
         "wires": [
             [
                 "573539e9.5b4038",
-                "25c0e3c3.9c37ac"
+                "25c0e3c3.9c37ac",
+                "07c480ed2869352e"
             ]
         ]
     },
@@ -8765,9 +8753,44 @@
         "links": [
             "4875aa3e.f01994"
         ],
-        "x": 875,
+        "x": 915,
         "y": 120,
         "wires": []
+    },
+    {
+        "id": "07c480ed2869352e",
+        "type": "ui_switch",
+        "z": "3428a01a.0d641",
+        "g": "587a9021.5adbf",
+        "name": "CABINET_LIGHT",
+        "label": "LICHT KÜCHENSCHRANK",
+        "tooltip": "",
+        "group": "3dbc8c98.083aa4",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "TURN-KITCHEN-LIGHTS-CABINET-ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "TURN-KITCHEN-LIGHTS-CABINET-OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 620,
+        "y": 240,
+        "wires": [
+            [
+                "48611f94.4d494"
+            ]
+        ]
     },
     {
         "id": "8616432a.605b1",
@@ -9383,8 +9406,7 @@
             [
                 "7bb77c9c.12e3e4",
                 "115cef24.ed8421"
-            ],
-            []
+            ]
         ]
     },
     {
@@ -11677,7 +11699,6 @@
         "closeCmd": "close",
         "toggleCmd": "toggle",
         "defaultCmd": "default",
-        "statusCmd": "",
         "persist": false,
         "x": 1170,
         "y": 320,
@@ -12549,7 +12570,6 @@
         "closeCmd": "close",
         "toggleCmd": "toggle",
         "defaultCmd": "default",
-        "statusCmd": "",
         "persist": false,
         "x": 450,
         "y": 1520,
