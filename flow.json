@@ -134,14 +134,6 @@
         "env": []
     },
     {
-        "id": "2d5eb58afeabcddb",
-        "type": "tab",
-        "label": "REMOTE",
-        "disabled": true,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "f6dd1fca.6c306",
         "type": "subflow",
         "name": "SUB_ANTEROOM_MAIN_LIGHT",
@@ -2626,9 +2618,7 @@
             "07c480ed2869352e"
         ],
         "x": 379,
-        "y": 19,
-        "w": 577,
-        "h": 262
+        "y": 19
     },
     {
         "id": "e045aa73.92a308",
@@ -2709,9 +2699,9 @@
             "65acd935.85f9b8",
             "d3afa9e1.b3b358"
         ],
-        "x": 964,
+        "x": 974,
         "y": 699,
-        "w": 252,
+        "w": 232,
         "h": 242
     },
     {
@@ -2756,9 +2746,7 @@
             "e251ac20cefad9c5"
         ],
         "x": 214,
-        "y": 99,
-        "w": 702,
-        "h": 402
+        "y": 99
     },
     {
         "id": "11412ff.7fe6dd",
@@ -3751,18 +3739,6 @@
         "willTopic": "broken",
         "willQos": "0",
         "willPayload": ""
-    },
-    {
-        "id": "36dbe5eee9a0c226",
-        "type": "remote-config",
-        "name": "Node-RED UI",
-        "host": "localhost",
-        "protocol": "http",
-        "port": "1880",
-        "baseurl": "/ui/#!/0?socketid=Ur6llXZxPhXR9xyLAAAH",
-        "instancehash": "94tnskuzlvn8nyl3h0yx4pkgpsjleo5uk920oxriy00vt04ozc8bwzdldvsmc35h",
-        "server": "nodered02.remote-red.com",
-        "region": "de"
     },
     {
         "id": "a952ee58.75f5b",
@@ -8582,7 +8558,6 @@
         "passthru": true,
         "decouple": "false",
         "topic": "",
-        "topicType": "str",
         "style": "",
         "onvalue": "TURN-HEATER-ANTE-ROOM-ON",
         "onvalueType": "str",
@@ -8592,8 +8567,6 @@
         "offvalueType": "str",
         "officon": "",
         "offcolor": "",
-        "animate": true,
-        "className": "",
         "x": 540,
         "y": 460,
         "wires": [
@@ -9415,8 +9388,7 @@
             [
                 "7bb77c9c.12e3e4",
                 "115cef24.ed8421"
-            ],
-            []
+            ]
         ]
     },
     {
@@ -13318,38 +13290,6 @@
         "statusType": "auto",
         "x": 730,
         "y": 160,
-        "wires": []
-    },
-    {
-        "id": "e896e0d540107db8",
-        "type": "remote-access",
-        "z": "2d5eb58afeabcddb",
-        "confignode": "36dbe5eee9a0c226",
-        "name": "GEORGSHOME",
-        "verbose": true,
-        "x": 270,
-        "y": 80,
-        "wires": [
-            [
-                "a56da7e94df5ca6c"
-            ]
-        ]
-    },
-    {
-        "id": "a56da7e94df5ca6c",
-        "type": "debug",
-        "z": "2d5eb58afeabcddb",
-        "name": "REMOTEACCESSDEBUG",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 80,
         "wires": []
     }
 ]
