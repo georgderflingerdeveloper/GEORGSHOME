@@ -2907,9 +2907,7 @@
             "c0c76c92.31c7b"
         ],
         "x": 434,
-        "y": 1159,
-        "w": 752,
-        "h": 362
+        "y": 1159
     },
     {
         "id": "b5e6f8f3.3d4d28",
@@ -11421,7 +11419,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 270,
-        "y": 800,
+        "y": 760,
         "wires": [
             [
                 "38ed9d18.281cf2"
@@ -11446,7 +11444,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 270,
-        "y": 840,
+        "y": 800,
         "wires": [
             [
                 "f89eaf36.8df32"
@@ -11802,16 +11800,15 @@
         "type": "mqtt in",
         "z": "6c34888.8f9c278",
         "name": "ALLOFF",
-        "topic": "ALL_LIGHTS_OFF",
+        "topic": "ALL_LIGHTS_OFF/#",
         "qos": "2",
         "datatype": "auto",
         "broker": "2579135a.e4f65c",
-        "x": 140,
-        "y": 1160,
+        "x": 160,
+        "y": 860,
         "wires": [
             [
-                "8fb1c404.688e78",
-                "46e3d2f0.44fdfc"
+                "8fb1c404.688e78"
             ]
         ]
     },
@@ -11823,14 +11820,14 @@
         "rules": [
             {
                 "t": "set",
-                "p": "topic",
+                "p": "payload",
                 "pt": "msg",
-                "to": "ALL_LIGHTS_OFF",
+                "to": "reset",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "payload",
+                "p": "topic",
                 "pt": "msg",
                 "to": "reset",
                 "tot": "str"
@@ -11842,10 +11839,12 @@
         "to": "",
         "reg": false,
         "x": 320,
-        "y": 1140,
+        "y": 860,
         "wires": [
             [
-                "a78dc8e.028a038"
+                "a78dc8e.028a038",
+                "fe7dcc1d.c27a7",
+                "46e3d2f0.44fdfc"
             ]
         ]
     },
@@ -11862,8 +11861,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 310,
-        "y": 1180,
+        "x": 470,
+        "y": 800,
         "wires": []
     }
 ]
