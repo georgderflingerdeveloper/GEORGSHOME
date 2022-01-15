@@ -11796,5 +11796,74 @@
                 "c9e06b00.0cd268"
             ]
         ]
+    },
+    {
+        "id": "ca57a4dc.460138",
+        "type": "mqtt in",
+        "z": "6c34888.8f9c278",
+        "name": "ALLOFF",
+        "topic": "ALL_LIGHTS_OFF",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "2579135a.e4f65c",
+        "x": 140,
+        "y": 1160,
+        "wires": [
+            [
+                "8fb1c404.688e78",
+                "46e3d2f0.44fdfc"
+            ]
+        ]
+    },
+    {
+        "id": "8fb1c404.688e78",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "RESET",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ALL_LIGHTS_OFF",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "reset",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 1140,
+        "wires": [
+            [
+                "a78dc8e.028a038"
+            ]
+        ]
+    },
+    {
+        "id": "46e3d2f0.44fdfc",
+        "type": "debug",
+        "z": "6c34888.8f9c278",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 310,
+        "y": 1180,
+        "wires": []
     }
 ]
