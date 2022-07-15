@@ -208,11 +208,11 @@
                 "y": 280,
                 "wires": [
                     {
-                        "id": "583ee5d6.cac97c",
+                        "id": "33b1d6bd.67ac9a",
                         "port": 0
                     },
                     {
-                        "id": "33b1d6bd.67ac9a",
+                        "id": "a97c2ae7fe1b1e13",
                         "port": 0
                     }
                 ]
@@ -226,7 +226,7 @@
             "y": 160,
             "wires": [
                 {
-                    "id": "583ee5d6.cac97c",
+                    "id": "a97c2ae7fe1b1e13",
                     "port": 0
                 }
             ]
@@ -2377,6 +2377,60 @@
         }
     },
     {
+        "id": "c327ce184187abeb",
+        "type": "subflow",
+        "name": "CommandConverter",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "583ee5d6.cac97c"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 400,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "583ee5d6.cac97c",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "CmdOn",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "CmdOff",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99",
+        "status": {
+            "x": 380,
+            "y": 120,
+            "wires": [
+                {
+                    "id": "583ee5d6.cac97c",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
         "id": "294b4b40.587a14",
         "type": "group",
         "z": "7fa0f8f.5a71708",
@@ -3718,23 +3772,6 @@
         ]
     },
     {
-        "id": "583ee5d6.cac97c",
-        "type": "function",
-        "z": "15e47868.0e5ea8",
-        "name": "BOILER COMMAND",
-        "func": "var result;\nvar ResultOn  = \"TURN-BOILER-ON\";\nvar ResultOff = \"TURN-BOILER-OFF\";\n\nif( msg.payload === true)\n{\n   result = ResultOn;\n}\nelse\n{\n   result = ResultOff;\n}\nmsg.payload = result;\n\nreturn msg;\n\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 800,
-        "y": 160,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "33b1d6bd.67ac9a",
         "type": "ui_switch",
         "z": "15e47868.0e5ea8",
@@ -3812,7 +3849,7 @@
         "wires": [
             [
                 "33b1d6bd.67ac9a",
-                "583ee5d6.cac97c"
+                "a97c2ae7fe1b1e13"
             ]
         ]
     },
@@ -3826,7 +3863,7 @@
         "y": 160,
         "wires": [
             [
-                "583ee5d6.cac97c"
+                "a97c2ae7fe1b1e13"
             ]
         ]
     },
@@ -3839,6 +3876,29 @@
         "x": 560,
         "y": 120,
         "wires": []
+    },
+    {
+        "id": "a97c2ae7fe1b1e13",
+        "type": "subflow:c327ce184187abeb",
+        "z": "15e47868.0e5ea8",
+        "name": "COMMAND_CONVERTER",
+        "env": [
+            {
+                "name": "CmdOn",
+                "value": "TURN-BOILER-ON",
+                "type": "str"
+            },
+            {
+                "name": "CmdOff",
+                "value": "TURN-BOILER-OFF",
+                "type": "str"
+            }
+        ],
+        "x": 840,
+        "y": 80,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "f72af37e.0c69a",
@@ -6540,6 +6600,23 @@
             [
                 "f83a7aa6.3e03f8"
             ]
+        ]
+    },
+    {
+        "id": "583ee5d6.cac97c",
+        "type": "function",
+        "z": "c327ce184187abeb",
+        "name": "Convert",
+        "func": "var result;\nvar ResultOn = env.get(\"CmdOn\");\nvar ResultOff = env.get(\"CmdOff\");\n\nif (msg.payload === true) {\n   result = ResultOn;\n}\nelse {\n   result = ResultOff;\n}\nmsg.payload = result;\n\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 80,
+        "wires": [
+            []
         ]
     },
     {
