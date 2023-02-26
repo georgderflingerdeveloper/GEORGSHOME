@@ -2667,12 +2667,18 @@
             "46c0d0f8.ce014",
             "f141cad7.25f818",
             "7a79026c.f00c8c",
-            "71ee541a.3a062c"
+            "71ee541a.3a062c",
+            "421b41a74543aacc",
+            "8b7d8fb4.0669",
+            "6f479a3cec96a0ca",
+            "ed172b6757d1c0c8",
+            "011011c41a1a9425",
+            "dc6738d8d04911b4"
         ],
-        "x": 674,
-        "y": 119,
-        "w": 327,
-        "h": 382
+        "x": 444,
+        "y": 39,
+        "w": 522,
+        "h": 367
     },
     {
         "id": "c5095565.7f4e28",
@@ -2688,7 +2694,7 @@
             "d3afa9e1.b3b358"
         ],
         "x": 974,
-        "y": 699,
+        "y": 839,
         "w": 232,
         "h": 242
     },
@@ -2987,18 +2993,226 @@
         "h": 200
     },
     {
-        "id": "2211de52.b114b2",
-        "type": "ui_tab",
-        "name": "KÜCHE",
-        "icon": "dashboard",
-        "order": 3
+        "id": "bb57b64ac6308f6e",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "x": 1180,
+        "y": 140,
+        "wires": [
+            [
+                "34f4f74.85d2b08",
+                "528d8119.b5e69",
+                "2ef3deb7.89c4c2"
+            ]
+        ]
     },
     {
-        "id": "e72dbf90.dc0d1",
-        "type": "ui_tab",
-        "name": "VORHAUS",
-        "icon": "dashboard",
-        "order": 4
+        "id": "f6845ac31bf76528",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "x": 1180,
+        "y": 100,
+        "wires": [
+            [
+                "34f4f74.85d2b08",
+                "528d8119.b5e69",
+                "2ef3deb7.89c4c2"
+            ]
+        ]
+    },
+    {
+        "id": "421b41a74543aacc",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "g": "d25553b5.e1268",
+        "x": 940,
+        "y": 380,
+        "wires": [
+            [
+                "8902ca66.b29778"
+            ]
+        ]
+    },
+    {
+        "id": "a201de914c6d8870",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "x": 1160,
+        "y": 480,
+        "wires": [
+            [
+                "234d0ad4.aa5936"
+            ]
+        ]
+    },
+    {
+        "id": "32be920b3331af8d",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "x": 1020,
+        "y": 660,
+        "wires": [
+            [
+                "419fc6fa.d20eb8",
+                "1f08d9ae.1ea606",
+                "a030b27e.8deae"
+            ]
+        ]
+    },
+    {
+        "id": "2e0c602f80266e4d",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "x": 1020,
+        "y": 600,
+        "wires": [
+            [
+                "bc1c3fcc.9b284",
+                "2e6ea3e2.15e3bc",
+                "1f08d9ae.1ea606",
+                "a030b27e.8deae"
+            ]
+        ]
+    },
+    {
+        "id": "07400c474d9c257a",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "x": 1020,
+        "y": 560,
+        "wires": [
+            [
+                "2e6ea3e2.15e3bc",
+                "1f08d9ae.1ea606",
+                "a030b27e.8deae"
+            ]
+        ]
+    },
+    {
+        "id": "7c41e68cbcda7663",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "x": 840,
+        "y": 1020,
+        "wires": [
+            [
+                "65acd935.85f9b8",
+                "d3afa9e1.b3b358"
+            ]
+        ]
+    },
+    {
+        "id": "011011c41a1a9425",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "g": "d25553b5.e1268",
+        "x": 760,
+        "y": 360,
+        "wires": [
+            [
+                "d4f76bfd9bab5ae9"
+            ]
+        ]
+    },
+    {
+        "id": "304cec693c795719",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "x": 920,
+        "y": 640,
+        "wires": [
+            [
+                "421b41a74543aacc",
+                "32be920b3331af8d"
+            ]
+        ]
+    },
+    {
+        "id": "4446acc079b32a8f",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "x": 1160,
+        "y": 260,
+        "wires": [
+            [
+                "b53402c9.abef1",
+                "6fc6b4bc.2db89c"
+            ]
+        ]
+    },
+    {
+        "id": "6bb2995678ee2ffa",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "x": 1060,
+        "y": 320,
+        "wires": [
+            [
+                "a201de914c6d8870",
+                "6fc6b4bc.2db89c",
+                "bb57b64ac6308f6e"
+            ]
+        ]
+    },
+    {
+        "id": "6f479a3cec96a0ca",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "g": "d25553b5.e1268",
+        "x": 920,
+        "y": 260,
+        "wires": [
+            [
+                "2e0c602f80266e4d",
+                "a201de914c6d8870",
+                "4446acc079b32a8f",
+                "7a79026c.f00c8c"
+            ]
+        ]
+    },
+    {
+        "id": "ed172b6757d1c0c8",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "g": "d25553b5.e1268",
+        "x": 760,
+        "y": 360,
+        "wires": [
+            [
+                "421b41a74543aacc",
+                "07400c474d9c257a"
+            ]
+        ]
+    },
+    {
+        "id": "d4f76bfd9bab5ae9",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "x": 860,
+        "y": 920,
+        "wires": [
+            [
+                "d3afa9e1.b3b358",
+                "65acd935.85f9b8"
+            ]
+        ]
+    },
+    {
+        "id": "dc6738d8d04911b4",
+        "type": "junction",
+        "z": "7fa0f8f.5a71708",
+        "g": "d25553b5.e1268",
+        "x": 680,
+        "y": 220,
+        "wires": [
+            [
+                "7c41e68cbcda7663",
+                "421b41a74543aacc",
+                "6f479a3cec96a0ca",
+                "f6845ac31bf76528",
+                "46c0d0f8.ce014"
+            ]
+        ]
     },
     {
         "id": "79166127.536b1",
@@ -3301,24 +3515,6 @@
         "disp": true,
         "width": "6",
         "collapse": true
-    },
-    {
-        "id": "e8c8455b.fcfee8",
-        "type": "ui_tab",
-        "name": "Zooland Sys",
-        "icon": "home",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "43746246.80f00c",
-        "type": "ui_tab",
-        "name": "Zooland Sys",
-        "icon": "home",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "d8743c8d.11542",
@@ -6346,23 +6542,14 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 770,
-        "y": 320,
+        "x": 730,
+        "y": 120,
         "wires": [
             [
-                "65acd935.85f9b8",
-                "d3afa9e1.b3b358",
-                "34f4f74.85d2b08",
-                "6fc6b4bc.2db89c",
-                "528d8119.b5e69",
-                "2ef3deb7.89c4c2",
-                "234d0ad4.aa5936",
-                "a030b27e.8deae",
                 "7a79026c.f00c8c",
-                "1f08d9ae.1ea606",
-                "2e6ea3e2.15e3bc",
-                "8902ca66.b29778",
-                "71ee541a.3a062c"
+                "71ee541a.3a062c",
+                "6bb2995678ee2ffa",
+                "ed172b6757d1c0c8"
             ]
         ]
     },
@@ -6378,7 +6565,7 @@
         "initialize": "",
         "finalize": "",
         "x": 1100,
-        "y": 900,
+        "y": 1040,
         "wires": [
             [
                 "67458fb3.fd5b5"
@@ -6409,7 +6596,7 @@
         "officon": "",
         "offcolor": "",
         "x": 1090,
-        "y": 740,
+        "y": 880,
         "wires": [
             [
                 "419fc6fa.d20eb8"
@@ -6466,25 +6653,11 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "",
-        "x": 760,
-        "y": 460,
+        "x": 540,
+        "y": 220,
         "wires": [
             [
-                "46c0d0f8.ce014",
-                "65acd935.85f9b8",
-                "34f4f74.85d2b08",
-                "d3afa9e1.b3b358",
-                "b53402c9.abef1",
-                "6fc6b4bc.2db89c",
-                "528d8119.b5e69",
-                "2ef3deb7.89c4c2",
-                "234d0ad4.aa5936",
-                "a030b27e.8deae",
-                "7a79026c.f00c8c",
-                "1f08d9ae.1ea606",
-                "2e6ea3e2.15e3bc",
-                "8902ca66.b29778",
-                "bc1c3fcc.9b284"
+                "dc6738d8d04911b4"
             ]
         ]
     },
@@ -6698,8 +6871,8 @@
         "links": [
             "cab34a8f.35c668"
         ],
-        "x": 955,
-        "y": 160,
+        "x": 915,
+        "y": 80,
         "wires": []
     },
     {
@@ -6893,8 +7066,8 @@
         "links": [
             "a56d14db.ae8e98"
         ],
-        "x": 960,
-        "y": 220,
+        "x": 920,
+        "y": 140,
         "wires": []
     },
     {
@@ -6966,14 +7139,11 @@
         "links": [
             "1686b10a.07014f"
         ],
-        "x": 725,
-        "y": 640,
+        "x": 935,
+        "y": 760,
         "wires": [
             [
-                "419fc6fa.d20eb8",
-                "1f08d9ae.1ea606",
-                "a030b27e.8deae",
-                "8902ca66.b29778"
+                "304cec693c795719"
             ]
         ]
     },
@@ -6994,12 +7164,13 @@
         "id": "8b7d8fb4.0669",
         "type": "link in",
         "z": "7fa0f8f.5a71708",
+        "g": "d25553b5.e1268",
         "name": "ALL_OFF",
         "links": [
             "570c4e1d.1267e"
         ],
-        "x": 615,
-        "y": 460,
+        "x": 485,
+        "y": 120,
         "wires": [
             [
                 "f141cad7.25f818"
