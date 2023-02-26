@@ -3461,11 +3461,7 @@
         "width": "6",
         "collapse": true
     },
-    {
-        "id": "78ad82e4.622fac",
-        "type": "alexa-home-conf",
-        "username": "georgderflinger"
-    },
+
     {
         "id": "2579135a.e4f65c",
         "type": "mqtt-broker",
