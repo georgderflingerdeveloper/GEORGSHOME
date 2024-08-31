@@ -66,7 +66,7 @@
         "id": "c28cf7ba.34de98",
         "type": "tab",
         "label": "FLOW_KIDROOM",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
@@ -137,6 +137,38 @@
         "id": "2d5eb58afeabcddb",
         "type": "tab",
         "label": "REMOTE",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "431ba1c851c6432c",
+        "type": "tab",
+        "label": "JUNIOR_ROOM_IO_CONTROL",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "21566b29afa63880",
+        "type": "tab",
+        "label": "JUNIOR_PLC",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "012ebfaa139d5c13",
+        "type": "tab",
+        "label": "JUNIOR_DASHBOARD",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f483b74fafd5d5d9",
+        "type": "tab",
+        "label": "Flow 1",
         "disabled": false,
         "info": "",
         "env": []
@@ -2373,6 +2405,176 @@
         }
     },
     {
+        "id": "a287f300902caa62",
+        "type": "subflow",
+        "name": "SUB_DIGOUT_CMD_OFF (2)",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "83ced73154d85c88"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 320,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "83ced73154d85c88",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99",
+        "status": {
+            "x": 320,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "83ced73154d85c88",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
+        "id": "8a8aa8488bf31f59",
+        "type": "subflow",
+        "name": "SUB_DIG_OUT_OFF (2)",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "c1fd7ab344c5173e"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 500,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "8830e4ae4bdad197",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99",
+        "status": {
+            "x": 500,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "8830e4ae4bdad197",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
+        "id": "af5bc91d21532d7f",
+        "type": "subflow",
+        "name": "SUB_DIG_OUT_ON_OFF (2)",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "0ec11daa9b17ee64"
+                    },
+                    {
+                        "id": "801dd49e9e95a195"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 380,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "0ec11daa9b17ee64",
+                        "port": 0
+                    },
+                    {
+                        "id": "801dd49e9e95a195",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99",
+        "status": {
+            "x": 380,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "801dd49e9e95a195",
+                    "port": 0
+                },
+                {
+                    "id": "0ec11daa9b17ee64",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
+        "id": "cfbb5d991c18a536",
+        "type": "subflow",
+        "name": "DOUBLE_CLICKED",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "ce50f156d821be44"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 860,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "6a78c1f3bb3e4684",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
         "id": "294b4b40.587a14",
         "type": "group",
         "z": "7fa0f8f.5a71708",
@@ -2607,7 +2809,9 @@
             "ba9c0e3a.9d4bd"
         ],
         "x": 394,
-        "y": 19
+        "y": 19,
+        "w": 602,
+        "h": 382
     },
     {
         "id": "587a9021.5adbf",
@@ -2754,7 +2958,7 @@
             "e251ac20cefad9c5"
         ],
         "x": 214,
-        "y": 99
+        "y": 119
     },
     {
         "id": "1bba2fe1.2947e",
@@ -2984,6 +3188,156 @@
         "y": 2299
     },
     {
+        "id": "c12d92db.8ccdf",
+        "type": "group",
+        "z": "6c34888.8f9c278",
+        "name": "MAINLIGHT",
+        "style": {
+            "fill": "#ffbfbf",
+            "label": true
+        },
+        "nodes": [
+            "193227be.052708",
+            "b1273a8a.8e65d8"
+        ],
+        "x": 814,
+        "y": 39
+    },
+    {
+        "id": "3273be7faa57bfbe",
+        "type": "group",
+        "z": "6c34888.8f9c278",
+        "name": "MQTT TEST",
+        "style": {
+            "label": true,
+            "fill": "#d1d1d1",
+            "fill-opacity": "0.47"
+        },
+        "nodes": [
+            "bf14afe1498d062b",
+            "c3c76d1ca32a969f",
+            "a13304153e3b2d5a",
+            "d61e81e2fd3b2fc9"
+        ],
+        "x": 94,
+        "y": 359
+    },
+    {
+        "id": "d9499599d434120e",
+        "type": "group",
+        "z": "1f4c4ae3.09c2f5",
+        "name": "MIDDLE_LIGHT",
+        "style": {
+            "fill": "#ffbfbf",
+            "label": true
+        },
+        "nodes": [
+            "d8d52dc8279032fa"
+        ],
+        "x": 454,
+        "y": 419
+    },
+    {
+        "id": "5419b658a3b4e70c",
+        "type": "group",
+        "z": "431ba1c851c6432c",
+        "name": "DIGITAL_OUTPUTS",
+        "style": {
+            "fill": "#ffbfbf",
+            "fill-opacity": "0.44",
+            "label": true
+        },
+        "nodes": [
+            "2efb051be53014fc",
+            "8b0cd28fad0a2680",
+            "91784b56299e74da",
+            "b01836120b219a41",
+            "a4a969d7b78473bf",
+            "cd8fc6122cd2c349",
+            "201791b73ed53216",
+            "4dbab4e6f0843775",
+            "50219109594cc0c8",
+            "7f5e711633fbe857",
+            "7d9438c6e319389c",
+            "387e17d5f7d59f1c",
+            "6ec2b666446f8e28",
+            "e18c135bc7b6eee6",
+            "95a8dffe49621d36",
+            "37b33ef4617947ca",
+            "4916fd261b3ef4a6",
+            "41a2608e1e29ff0f",
+            "cc19dd1d8f21cc78",
+            "fd59331a09e8d777",
+            "5b9060d0fee5134d",
+            "56a451dc7dc2612f",
+            "5c542b42be792698",
+            "46b383e4f7f99d28",
+            "740b33f06e47161c"
+        ],
+        "x": 794,
+        "y": 5219,
+        "w": 532,
+        "h": 922
+    },
+    {
+        "id": "ac92775f41a0afb8",
+        "type": "group",
+        "z": "431ba1c851c6432c",
+        "name": "DIGITAL_INPUTS",
+        "style": {
+            "fill": "#e3f3d3",
+            "fill-opacity": "0.42",
+            "label": true
+        },
+        "nodes": [
+            "13a9707cda9d3632",
+            "6558ed41f8b2f0e3"
+        ],
+        "x": 104,
+        "y": 5219,
+        "w": 372,
+        "h": 82
+    },
+    {
+        "id": "de31784b51f6bbb4",
+        "type": "group",
+        "z": "431ba1c851c6432c",
+        "name": "HUB",
+        "style": {
+            "fill": "#bfdbef",
+            "fill-opacity": "0.34",
+            "label": true
+        },
+        "nodes": [
+            "b19624bbf38dbfa7"
+        ],
+        "x": 374,
+        "y": 5099,
+        "w": 232,
+        "h": 82
+    },
+    {
+        "id": "5cb1dedf14ed7d09",
+        "type": "group",
+        "z": "f483b74fafd5d5d9",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "a612aca0328ba90e"
+        ],
+        "x": 514,
+        "y": 139,
+        "w": 232,
+        "h": 82
+    },
+    {
         "id": "c714b94e.ae699",
         "type": "group",
         "z": "73b4244c.d9fd9c",
@@ -3073,97 +3427,17 @@
         "y": 339
     },
     {
-        "id": "c12d92db.8ccdf",
-        "type": "group",
-        "z": "6c34888.8f9c278",
-        "name": "MAINLIGHT",
-        "style": {
-            "fill": "#ffbfbf",
-            "label": true
-        },
-        "nodes": [
-            "193227be.052708",
-            "b1273a8a.8e65d8"
-        ],
-        "x": 354,
-        "y": 299,
-        "w": 192,
-        "h": 142
-    },
-    {
-        "id": "d1e7d7ad.42bde8",
-        "type": "ui_group",
-        "name": "HAUPTSTEUERUNG",
-        "tab": "",
-        "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "68419d26.ef9f84",
-        "type": "ui_group",
-        "name": "KÜCHE",
-        "tab": "2211de52.b114b2",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "3a67d708.491aa8",
-        "type": "ui_group",
-        "name": "FENSTERBANK",
-        "tab": "",
-        "order": 6,
-        "disp": true,
-        "width": "6"
-    },
-    {
-        "id": "da3ea710.5749a8",
-        "type": "ui_group",
-        "name": "HAUPTEINGANG VORNE",
-        "tab": "",
-        "order": 2,
-        "disp": true,
-        "width": "6"
-    },
-    {
-        "id": "94fb52e9.afaa7",
-        "type": "ui_group",
-        "name": "GALLERIE",
-        "tab": "",
-        "order": 3,
-        "disp": true,
-        "width": "6"
-    },
-    {
-        "id": "8f0e4184.08183",
-        "type": "ui_group",
-        "name": "GALLERIE UNTEN",
-        "tab": "",
-        "order": 5,
-        "disp": true,
-        "width": "6"
-    },
-    {
-        "id": "c50cfbbe.2ebd18",
-        "type": "ui_group",
-        "name": "GALLERIE OBEN",
-        "tab": "",
-        "order": 4,
-        "disp": true,
-        "width": "6"
-    },
-    {
-        "id": "a24fb5d0.f805f8",
-        "type": "ui_group",
-        "name": "VORHAUS",
-        "tab": "",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false
+        "id": "ce50f156d821be44",
+        "type": "junction",
+        "z": "cfbb5d991c18a536",
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "982ffa67a17bad75",
+                "4a01b69b7864fb94"
+            ]
+        ]
     },
     {
         "id": "2211de52.b114b2",
@@ -3354,13 +3628,6 @@
         "icon": "dashboard"
     },
     {
-        "id": "35aaad8a.ed3c12",
-        "type": "ui_tab",
-        "name": "KÜCHE",
-        "icon": "dashboard",
-        "order": 3
-    },
-    {
         "id": "52acc5d.8b5ba3c",
         "type": "ui_tab",
         "name": "WOHNZIMMER",
@@ -3436,41 +3703,11 @@
         "collapse": false
     },
     {
-        "id": "1d52af1b.24d841",
-        "type": "ui_group",
-        "name": "LUEFTER",
-        "tab": "60261446.7371fc",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "6fa3dc0b.2db2b4",
-        "type": "ui_group",
-        "name": "Lichter",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": true
-    },
-    {
         "id": "ef7f35ee.d69248",
         "type": "ui_group",
         "name": "Heizung",
         "tab": "c1a8c6ed.e57098",
         "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "f9c180f2.4091",
-        "type": "ui_group",
-        "name": "Heizkörper",
-        "tab": "",
-        "order": 1,
         "disp": true,
         "width": "6",
         "collapse": false
@@ -3505,16 +3742,6 @@
         "collapse": true
     },
     {
-        "id": "b0db099e.93d0d8",
-        "type": "ui_group",
-        "name": "hidden_group",
-        "tab": "e8c8455b.fcfee8",
-        "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "e8c8455b.fcfee8",
         "type": "ui_tab",
         "name": "Zooland Sys",
@@ -3522,16 +3749,6 @@
         "order": 1,
         "disabled": false,
         "hidden": false
-    },
-    {
-        "id": "713baee.661de5",
-        "type": "ui_group",
-        "name": "hidden_group",
-        "tab": "43746246.80f00c",
-        "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false
     },
     {
         "id": "43746246.80f00c",
@@ -3615,6 +3832,14 @@
         "willTopic": "",
         "willQos": "0",
         "willPayload": ""
+    },
+    {
+        "id": "45135a7bd60716cf",
+        "type": "ui_tab",
+        "name": "JUNIOR",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "a952ee58.75f5b",
@@ -5311,9 +5536,11 @@
         "name": "LIGHT COMMAND KID CEILING",
         "func": "var result;\nvar ResultOn  = \"TURN-LIGHT-KIDROOM1-ON\";\nvar ResultOff = \"TURN-LIGHT-KIDROOM1-OFF\";\n\nif( msg.payload === true)\n{\n   result = ResultOn;\n}\nelse\n{\n   result = ResultOff;\n}\nmsg.payload = result;\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 700,
         "y": 140,
         "wires": [
@@ -6486,6 +6713,203 @@
             [
                 "f83a7aa6.3e03f8"
             ]
+        ]
+    },
+    {
+        "id": "83ced73154d85c88",
+        "type": "change",
+        "z": "a287f300902caa62",
+        "name": "OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"dutyCycle\":0}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "setDutyCycle",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 190,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8830e4ae4bdad197",
+        "type": "subflow:a287f300902caa62",
+        "z": "8a8aa8488bf31f59",
+        "name": "DIGOUT_OFF_",
+        "env": [],
+        "x": 340,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c1fd7ab344c5173e",
+        "type": "switch",
+        "z": "8a8aa8488bf31f59",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "8830e4ae4bdad197"
+            ]
+        ]
+    },
+    {
+        "id": "0ec11daa9b17ee64",
+        "type": "subflow:737cfbd.2ae9804",
+        "z": "af5bc91d21532d7f",
+        "name": "DIGOUT_ON_TRUE",
+        "env": [],
+        "x": 200,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "801dd49e9e95a195",
+        "type": "subflow:8a8aa8488bf31f59",
+        "z": "af5bc91d21532d7f",
+        "name": "DIGOUT_OFF_FALSE",
+        "env": [],
+        "x": 200,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "982ffa67a17bad75",
+        "type": "ImpulseUltimate",
+        "z": "cfbb5d991c18a536",
+        "name": "",
+        "commandText": "// Open garage door\nwait:200\nsend:true",
+        "payloadPropName": "payload",
+        "x": 220,
+        "y": 200,
+        "wires": [
+            [
+                "d67439c63e4a7d91"
+            ]
+        ]
+    },
+    {
+        "id": "4a01b69b7864fb94",
+        "type": "countula",
+        "z": "cfbb5d991c18a536",
+        "name": "",
+        "x": 280,
+        "y": 80,
+        "wires": [
+            [],
+            [
+                "04ba48e789df520f"
+            ]
+        ]
+    },
+    {
+        "id": "d67439c63e4a7d91",
+        "type": "change",
+        "z": "cfbb5d991c18a536",
+        "name": "RESET",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "RESET",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 140,
+        "wires": [
+            [
+                "4a01b69b7864fb94"
+            ]
+        ]
+    },
+    {
+        "id": "04ba48e789df520f",
+        "type": "switch",
+        "z": "cfbb5d991c18a536",
+        "name": "CHECK_DOUBLE",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "2",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 80,
+        "wires": [
+            [
+                "6a78c1f3bb3e4684"
+            ]
+        ]
+    },
+    {
+        "id": "6a78c1f3bb3e4684",
+        "type": "change",
+        "z": "cfbb5d991c18a536",
+        "name": "DOUBLE_CLICKED",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "DOUBLE_CLICKED",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 80,
+        "wires": [
+            []
         ]
     },
     {
@@ -8337,7 +8761,7 @@
         "g": "6e130f3.368a6f",
         "name": "",
         "x": 580,
-        "y": 140,
+        "y": 160,
         "wires": [
             [
                 "d12deac3.fec6f8"
@@ -8352,7 +8776,7 @@
         "name": "ANTEROOM_MAIN_LIGHT",
         "env": [],
         "x": 582.4659423828125,
-        "y": 211.87314891815186,
+        "y": 231.87314891815186,
         "wires": [
             [
                 "d12deac3.fec6f8"
@@ -8367,7 +8791,7 @@
         "name": "",
         "env": [],
         "x": 580,
-        "y": 280,
+        "y": 300,
         "wires": [
             [
                 "d12deac3.fec6f8"
@@ -8384,7 +8808,7 @@
             "7a79026c.f00c8c"
         ],
         "x": 255,
-        "y": 200,
+        "y": 220,
         "wires": [
             [
                 "12adb9bc.a841b6",
@@ -8403,7 +8827,7 @@
             "c1487bb5.ec6388"
         ],
         "x": 875,
-        "y": 240,
+        "y": 260,
         "wires": []
     },
     {
@@ -8416,7 +8840,7 @@
             "71ee541a.3a062c"
         ],
         "x": 255,
-        "y": 360,
+        "y": 380,
         "wires": [
             [
                 "39b8623a.a0dfae"
@@ -8431,7 +8855,7 @@
         "name": "",
         "env": [],
         "x": 560,
-        "y": 360,
+        "y": 380,
         "wires": [
             [
                 "d12deac3.fec6f8"
@@ -8447,7 +8871,7 @@
         "label": "HeizkörperHinten",
         "tooltip": "",
         "group": "fd93ca25.397518",
-        "order": 5,
+        "order": 6,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -8463,11 +8887,41 @@
         "officon": "",
         "offcolor": "",
         "x": 540,
-        "y": 460,
+        "y": 640,
         "wires": [
             [
                 "d12deac3.fec6f8"
             ]
+        ]
+    },
+    {
+        "id": "d8d52dc8279032fa",
+        "type": "ui_switch",
+        "z": "1f4c4ae3.09c2f5",
+        "g": "d9499599d434120e",
+        "name": "MIDDLE LIGHT",
+        "label": "LICHTMITTE",
+        "tooltip": "",
+        "group": "fd93ca25.397518",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-3x fa-lightbulb-o",
+        "oncolor": "yellow",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-3x fa-lightbulb-o",
+        "offcolor": "gray",
+        "x": 560,
+        "y": 460,
+        "wires": [
+            []
         ]
     },
     {
@@ -9337,8 +9791,8 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "",
-        "x": 440,
-        "y": 340,
+        "x": 900,
+        "y": 80,
         "wires": [
             [
                 "dd6862b6384df731"
@@ -9369,8 +9823,8 @@
         "offvalueType": "bool",
         "officon": "fa-3x fa-lightbulb-o",
         "offcolor": "gray",
-        "x": 450,
-        "y": 400,
+        "x": 910,
+        "y": 140,
         "wires": [
             []
         ]
@@ -9389,8 +9843,8 @@
         "correl": "",
         "expiry": "",
         "broker": "2579135a.e4f65c",
-        "x": 680,
-        "y": 340,
+        "x": 1140,
+        "y": 80,
         "wires": []
     },
     {
@@ -9398,16 +9852,211 @@
         "type": "mqtt in",
         "z": "6c34888.8f9c278",
         "name": "FEEDBACK_ENTRY_ROOM",
-        "topic": "LIGHT_FEEDBACK_ENTRY_ROOM",
+        "topic": "LIGHT_FEEDBACK_ENTRY_ROOM/MAIN",
         "qos": "2",
-        "datatype": "auto",
+        "datatype": "utf8",
         "broker": "2579135a.e4f65c",
         "nl": false,
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 220,
+        "x": 200,
+        "y": 140,
+        "wires": [
+            [
+                "bf585748c3439846",
+                "894e72ddfafece6f"
+            ]
+        ]
+    },
+    {
+        "id": "bf14afe1498d062b",
+        "type": "mqtt out",
+        "z": "6c34888.8f9c278",
+        "g": "3273be7faa57bfbe",
+        "name": "",
+        "topic": "LIGHT_FEEDBACK_ENTRY_ROOM/MAIN",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2579135a.e4f65c",
+        "x": 510,
         "y": 400,
+        "wires": []
+    },
+    {
+        "id": "c3c76d1ca32a969f",
+        "type": "inject",
+        "z": "6c34888.8f9c278",
+        "g": "3273be7faa57bfbe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "bf14afe1498d062b"
+            ]
+        ]
+    },
+    {
+        "id": "a13304153e3b2d5a",
+        "type": "mqtt out",
+        "z": "6c34888.8f9c278",
+        "g": "3273be7faa57bfbe",
+        "name": "",
+        "topic": "LIGHT_FEEDBACK_ENTRY_ROOM/MAIN",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2579135a.e4f65c",
+        "x": 510,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d61e81e2fd3b2fc9",
+        "type": "inject",
+        "z": "6c34888.8f9c278",
+        "g": "3273be7faa57bfbe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [
+                "a13304153e3b2d5a"
+            ]
+        ]
+    },
+    {
+        "id": "4fb6b2f754e52ad8",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "MAKE_PAYLOAD_TRUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 80,
+        "wires": [
+            [
+                "193227be.052708"
+            ]
+        ]
+    },
+    {
+        "id": "bf585748c3439846",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "name": "IsTRUE",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 460,
+        "y": 80,
+        "wires": [
+            [
+                "4fb6b2f754e52ad8"
+            ]
+        ]
+    },
+    {
+        "id": "894e72ddfafece6f",
+        "type": "switch",
+        "z": "6c34888.8f9c278",
+        "name": "IsFALSE",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "false",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 460,
+        "y": 140,
+        "wires": [
+            [
+                "5037fc02e42b74f9"
+            ]
+        ]
+    },
+    {
+        "id": "5037fc02e42b74f9",
+        "type": "change",
+        "z": "6c34888.8f9c278",
+        "name": "MAKE_PAYLOAD_FALSE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 140,
         "wires": [
             [
                 "193227be.052708"
@@ -11837,5 +12486,1387 @@
         "x": 620,
         "y": 80,
         "wires": []
+    },
+    {
+        "id": "b19624bbf38dbfa7",
+        "type": "phidget22-connect",
+        "z": "431ba1c851c6432c",
+        "g": "de31784b51f6bbb4",
+        "port": "5661",
+        "hostname": "192.168.0.200",
+        "debug": true,
+        "x": 490,
+        "y": 5140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "13a9707cda9d3632",
+        "type": "phidget22-digitalinput",
+        "z": "431ba1c851c6432c",
+        "g": "ac92775f41a0afb8",
+        "channel": 0,
+        "deviceSerialNumber": -1,
+        "isHubPortDevice": false,
+        "hubPort": "0",
+        "debug": false,
+        "inputMode": 1,
+        "powerSupply": 1,
+        "x": 210,
+        "y": 5260,
+        "wires": [
+            [
+                "6558ed41f8b2f0e3",
+                "92072a1cbb260550"
+            ]
+        ]
+    },
+    {
+        "id": "6558ed41f8b2f0e3",
+        "type": "link out",
+        "z": "431ba1c851c6432c",
+        "g": "ac92775f41a0afb8",
+        "name": "LINK_LIGHT_BUTTON",
+        "mode": "link",
+        "links": [
+            "23ccd80b7d8de1d3"
+        ],
+        "x": 435,
+        "y": 5260,
+        "wires": []
+    },
+    {
+        "id": "2efb051be53014fc",
+        "type": "phidget22-digitaloutput",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "channel": 0,
+        "deviceSerialNumber": -1,
+        "isHubPortDevice": false,
+        "hubPort": "5",
+        "debug": false,
+        "LEDCurrentLimit": 0.02,
+        "LEDForwardVoltage": 1,
+        "x": 1220,
+        "y": 5380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b0cd28fad0a2680",
+        "type": "link in",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "LINK_LIGHT_RIGHT",
+        "links": [
+            "c4aa5848577b2a5b",
+            "8008fcec663d98f2"
+        ],
+        "x": 835,
+        "y": 5380,
+        "wires": [
+            [
+                "201791b73ed53216"
+            ]
+        ]
+    },
+    {
+        "id": "91784b56299e74da",
+        "type": "phidget22-digitaloutput",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "channel": "1",
+        "deviceSerialNumber": -1,
+        "isHubPortDevice": false,
+        "hubPort": "5",
+        "debug": false,
+        "LEDCurrentLimit": 0.02,
+        "LEDForwardVoltage": 1,
+        "x": 1190,
+        "y": 5560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b01836120b219a41",
+        "type": "link in",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "LINK_LIGHT_WINDOW_RIGHT",
+        "links": [
+            "8008fcec663d98f2"
+        ],
+        "x": 835,
+        "y": 5580,
+        "wires": [
+            [
+                "7f5e711633fbe857"
+            ]
+        ]
+    },
+    {
+        "id": "a4a969d7b78473bf",
+        "type": "inject",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "TEST_0_ON",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 910,
+        "y": 5260,
+        "wires": [
+            [
+                "201791b73ed53216"
+            ]
+        ]
+    },
+    {
+        "id": "cd8fc6122cd2c349",
+        "type": "inject",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "TEST_0_OFF",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 910,
+        "y": 5300,
+        "wires": [
+            [
+                "201791b73ed53216"
+            ]
+        ]
+    },
+    {
+        "id": "201791b73ed53216",
+        "type": "subflow:af5bc91d21532d7f",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "DO_0",
+        "x": 1070,
+        "y": 5380,
+        "wires": [
+            [
+                "2efb051be53014fc"
+            ]
+        ]
+    },
+    {
+        "id": "4dbab4e6f0843775",
+        "type": "inject",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "TEST_1_ON",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 910,
+        "y": 5460,
+        "wires": [
+            [
+                "7f5e711633fbe857"
+            ]
+        ]
+    },
+    {
+        "id": "50219109594cc0c8",
+        "type": "inject",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "TEST_1_OFF",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 910,
+        "y": 5520,
+        "wires": [
+            [
+                "7f5e711633fbe857"
+            ]
+        ]
+    },
+    {
+        "id": "7f5e711633fbe857",
+        "type": "subflow:af5bc91d21532d7f",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "DO_1",
+        "x": 1070,
+        "y": 5500,
+        "wires": [
+            [
+                "91784b56299e74da"
+            ]
+        ]
+    },
+    {
+        "id": "7d9438c6e319389c",
+        "type": "phidget22-digitaloutput",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "channel": "2",
+        "deviceSerialNumber": -1,
+        "isHubPortDevice": false,
+        "hubPort": "5",
+        "debug": false,
+        "LEDCurrentLimit": 0.02,
+        "LEDForwardVoltage": 1,
+        "x": 1200,
+        "y": 5740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "387e17d5f7d59f1c",
+        "type": "link in",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "LINK_LIGHT_WINDOW_RIGHT",
+        "links": [
+            "8008fcec663d98f2"
+        ],
+        "x": 835,
+        "y": 5740,
+        "wires": [
+            [
+                "95a8dffe49621d36"
+            ]
+        ]
+    },
+    {
+        "id": "6ec2b666446f8e28",
+        "type": "inject",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "TEST_2_ON",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 910,
+        "y": 5640,
+        "wires": [
+            [
+                "95a8dffe49621d36"
+            ]
+        ]
+    },
+    {
+        "id": "e18c135bc7b6eee6",
+        "type": "inject",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "TEST_2_OFF",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 910,
+        "y": 5700,
+        "wires": [
+            [
+                "95a8dffe49621d36"
+            ]
+        ]
+    },
+    {
+        "id": "95a8dffe49621d36",
+        "type": "subflow:af5bc91d21532d7f",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "DO_2",
+        "x": 1070,
+        "y": 5680,
+        "wires": [
+            [
+                "7d9438c6e319389c"
+            ]
+        ]
+    },
+    {
+        "id": "37b33ef4617947ca",
+        "type": "phidget22-digitaloutput",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "channel": "3",
+        "deviceSerialNumber": -1,
+        "isHubPortDevice": false,
+        "hubPort": "5",
+        "debug": false,
+        "LEDCurrentLimit": 0.02,
+        "LEDForwardVoltage": 1,
+        "x": 1190,
+        "y": 5920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4916fd261b3ef4a6",
+        "type": "link in",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "LINK_LIGHT_WINDOW_RIGHT",
+        "links": [
+            "8008fcec663d98f2"
+        ],
+        "x": 835,
+        "y": 5920,
+        "wires": [
+            [
+                "fd59331a09e8d777"
+            ]
+        ]
+    },
+    {
+        "id": "41a2608e1e29ff0f",
+        "type": "inject",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "TEST_3_ON",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 910,
+        "y": 5820,
+        "wires": [
+            [
+                "fd59331a09e8d777"
+            ]
+        ]
+    },
+    {
+        "id": "cc19dd1d8f21cc78",
+        "type": "inject",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "TEST_3_OFF",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 910,
+        "y": 5880,
+        "wires": [
+            [
+                "fd59331a09e8d777"
+            ]
+        ]
+    },
+    {
+        "id": "fd59331a09e8d777",
+        "type": "subflow:af5bc91d21532d7f",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "DO_3",
+        "x": 1070,
+        "y": 5860,
+        "wires": [
+            [
+                "37b33ef4617947ca"
+            ]
+        ]
+    },
+    {
+        "id": "5b9060d0fee5134d",
+        "type": "phidget22-digitaloutput",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "channel": "4",
+        "deviceSerialNumber": -1,
+        "isHubPortDevice": false,
+        "hubPort": "5",
+        "debug": false,
+        "LEDCurrentLimit": 0.02,
+        "LEDForwardVoltage": 1,
+        "x": 1200,
+        "y": 6100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56a451dc7dc2612f",
+        "type": "link in",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "LINK_LIGHT_WINDOW_RIGHT",
+        "links": [
+            "8008fcec663d98f2"
+        ],
+        "x": 835,
+        "y": 6100,
+        "wires": [
+            [
+                "740b33f06e47161c"
+            ]
+        ]
+    },
+    {
+        "id": "5c542b42be792698",
+        "type": "inject",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "TEST_4_ON",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 910,
+        "y": 6000,
+        "wires": [
+            [
+                "740b33f06e47161c"
+            ]
+        ]
+    },
+    {
+        "id": "46b383e4f7f99d28",
+        "type": "inject",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "TEST_4_OFF",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 910,
+        "y": 6060,
+        "wires": [
+            [
+                "740b33f06e47161c"
+            ]
+        ]
+    },
+    {
+        "id": "740b33f06e47161c",
+        "type": "subflow:af5bc91d21532d7f",
+        "z": "431ba1c851c6432c",
+        "g": "5419b658a3b4e70c",
+        "name": "DO_4",
+        "x": 1070,
+        "y": 6040,
+        "wires": [
+            [
+                "5b9060d0fee5134d"
+            ]
+        ]
+    },
+    {
+        "id": "2ceaf157ec84b021",
+        "type": "switch",
+        "z": "431ba1c851c6432c",
+        "name": "",
+        "property": "state",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 4940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "92072a1cbb260550",
+        "type": "debug",
+        "z": "431ba1c851c6432c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 5340,
+        "wires": []
+    },
+    {
+        "id": "38b8d4091c224345",
+        "type": "redplc-sys-onstart",
+        "z": "21566b29afa63880",
+        "sdelay": 100,
+        "x": 210,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "879af86708707080",
+        "type": "redplc-sys-firstscan",
+        "z": "21566b29afa63880",
+        "x": 220,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "83e51680809f7c40",
+        "type": "redplc-sys-inject",
+        "z": "21566b29afa63880",
+        "sdelay": 200,
+        "tupdate": "100",
+        "outputs": 2,
+        "x": 120,
+        "y": 740,
+        "wires": [
+            [
+                "8912526630cb43a6",
+                "4c4c5cb944c67eed",
+                "4628422a4db8d9fe"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d96c363132cc2bbf",
+        "type": "redplc-import",
+        "z": "21566b29afa63880",
+        "vartype": "M",
+        "address": 0,
+        "index": 0,
+        "tofix": 2,
+        "name": "ILIGHT_BUTTON",
+        "x": 690,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "23ccd80b7d8de1d3",
+        "type": "link in",
+        "z": "21566b29afa63880",
+        "name": "link in 1",
+        "links": [
+            "6558ed41f8b2f0e3"
+        ],
+        "x": 55,
+        "y": 440,
+        "wires": [
+            [
+                "c2f3f572d085fbb6"
+            ]
+        ]
+    },
+    {
+        "id": "99d3661524deb733",
+        "type": "redplc-m-memory",
+        "z": "21566b29afa63880",
+        "address": 0,
+        "persistent": 0,
+        "tupdate": 20,
+        "meminit": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        "x": 220,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c2f3f572d085fbb6",
+        "type": "function",
+        "z": "21566b29afa63880",
+        "name": "CONVERT_BOOL",
+        "func": "if( msg.payload.state === false )\n{\n    msg.payload = false\n}\nelse if (msg.payload.state === true)\n{\n    msg.payload = true;\n}\nelse\n {\n    msg.payload = false\n }\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 440,
+        "wires": [
+            [
+                "9d52e38292fbdc5e",
+                "d96c363132cc2bbf"
+            ]
+        ]
+    },
+    {
+        "id": "8912526630cb43a6",
+        "type": "redplc-sys-rail",
+        "z": "21566b29afa63880",
+        "rtype": "1",
+        "outputs": 1,
+        "name": "",
+        "x": 270,
+        "y": 740,
+        "wires": [
+            [
+                "15645018f4434e5b"
+            ]
+        ]
+    },
+    {
+        "id": "15645018f4434e5b",
+        "type": "redplc-contact",
+        "z": "21566b29afa63880",
+        "operation": "N",
+        "vartype": "M",
+        "address": 0,
+        "index": 0,
+        "counter": "QU",
+        "timer": "Q",
+        "fflop": "Q",
+        "name": "LIGHT_BUTTON",
+        "x": 430,
+        "y": 740,
+        "wires": [
+            [
+                "54dfb45de03afb70"
+            ]
+        ]
+    },
+    {
+        "id": "3a0772f1188c0fd4",
+        "type": "redplc-coil",
+        "z": "21566b29afa63880",
+        "operation": "ST",
+        "vartype": "M",
+        "address": "1",
+        "index": 0,
+        "counter": "R",
+        "timer": "R",
+        "fflop": "R",
+        "name": "OUT1",
+        "x": 970,
+        "y": 740,
+        "wires": [
+            [
+                "b9fb9c42846d0429"
+            ]
+        ]
+    },
+    {
+        "id": "a063c5547d525250",
+        "type": "redplc-flipflop",
+        "z": "21566b29afa63880",
+        "operation": "T",
+        "address": 0,
+        "tpers": 0,
+        "name": "TOGGLE",
+        "x": 840,
+        "y": 740,
+        "wires": [
+            [
+                "3a0772f1188c0fd4"
+            ]
+        ]
+    },
+    {
+        "id": "01fdf2975ff16a34",
+        "type": "redplc-sys-rail",
+        "z": "21566b29afa63880",
+        "rtype": "0",
+        "outputs": 0,
+        "name": "",
+        "x": 1710,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "b9fb9c42846d0429",
+        "type": "redplc-export",
+        "z": "21566b29afa63880",
+        "vartype": "M",
+        "address": "1",
+        "index": "0",
+        "counter": "QU",
+        "timer": "Q",
+        "fflop": "Q",
+        "tofix": 2,
+        "topic": "DigOutState",
+        "label": "DigOut0",
+        "ostring": false,
+        "name": "DigitalOutput0",
+        "x": 1120,
+        "y": 740,
+        "wires": [
+            [
+                "01fdf2975ff16a34",
+                "a31a730f6de0c7da"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c28e72539a7c143e",
+        "type": "redplc-m-memory",
+        "z": "21566b29afa63880",
+        "address": "1",
+        "persistent": 0,
+        "tupdate": 20,
+        "meminit": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        "x": 220,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "8008fcec663d98f2",
+        "type": "link out",
+        "z": "21566b29afa63880",
+        "name": "LINK_LED_RIGHT",
+        "mode": "link",
+        "links": [
+            "8b0cd28fad0a2680",
+            "a343828a81079e36",
+            "b01836120b219a41",
+            "387e17d5f7d59f1c",
+            "4916fd261b3ef4a6",
+            "56a451dc7dc2612f"
+        ],
+        "x": 1685,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "d459a66ec3c3c701",
+        "type": "inject",
+        "z": "21566b29afa63880",
+        "name": "TRUE",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 370,
+        "y": 380,
+        "wires": [
+            [
+                "d96c363132cc2bbf",
+                "a851aa075b3eea0e",
+                "21c406bdf6e79e5d"
+            ]
+        ]
+    },
+    {
+        "id": "c64a5e1728f407b1",
+        "type": "inject",
+        "z": "21566b29afa63880",
+        "name": "FALSE",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 410,
+        "y": 320,
+        "wires": [
+            [
+                "d96c363132cc2bbf"
+            ]
+        ]
+    },
+    {
+        "id": "a31a730f6de0c7da",
+        "type": "rbe",
+        "z": "21566b29afa63880",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1330,
+        "y": 780,
+        "wires": [
+            [
+                "8008fcec663d98f2"
+            ]
+        ]
+    },
+    {
+        "id": "093600a5fa024f52",
+        "type": "redplc-import",
+        "z": "21566b29afa63880",
+        "vartype": "M",
+        "address": 0,
+        "index": "1",
+        "tofix": 2,
+        "name": "IDOUBLE_CLICKED",
+        "x": 1100,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "a851aa075b3eea0e",
+        "type": "subflow:cfbb5d991c18a536",
+        "z": "21566b29afa63880",
+        "name": "",
+        "x": 700,
+        "y": 380,
+        "wires": [
+            [
+                "38e9d7880179dd82"
+            ]
+        ]
+    },
+    {
+        "id": "498f72f3686f0b48",
+        "type": "debug",
+        "z": "21566b29afa63880",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "38e9d7880179dd82",
+        "type": "change",
+        "z": "21566b29afa63880",
+        "name": "ISTRUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 420,
+        "wires": [
+            [
+                "093600a5fa024f52"
+            ]
+        ]
+    },
+    {
+        "id": "21c406bdf6e79e5d",
+        "type": "change",
+        "z": "21566b29afa63880",
+        "name": "FALSE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 480,
+        "wires": [
+            [
+                "093600a5fa024f52"
+            ]
+        ]
+    },
+    {
+        "id": "745dd7d1b6e58684",
+        "type": "redplc-contact",
+        "z": "21566b29afa63880",
+        "operation": "NO",
+        "vartype": "M",
+        "address": 0,
+        "index": "1",
+        "counter": "QU",
+        "timer": "Q",
+        "fflop": "Q",
+        "name": "DOUBLE_CLICKED",
+        "x": 460,
+        "y": 840,
+        "wires": [
+            [
+                "5a11088068fb64b0"
+            ]
+        ]
+    },
+    {
+        "id": "5a11088068fb64b0",
+        "type": "redplc-timer",
+        "z": "21566b29afa63880",
+        "operation": "TON",
+        "address": 0,
+        "timev": "2",
+        "timeu": "m",
+        "persistent": 0,
+        "tpers": 20,
+        "name": "",
+        "x": 640,
+        "y": 840,
+        "wires": [
+            [
+                "06b7a69d3c2a999e"
+            ]
+        ]
+    },
+    {
+        "id": "06b7a69d3c2a999e",
+        "type": "redplc-function",
+        "z": "21566b29afa63880",
+        "operation": "P_TRIGGER",
+        "x": 810,
+        "y": 840,
+        "wires": [
+            [
+                "a063c5547d525250"
+            ]
+        ]
+    },
+    {
+        "id": "9d52e38292fbdc5e",
+        "type": "switch",
+        "z": "21566b29afa63880",
+        "name": "CHECKTRUE",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 440,
+        "wires": [
+            [
+                "498f72f3686f0b48",
+                "a851aa075b3eea0e",
+                "21c406bdf6e79e5d"
+            ]
+        ]
+    },
+    {
+        "id": "4c4c5cb944c67eed",
+        "type": "redplc-sys-rail",
+        "z": "21566b29afa63880",
+        "rtype": "1",
+        "outputs": 1,
+        "name": "",
+        "x": 290,
+        "y": 840,
+        "wires": [
+            [
+                "745dd7d1b6e58684"
+            ]
+        ]
+    },
+    {
+        "id": "4628422a4db8d9fe",
+        "type": "redplc-sys-rail",
+        "z": "21566b29afa63880",
+        "rtype": "1",
+        "outputs": 1,
+        "name": "",
+        "x": 270,
+        "y": 680,
+        "wires": [
+            [
+                "2679469f0f8b0f97"
+            ]
+        ]
+    },
+    {
+        "id": "2679469f0f8b0f97",
+        "type": "redplc-contact",
+        "z": "21566b29afa63880",
+        "operation": "NO",
+        "vartype": "M",
+        "address": 0,
+        "index": "1",
+        "counter": "QU",
+        "timer": "Q",
+        "fflop": "Q",
+        "name": "DOUBLE_CLICKED",
+        "x": 460,
+        "y": 680,
+        "wires": [
+            [
+                "3b805b59721788be"
+            ]
+        ]
+    },
+    {
+        "id": "3b805b59721788be",
+        "type": "redplc-coil",
+        "z": "21566b29afa63880",
+        "operation": "ST",
+        "vartype": "M",
+        "address": "1",
+        "index": "1",
+        "counter": "R",
+        "timer": "R",
+        "fflop": "R",
+        "name": "Lock",
+        "x": 670,
+        "y": 680,
+        "wires": [
+            [
+                "1fe2b368a27ba482"
+            ]
+        ]
+    },
+    {
+        "id": "1fe2b368a27ba482",
+        "type": "redplc-sys-rail",
+        "z": "21566b29afa63880",
+        "rtype": "0",
+        "outputs": 0,
+        "name": "",
+        "x": 870,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "54dfb45de03afb70",
+        "type": "redplc-contact",
+        "z": "21566b29afa63880",
+        "operation": "NC",
+        "vartype": "M",
+        "address": "1",
+        "index": "1",
+        "counter": "QU",
+        "timer": "Q",
+        "fflop": "Q",
+        "name": "Lock",
+        "x": 610,
+        "y": 740,
+        "wires": [
+            [
+                "a063c5547d525250"
+            ]
+        ]
+    },
+    {
+        "id": "a343828a81079e36",
+        "type": "link in",
+        "z": "012ebfaa139d5c13",
+        "name": "link in 2",
+        "links": [
+            "8008fcec663d98f2"
+        ],
+        "x": 295,
+        "y": 160,
+        "wires": [
+            [
+                "f00903fc01f13677"
+            ]
+        ]
+    },
+    {
+        "id": "f00903fc01f13677",
+        "type": "ui_led",
+        "z": "012ebfaa139d5c13",
+        "order": 5,
+        "group": "9f9a8a62.d54b98",
+        "width": 0,
+        "height": 0,
+        "label": "Licht rechts neben Türe",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#f0f0f0",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ffae00",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 550,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "92fa1983498a244f",
+        "type": "inject",
+        "z": "f483b74fafd5d5d9",
+        "name": "TRUE",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 210,
+        "y": 180,
+        "wires": [
+            [
+                "a612aca0328ba90e"
+            ]
+        ]
+    },
+    {
+        "id": "b28cf5388483d0a9",
+        "type": "debug",
+        "z": "f483b74fafd5d5d9",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "topic",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "a612aca0328ba90e",
+        "type": "subflow:cfbb5d991c18a536",
+        "z": "f483b74fafd5d5d9",
+        "g": "5cb1dedf14ed7d09",
+        "name": "DOUBLE_CLICKED",
+        "x": 630,
+        "y": 180,
+        "wires": [
+            [
+                "b28cf5388483d0a9"
+            ]
+        ]
     }
 ]
